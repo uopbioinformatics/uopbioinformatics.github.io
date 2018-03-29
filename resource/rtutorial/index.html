@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.24.1" />
+  <meta name="author" content="Bioinformatics Group">
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css" integrity="sha512-GGGNUPDhnG8LEAEDsjqYIQns+Gu8RBs4j5XGlxl7UfRaZBhCCm5jenJkeJL8uPuOXGqgl8/H1gjlWQDRjd3cUQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-101891200-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="UoP Bioinformatics Group">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="UoP Bioinformatics Group">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/resource/rtutorial/">
+
+  
+
+  <title>How To Use R | UoP Bioinformatics Group</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">UoP Bioinformatics Group</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#resources">
+            
+            <span>Resources</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#software">
+            
+            <span>Software</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/headers/R-wide.jpg" class="article-banner" itemprop="image">
+  <span class="article-header-caption"><a href="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/5e/b4ef8069b511e3ae92c39913bb30e0/Rprogramming.jpg" target="_blank">https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/5e/b4ef8069b511e3ae92c39913bb30e0/Rprogramming.jpg</a></span>
+</div>
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">How To Use R</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-08-23 12:28:14 -0500 -0500" itemprop="datePublished">
+      Wed, Aug 23, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/how-to">How To</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/r">R</a
+    >, 
+    
+    <a href="/tags/how-to">How To</a
+    >, 
+    
+    <a href="/tags/howto">howto</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fresource%2frtutorial%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=How%20To%20Use%20R&amp;url=%2fresource%2frtutorial%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fresource%2frtutorial%2f&amp;title=How%20To%20Use%20R"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fresource%2frtutorial%2f&amp;title=How%20To%20Use%20R"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=How%20To%20Use%20R&amp;body=%2fresource%2frtutorial%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <div id="TOC">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#installing-r"><span class="toc-section-number">2</span> Installing R</a></li>
+<li><a href="#basics-of-r"><span class="toc-section-number">3</span> Basics of R</a><ul>
+<li><a href="#introduction-1"><span class="toc-section-number">3.1</span> Introduction</a></li>
+<li><a href="#data-classes"><span class="toc-section-number">3.2</span> Data Classes</a></li>
+<li><a href="#vectors"><span class="toc-section-number">3.3</span> Vectors</a></li>
+<li><a href="#lists"><span class="toc-section-number">3.4</span> Lists</a></li>
+<li><a href="#matrices"><span class="toc-section-number">3.5</span> Matrices</a></li>
+<li><a href="#functions"><span class="toc-section-number">3.6</span> Functions</a></li>
+<li><a href="#printing"><span class="toc-section-number">3.7</span> Printing</a></li>
+</ul></li>
+<li><a href="#installing-packages"><span class="toc-section-number">4</span> Installing Packages</a></li>
+<li><a href="#data-frames"><span class="toc-section-number">5</span> Data Frames</a></li>
+<li><a href="#reading-and-writing-data"><span class="toc-section-number">6</span> Reading and Writing Data</a></li>
+<li><a href="#control-sequences"><span class="toc-section-number">7</span> Control Sequences</a><ul>
+<li><a href="#if-else"><span class="toc-section-number">7.1</span> IF ELSE</a></li>
+<li><a href="#for"><span class="toc-section-number">7.2</span> FOR</a></li>
+<li><a href="#while"><span class="toc-section-number">7.3</span> WHILE</a></li>
+<li><a href="#loop-control"><span class="toc-section-number">7.4</span> Loop Control</a></li>
+</ul></li>
+<li><a href="#writing-functions-in-r"><span class="toc-section-number">8</span> Writing Functions in R</a></li>
+<li><a href="#some-simple-statistics"><span class="toc-section-number">9</span> Some Simple Statistics</a></li>
+<li><a href="#plotting-with-r"><span class="toc-section-number">10</span> Plotting With R</a><ul>
+<li><a href="#scatterplots"><span class="toc-section-number">10.1</span> Scatterplots</a></li>
+<li><a href="#histograms"><span class="toc-section-number">10.2</span> Histograms</a></li>
+<li><a href="#quantile-quantile-plots"><span class="toc-section-number">10.3</span> Quantile-Quantile Plots</a></li>
+<li><a href="#line-plots"><span class="toc-section-number">10.4</span> Line Plots</a></li>
+<li><a href="#density-plots"><span class="toc-section-number">10.5</span> Density Plots</a></li>
+<li><a href="#boxplots"><span class="toc-section-number">10.6</span> Boxplots</a></li>
+<li><a href="#bar-plots-and-pie-charts"><span class="toc-section-number">10.7</span> Bar Plots and Pie Charts</a></li>
+<li><a href="#graphical-control"><span class="toc-section-number">10.8</span> Graphical Control</a></li>
+<li><a href="#subplots"><span class="toc-section-number">10.9</span> Subplots</a></li>
+<li><a href="#saving-figures"><span class="toc-section-number">10.10</span> Saving Figures</a></li>
+</ul></li>
+<li><a href="#example-analysis"><span class="toc-section-number">11</span> Example Analysis</a><ul>
+<li><a href="#introduction-2"><span class="toc-section-number">11.1</span> Introduction</a></li>
+<li><a href="#load-data"><span class="toc-section-number">11.2</span> Load Data</a></li>
+<li><a href="#calculate-fold-change"><span class="toc-section-number">11.3</span> Calculate Fold Change</a></li>
+<li><a href="#compare-data"><span class="toc-section-number">11.4</span> Compare Data</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>This tutorial is a basic introduction to R that was originally written for biologists to get a basic understanding of how R functions. R is a software package that is a free to use open-source version of the S programming language. It is designed mainly for running statistical analyses and is very powerful in this regard. Follow through the tutorial and run the example commands by typing them into the command line as you go to see what happens. Don’t be afraid to play around with things as you go – it’s the best way to find out what certain functions do.</p>
+<p>You will notice that I have added comments to some of the code using the <code>#</code> comment character. Everything to the right of this character is ignored by R. This can be used to add comments to your code, for instance to explain what a particular code chunk does. You can NEVER have too many comments!</p>
+</div>
+<div id="installing-r" class="section level1">
+<h1><span class="header-section-number">2</span> Installing R</h1>
+<p>First of all, you will need to download and install R. The R website can be found at <a href="http://www.r-project.org">r-project.org</a>. R is updated quite regularly – there is an updated release roughly every 6 months, with various developmental versions released between the official versions. The functions in R are actively maintained to ensure that they run as they should, and new functionality is added all of the time.</p>
+<p>The current version is 3.3.2. To download it, go to the Comprehensive R Archive Network (<a href="https://cran.r-project.org">cran.r-project.org</a>). There are ready-made binaries available for MAC, windows, and most Linux distributions, so follow the links and download as instructed. You can also download the source code in a tarball, and can compile and install it using <code>make</code>.</p>
+<p>It is also worth taking a look at the Integrated Development Environment <a href="https://www.rstudio.com">RStudio</a>, which is a great open-source interface for R.</p>
+</div>
+<div id="basics-of-r" class="section level1">
+<h1><span class="header-section-number">3</span> Basics of R</h1>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">3.1</span> Introduction</h2>
+<p>Open the R environment. This is a command line version allowing you to see the results of the commands that you enter as you run them.</p>
+<p>The command line is shown by the <code>&gt;</code> character. Simply type your command here and press return to see the results. If your command is not complete, then the command line character will change to a <code>+</code> to indicate that more input is required, for instance a missing parenthesis:</p>
+<pre class="r"><code>print (&quot;Hello World!&quot;</code></pre>
+<pre><code>## Error: &lt;text&gt;:2:0: unexpected end of input
+## 1: print (&quot;Hello World!&quot;
+##    ^</code></pre>
+<p>R stores “variables” using names made up of characters and numbers. A variable, as the name suggests, is a data “object” that can take any value that you want, and can be changed.</p>
+<p>The variable name can be anything that you like, although it must begin with a character. Whilst it is perfectly acceptable to use simple variable names such as <code>x</code>, <code>y</code>, <code>i</code>, I recommend using a more descriptive name (e.g. <code>patient_height</code> instead of <code>x</code>). There are lots of different variable naming conventions to choose from (e.g. see <a href="https://en.wikipedia.org/wiki/Naming_convention_(programming)">here</a>), but once you have chosen one try and stick to it.</p>
+<p>To assign a value to the variable, use the <code>&lt;-</code> command (less-than symbol followed by minus symbol). You can also use the <code>=</code> symbol, but this has other uses (for instance using <code>==</code> to test for equality) so I prefer to use the <code>&lt;-</code> command:</p>
+<pre class="r"><code>x &lt;- 3
+x # Returns the value stored in &#39;x&#39; - currently 3</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>x &lt;- 5
+x # Returns the value stored in &#39;x&#39; - now 5</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p>Simple arithmetic can be performed using the standard arithmetic operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>), as well as the exponent operator (<code>^</code>). There is a level of precedence to these functions – the exponent will be calculated first, followed by multiplication and division, followed by plus and minus. For this reason, you must be careful that your arithmetic is doing what you expect it to do. You can get around this by encapsulating subsets of the sum in parentheses, which will be calculated from the inside out:</p>
+<pre class="r"><code>1+2*3 </code></pre>
+<pre><code>## [1] 7</code></pre>
+<pre class="r"><code>(1 + 2) * 3 </code></pre>
+<pre><code>## [1] 9</code></pre>
+<pre class="r"><code>1 + (2 * 3) </code></pre>
+<pre><code>## [1] 7</code></pre>
+<p>Personally I think that you can NEVER have too many parentheses – they ensure that your equations are doing what they should, and they can help improve the readability of things making it easier to see what a calculation is trying to achieve.</p>
+<p>Another operator that you may not have seen before is the “modulo” operator (<code>%%</code>), which gives you the remainder left after dividing by the number:</p>
+<pre class="r"><code>6%%2 # 6 is divisible by 2 exactly three times</code></pre>
+<pre><code>## [1] 0</code></pre>
+<pre class="r"><code>6%%4 # 6 is divisible by 4 one time with a remainder of 2</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p>You can also use other variables in these assignments:</p>
+<pre class="r"><code>x &lt;- 1
+y &lt;- x
+y</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>z &lt;- x + y 
+z</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="data-classes" class="section level2">
+<h2><span class="header-section-number">3.2</span> Data Classes</h2>
+<p>Variables can take many forms, or “classes”. The most common are “numeric” (which you can do numerical calculations on), character (can contain letters, numbers, symbols etc., but cannot run numerical calculations), and logical (TRUE or FALSE). The speech marks character <code>&quot;</code> is used to show that the class of y is “character”. You can also use the apostrophe <code>'</code>. There <em>is</em> a difference between these, but for now this is not important. You can check the class of a variable by using the <code>class()</code> function:</p>
+<pre class="r"><code>x &lt;- 12345
+class(x)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>y &lt;- &quot;12345&quot;
+class(y)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>Addition is a well-defined operation on numerical objects, but is not defined on character class objects. Attempting to use a function which has not been defined for the object in question will throw an error:</p>
+<pre class="r"><code>x + 1 # x is numeric, so addition is well defined</code></pre>
+<pre><code>## [1] 12346</code></pre>
+<pre class="r"><code>y + 1 # y is a character, so addition is not defined - produces an error</code></pre>
+<pre><code>## Error in y + 1: non-numeric argument to binary operator</code></pre>
+<p>To see which objects are currently present in the R environment, use the <code>ls()</code> command. To remove a particular object, use the <code>rm()</code> command. <em>BE CAREFUL</em> – once you have removed an object, it is gone forever!</p>
+<pre class="r"><code>x &lt;- 5
+ls ()</code></pre>
+<pre><code>## [1] &quot;x&quot; &quot;y&quot; &quot;z&quot;</code></pre>
+<pre class="r"><code>rm(x)
+ls ()</code></pre>
+<pre><code>## [1] &quot;y&quot; &quot;z&quot;</code></pre>
+<pre class="r"><code>rm(list=ls()) # Removes all objects in the current R session
+ls ()</code></pre>
+<pre><code>## character(0)</code></pre>
+<p>You can also change the class of a variable by assigning to the <code>class()</code> function:</p>
+<pre class="r"><code>x &lt;- &quot;12345&quot;
+x+1</code></pre>
+<pre><code>## Error in x + 1: non-numeric argument to binary operator</code></pre>
+<pre class="r"><code>class(x)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>class(x) &lt;- &quot;numeric&quot; 
+class(x)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>x+1</code></pre>
+<pre><code>## [1] 12346</code></pre>
+<p>The other important data class is “logical”, which is simply a binary TRUE or FALSE value. There are certain operators that are used to compare two variables. The obvious ones are “is less than” (<code>&lt;</code>), “is greater than” (<code>&gt;</code>), “is equal to”&quot; (<code>==</code>). You can also combine these to see “is less than or equal to” (<code>&lt;=</code>) or “is greater than or equal to” (<code>&gt;=</code>). If the statement is true, then it will return the output “TRUE”. Otherwise it will return “FALSE”:</p>
+<pre class="r"><code>x &lt;- 2
+y &lt;- 3
+x &lt;= y</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>x &gt;= y</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p>You can also combine these logical tests to ask complex questions by using the “AND” (<code>&amp;&amp;</code>) or the “OR” (<code>||</code>) operators. You can also negate the output of a logical test by using the “NOT” (<code>!</code>) operator. This lets you test for very specific events in your data. Again, I recommend using parentheses to break up your tests to ensure that the tests occur in the order which you expect:</p>
+<pre class="r"><code>x &lt;- 3
+y &lt;- 7
+z &lt;- 6
+(x &lt;= 3 &amp;&amp; y &gt;= 8) &amp;&amp; z == 6  </code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>(x &lt;= 3 &amp;&amp; y &gt;= 8) || z == 6 </code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>One important set of functions are the log and exponential functions. The exponential function is the function <span class="math inline">\(e^x\)</span>, such that <span class="math inline">\(e^x\)</span> is its own derivative (<span class="math inline">\(\frac{d}{dx} e^x = e^x\)</span>). The value e is the constant 2.718281828…, which is the limit <span class="math inline">\(\lim_{n \to \infty} (1+\frac{1}{n})^n\)</span>. It is a very important value in mathematics (hence why it has its own constant). Logarithms are the inverse of exponents, with natural log being log base <span class="math inline">\(e\)</span>. Here are some examples:</p>
+<pre class="r"><code>log (8)     ## Natural logarithm - base e</code></pre>
+<pre><code>## [1] 2.079442</code></pre>
+<pre class="r"><code>log2 (8)    ## Log base 2</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>exp (1)     ## e</code></pre>
+<pre><code>## [1] 2.718282</code></pre>
+<pre class="r"><code>exp (5)     ## e^5</code></pre>
+<pre><code>## [1] 148.4132</code></pre>
+<pre class="r"><code>log(exp(8)) ## log and exponential cancel out - base e</code></pre>
+<pre><code>## [1] 8</code></pre>
+<pre class="r"><code>exp(log(8)) ## log and exponential cancel out - base e</code></pre>
+<pre><code>## [1] 8</code></pre>
+<pre class="r"><code>2^(log2(8)) ## log and exponential cancel out - base 2</code></pre>
+<pre><code>## [1] 8</code></pre>
+<pre class="r"><code>log2 (2^8)  ## log and exponential cancel out - base 2</code></pre>
+<pre><code>## [1] 8</code></pre>
+</div>
+<div id="vectors" class="section level2">
+<h2><span class="header-section-number">3.3</span> Vectors</h2>
+<p>Single values are all well and good, but R has a number of ways to store multiple values in a single data structure. The simplest one of these is as a “vector” – simply a list of values of the same class. You create a vector by using the <code>c()</code> (concatenate) function:</p>
+<pre class="r"><code>my_vector &lt;- c(1,2,3,4,5) 
+my_vector</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<p>This is a very useful way of storing linked data together. You can access the individual elements of the vector by using square brackets (<code>[</code>) to take a subset of the data. The elements in the vector are numbered from 1 upwards, so to take the first and last values we do the following:</p>
+<pre class="r"><code>my_vector &lt;- c(10,20,30,40,50)
+my_vector[1]</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code>my_vector[5]</code></pre>
+<pre><code>## [1] 50</code></pre>
+<pre class="r"><code>my_vector[6]</code></pre>
+<pre><code>## [1] NA</code></pre>
+<p>As you can see, a value <code>NA</code> (Not Applicable) is returned if you try to take an element that does not exist. The subset can be as long as you like, as long as it’s not longer than the full set:</p>
+<pre class="r"><code>my_vector &lt;- c(10,20,30,40,50)
+my_vector[1:4]</code></pre>
+<pre><code>## [1] 10 20 30 40</code></pre>
+<p>Here, the <code>:</code> in the brackets simply means to take all of the numbers from 1 through to 4, so this returns the first 4 elements of the vector. For instance, this is a simple way to take the numbers from 1 to 20:</p>
+<pre class="r"><code>1:20</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<p>To drop elements from an array, you use the minus symbol:</p>
+<pre class="r"><code>my_vector &lt;- c(10,20,30,40,50) 
+my_vector[-1] </code></pre>
+<pre><code>## [1] 20 30 40 50</code></pre>
+<pre class="r"><code>my_vector[-length(my_vector)] </code></pre>
+<pre><code>## [1] 10 20 30 40</code></pre>
+<pre class="r"><code>my_vector[-c(1,3,5)]</code></pre>
+<pre><code>## [1] 20 40</code></pre>
+<p>Another way to generate a regular sequence in R is to use the <code>seq()</code> command. You supply the start number and the end number, and then either supply the parameter <code>by</code> to define the regular interval between values, or the parameter <code>length</code> to specify the total number of values to return between the start and end value:</p>
+<pre class="r"><code>seq(from = 1, to = 20, by = 1) # Returns the same as 1:20</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<pre class="r"><code>seq(from = 1, to = 20, by = 2) # Just the even numbers between 1 and 20 </code></pre>
+<pre><code>##  [1]  1  3  5  7  9 11 13 15 17 19</code></pre>
+<pre class="r"><code>seq(from = 1, to = 20, length = 10) # Slightly different to above</code></pre>
+<pre><code>##  [1]  1.000000  3.111111  5.222222  7.333333  9.444444 11.555556 13.666667
+##  [8] 15.777778 17.888889 20.000000</code></pre>
+<p>You can also use the <code>rep()</code> function to give a vector of the specified length containing repeated values:</p>
+<pre class="r"><code>rep(10, times = 5)      # Returns vector containing five copies of the number 10 </code></pre>
+<pre><code>## [1] 10 10 10 10 10</code></pre>
+<pre class="r"><code>rep(c(1,2,3), each = 5) # Returns five 1s, then five 2s, then five 3s</code></pre>
+<pre><code>##  [1] 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3</code></pre>
+<p>One of the most powerful features of R is the fact that arithmetic can be conducted on entire vectors rather than having to loop through all values in the vector. Vectorisation of calculations in this way can give huge improvements in performance. For instance, if you sum two vectors (of equal size), the result will be a vector where the i<sup>th</sup> entry is the sum of the i<sup>th</sup> entries from the input vectors:</p>
+<pre class="r"><code>x &lt;- c(2,3,2,4,5) 
+y &lt;- c(4,1,1,2,3) 
+x+y</code></pre>
+<pre><code>## [1] 6 4 3 6 8</code></pre>
+<pre class="r"><code>x*y</code></pre>
+<pre><code>## [1]  8  3  2  8 15</code></pre>
+</div>
+<div id="lists" class="section level2">
+<h2><span class="header-section-number">3.4</span> Lists</h2>
+<p>Another data structure that is very useful is the “list”. A list contains a number of things in a similar way to the vector, but the things that it contains can all be completely different classes. They can even be vectors and other lists (a list of lists):</p>
+<pre class="r"><code>my_list &lt;- list(12345, &quot;12345&quot;, c(1,2,3,4,5)) 
+my_list</code></pre>
+<pre><code>## [[1]]
+## [1] 12345
+## 
+## [[2]]
+## [1] &quot;12345&quot;
+## 
+## [[3]]
+## [1] 1 2 3 4 5</code></pre>
+<p>To subset a list, the syntax is slightly different and you use double square brackets:</p>
+<pre class="r"><code>my_list &lt;- list(12345, &quot;12345&quot;, c(1,2,3,4,5)) 
+my_list[[1]]</code></pre>
+<pre><code>## [1] 12345</code></pre>
+<pre class="r"><code>my_list[[3]]</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<p>If your list contains lists or vectors, you can subset these as well by using multiple sets of square brackets:</p>
+<pre class="r"><code>my_list &lt;- list(12345, &quot;12345&quot;, c(1,2,3,4,5)) 
+my_list[[3]][5]</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p>Can you see the difference between subsetting using <code>[[</code> and using <code>[</code>?</p>
+<pre class="r"><code>my_list &lt;- list(12345, &quot;12345&quot;, c(1,2,3,4,5)) 
+my_list[[3]]  ## Returns a vector</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>my_list[3]    ## Returns a list</code></pre>
+<pre><code>## [[1]]
+## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>my_list[3][5] ## Not defined!</code></pre>
+<pre><code>## [[1]]
+## NULL</code></pre>
+<p>You can give names to the values in a vector or in a list by using the <code>names()</code> function to make it easier to follow what the values are:</p>
+<pre class="r"><code>my_vector        &lt;- c(1:5)
+names(my_vector) &lt;- c(&quot;length&quot;, &quot;width&quot;, &quot;height&quot;, &quot;weight&quot;, &quot;age&quot;)</code></pre>
+<p>You can use these names instead of the reference number to subset lists and vectors:</p>
+<pre class="r"><code>my_vector        &lt;- c(1:5)
+names(my_vector) &lt;- c(&quot;length&quot;, &quot;width&quot;, &quot;height&quot;, &quot;weight&quot;, &quot;age&quot;) 
+my_vector[&quot;age&quot;]</code></pre>
+<pre><code>## age 
+##   5</code></pre>
+<p>The number of values in a vector or list can be found by using the <code>length()</code> function:</p>
+<pre class="r"><code>my_vector &lt;- 1:5 
+length(my_vector)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p>We can also sort the data simply using the <code>sort()</code> function. If we want to get the indeces of the sorted vector (for instance to order a second vector based on the values in the first), we can use the <code>order()</code> function:</p>
+<pre class="r"><code>## Some values and their corresponding names
+my_vals  &lt;- c( 0.2, 1.7, 0.5, 3.4, 2.7 ) 
+my_names &lt;- c(&quot;val1&quot;, &quot;val2&quot;, &quot;val3&quot;, &quot;val4&quot;, &quot;val5&quot;)
+
+## Sort the data
+my_sorted &lt;- sort(my_vals)  ## Returns the values in sorted order 
+my_order  &lt;- order(my_vals) ## Returns the indeces of the sorted values
+
+## What is the difference between the two?
+my_sorted </code></pre>
+<pre><code>## [1] 0.2 0.5 1.7 2.7 3.4</code></pre>
+<pre class="r"><code>my_order</code></pre>
+<pre><code>## [1] 1 3 2 5 4</code></pre>
+<pre class="r"><code>## Get the sorted value names
+sort(my_names)     ## This won&#39;t work as this will order names alphabetically </code></pre>
+<pre><code>## [1] &quot;val1&quot; &quot;val2&quot; &quot;val3&quot; &quot;val4&quot; &quot;val5&quot;</code></pre>
+<pre class="r"><code>my_names[my_order] ## This gives us the order based on the values themselves</code></pre>
+<pre><code>## [1] &quot;val1&quot; &quot;val3&quot; &quot;val2&quot; &quot;val5&quot; &quot;val4&quot;</code></pre>
+<p>By default the sort functions sort from lowest to highest. You can sort in decreasing by order by using the decreasing parameter:</p>
+<pre class="r"><code>sort(my_vals , decreasing = TRUE)</code></pre>
+<pre><code>## [1] 3.4 2.7 1.7 0.5 0.2</code></pre>
+</div>
+<div id="matrices" class="section level2">
+<h2><span class="header-section-number">3.5</span> Matrices</h2>
+<p>Another data format is a “matrix”&quot; (also known as an “array” in R). This is simply a table of values, and can be thought of as a multidimensional vector. To access specific values in the matrix, you again use the square bracket accessor function, but this time must specify both the row (first value) and column (second value):</p>
+<pre class="r"><code>my_matrix &lt;- matrix(1:20, nrow = 5, ncol = 4) 
+my_matrix</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    6   11   16
+## [2,]    2    7   12   17
+## [3,]    3    8   13   18
+## [4,]    4    9   14   19
+## [5,]    5   10   15   20</code></pre>
+<pre class="r"><code>my_matrix[3,4] &lt;- 99999
+my_matrix</code></pre>
+<pre><code>##      [,1] [,2] [,3]  [,4]
+## [1,]    1    6   11    16
+## [2,]    2    7   12    17
+## [3,]    3    8   13 99999
+## [4,]    4    9   14    19
+## [5,]    5   10   15    20</code></pre>
+<p>By default, the values are added to the matrix in a column-wise fashion (from top to bottom for column 1, then the same for column 2, etc.). To fill the matrix in a row-wise fashion, use the byrow parameter:</p>
+<pre class="r"><code>my_matrix &lt;- matrix(1:20, nrow = 5, ncol = 4, byrow = TRUE)</code></pre>
+<p>You can also use the square bracket accessor function to extract subsets of the matrix:</p>
+<pre class="r"><code>my_matrix &lt;- matrix(1:20, nrow = 5, ncol = 4) 
+my_matrix</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    6   11   16
+## [2,]    2    7   12   17
+## [3,]    3    8   13   18
+## [4,]    4    9   14   19
+## [5,]    5   10   15   20</code></pre>
+<pre class="r"><code>sub_matrix &lt;- my_matrix[1:2, 3:4]
+sub_matrix</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]   11   16
+## [2,]   12   17</code></pre>
+<p>The <code>cbind()</code> (column bind) and <code>rbind()</code> (row bind) functions can also be used to concatenate vectors together by row or by column to give a matrix:</p>
+<pre class="r"><code>cbind(c(1,2,3), c(4,5,6), c(7,8,9)) </code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9</code></pre>
+<pre class="r"><code>rbind(c(1,2,3), c(4,5,6), c(7,8,9)) </code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9</code></pre>
+<p>You can change the names of both the rows and the columns by using the <code>rownames()</code> and <code>colnames()</code> functions:</p>
+<pre class="r"><code>my_matrix           &lt;- matrix(1:20, nrow = 5, ncol = 4) 
+rownames(my_matrix) &lt;- c(&quot;row1&quot;, &quot;row2&quot;, &quot;row3&quot;, &quot;row4&quot;, &quot;row5&quot;) 
+colnames(my_matrix) &lt;- c(&quot;col1&quot;, &quot;col2&quot;, &quot;col3&quot;, &quot;col4&quot;) 
+my_matrix</code></pre>
+<pre><code>##      col1 col2 col3 col4
+## row1    1    6   11   16
+## row2    2    7   12   17
+## row3    3    8   13   18
+## row4    4    9   14   19
+## row5    5   10   15   20</code></pre>
+<p>The dimensions of the matrix can be found by using the <code>dim()</code> function, which gives the number of rows (first value) and the number of columns (second value) of the matrix. You can access the number of rows or columns directly by using the <code>nrows()</code> or <code>ncols()</code> functions respectively:</p>
+<pre class="r"><code>my_matrix &lt;- matrix(1:20, nrow = 5, ncol = 4) 
+dim(my_matrix)</code></pre>
+<pre><code>## [1] 5 4</code></pre>
+<pre class="r"><code>nrow(my_matrix)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>ncol(my_matrix)</code></pre>
+<pre><code>## [1] 4</code></pre>
+</div>
+<div id="functions" class="section level2">
+<h2><span class="header-section-number">3.6</span> Functions</h2>
+<p>R also uses functions (also known as methods, subroutines, and procedures) which simply take in one or more values, do something to them, and return a result. A simple example is the <code>sum()</code> function, which takes in two or more values in the form of a vector, and returns the sum of all of the values:</p>
+<pre class="r"><code>my_vector &lt;- 1:5
+sum(my_vector) </code></pre>
+<pre><code>## [1] 15</code></pre>
+<p>In this example, the <code>sum()</code> function takes only one variable (in this case a numeric vector). Sometimes functions take more than one variable (also known as “arguments”). These are named values that must be specified for the function to run. For example, the <code>cor()</code> function returns the correlation between two vectors. This requires several variables to be supplied – two vectors, <code>x</code> and <code>y</code>, of equal length – and you can also supply a number of additional arguments to control how the function works, including the <code>method</code> argument, which lets you specify which method to use to calculate the correlation:</p>
+<pre class="r"><code>sample1 &lt;- c(0.9, 1.2, 8.9, -0.3, 6.4)
+sample2 &lt;- c(0.6, 1.3, 9.0, -0.5, 6.2)
+cor(sample1, sample2 , method = &quot;pearson&quot;)</code></pre>
+<pre><code>## [1] 0.9991263</code></pre>
+<pre class="r"><code>cor(sample1, sample2 , method = &quot;spearman&quot;)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p>Note that we gave a name to the third argument (“method”), but not the first two. If you do not name arguments, they will be taken and assigned to the arguments in the order in which they are input. The first two arguments required by the function are <code>x</code> and <code>y</code> – the two vectors to compare. So there is no problem with not naming these (although you could, if you wanted to, say <code>x=sample1, y=sample2</code>). Any arguments not submitted will use their default value. For instance, the Pearson correlation is the default for <code>method</code>, so you could get this by simply typing:</p>
+<pre class="r"><code>pearson_cor &lt;- cor(sample1 , sample2)</code></pre>
+<p>However, there is another argument for <code>cor()</code>, <code>use</code>, for which we are happy to use the default value before we get to <code>method</code>. We therefore need to name <code>method</code> to make sure that “pearson”&quot; is not assigned to the <code>use</code> argument in the function. It is always safer to name the arguments if you are unsure of the order. You can check the arguments using the <code>args()</code> function:</p>
+<pre class="r"><code>args(cor)</code></pre>
+<pre><code>## function (x, y = NULL, use = &quot;everything&quot;, method = c(&quot;pearson&quot;, 
+##     &quot;kendall&quot;, &quot;spearman&quot;)) 
+## NULL</code></pre>
+<p>If you want to find out what a function does, there is a lot of very helpful documentation available in R. To see the documentation for a specific function, use the <code>help()</code> function. If you want to try and find a function, you can search using a keyword by using the <code>help.search()</code> function:</p>
+<pre class="r"><code>help(cor)
+?cor # Alternative for help() 
+help.search(&quot;correlation&quot;)
+??correlation # Alternative for help.search()</code></pre>
+</div>
+<div id="printing" class="section level2">
+<h2><span class="header-section-number">3.7</span> Printing</h2>
+<p><code>print()</code> can be used to print whatever is stored in the variable the function is called on. Print is what is known as an “overloaded”&quot; function, which means that there are many functions named <code>print()</code>, each written to deal with a variable of a different class. The correct one is used based on the variable that you supply. So calling <code>print()</code> on a numeric variable will print the value stored in the variable. Calling it on a vector prints all of the values stored in the vector. Calling it on a list will print the contents of the list split into an easily identifiable way. There are also many more classes in R for which print is defined, but there are too many to describe here:</p>
+<pre class="r"><code>x &lt;- 1
+print (x)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>y &lt;- 1:5
+print (y)</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>z &lt;- list(val1 = 1:5, val2 = 6:10)
+print (z)</code></pre>
+<pre><code>## $val1
+## [1] 1 2 3 4 5
+## 
+## $val2
+## [1]  6  7  8  9 10</code></pre>
+<p>If you notice, using <code>print()</code> is the default when you just call the variable itself:</p>
+<pre class="r"><code>z &lt;- list(val1 = 1:5, val2 = 6:10) 
+print (z)</code></pre>
+<pre><code>## $val1
+## [1] 1 2 3 4 5
+## 
+## $val2
+## [1]  6  7  8  9 10</code></pre>
+<pre class="r"><code>z</code></pre>
+<pre><code>## $val1
+## [1] 1 2 3 4 5
+## 
+## $val2
+## [1]  6  7  8  9 10</code></pre>
+<p><code>cat()</code> is similar to print in that the results of calling it are that text is printed to the console. The main use for <code>cat()</code> is to con<strong>CAT</strong>enate two or more variables together and instantly print them to the console. The additional argument <code>sep</code> specifies the character to use to separate the different variables:</p>
+<pre class="r"><code>cat(&quot;hello&quot;, &quot;world&quot;, sep = &quot; &quot;) </code></pre>
+<pre><code>## hello world</code></pre>
+<pre class="r"><code>x &lt;- 1:5
+y &lt;- &quot;bottles of beer&quot;
+cat(x, y, sep = &quot;\t&quot;)</code></pre>
+<pre><code>## 1    2   3   4   5   bottles of beer</code></pre>
+<p><code>\t</code> is a special printing character that you can use with the <code>cat()</code> function that prints a tab character. Another similar special character that you may need to use is <code>\n</code> which prints a new line.</p>
+<p>Another similar function is the <code>paste()</code> function, which also concatenates multiple values together. The differences between this and <code>cat()</code> are that the results of <code>paste()</code> can be saved to a different variable which requires a call to <code>print()</code> to see the results, and <code>paste()</code> can be used to concatenate individual elements of a vector by using the additional <code>collapse</code> argument:</p>
+<pre class="r"><code>print(paste(&quot;hello&quot;, &quot;world&quot;, sep = &quot;\t&quot;))</code></pre>
+<pre><code>## [1] &quot;hello\tworld&quot;</code></pre>
+<pre class="r"><code>print(paste(&quot;sample&quot;, 1:5, sep=&quot;_&quot;)) # Returns a vector of values</code></pre>
+<pre><code>## [1] &quot;sample_1&quot; &quot;sample_2&quot; &quot;sample_3&quot; &quot;sample_4&quot; &quot;sample_5&quot;</code></pre>
+<pre class="r"><code>print(paste(&quot;sample&quot;, 1:5, sep=&quot;_&quot;, collapse=&quot;\n&quot;)) # Prints values separated by new lines</code></pre>
+<pre><code>## [1] &quot;sample_1\nsample_2\nsample_3\nsample_4\nsample_5&quot;</code></pre>
+<p>Do you notice the difference between <code>print()</code> and <code>cat()</code>? While <code>print()</code> prints the <code>\t</code> character as is, <code>cat()</code> prints the actual tab space. This is a process known as “interpolation”. In many programming languages, using double quotes in strings results in special characters being interpolated, whilst single quotes will print as is. However, in R the two can be used relatively interchangeably.</p>
+<p>There are also other characters, such as <code>'</code>, <code>&quot;</code>, <code>/</code> and <code>\</code>, which may require “escaping” with a backslash to avoid R interpreting the character in a different context. For instance, if you have a string containing an apostrophe within a string defined using apostrophes, the string will be interpreted as terminating earlier, and the code will not do what you expect:</p>
+<pre class="r"><code>cat(&#39;It&#39;s very annoying when this happens...&#39;)</code></pre>
+<pre><code>## Error: &lt;text&gt;:1:9: unexpected symbol
+## 1: cat(&#39;It&#39;s
+##             ^</code></pre>
+<p>Here, the string submitted to <code>cat()</code> is actual “It” rather than the intended “It’s very annoying when this happens…”. The function will not know what to do about the remainder of the string, so an error will occur. However, by escaping the apostrophe, the string will be interpreted correctly:</p>
+<pre class="r"><code>cat(&#39;It\&#39;s easily fixed though!&#39;)</code></pre>
+<pre><code>## It&#39;s easily fixed though!</code></pre>
+<p>Another alternative is to use double apostrophes as the delimiter, which will avoid the single apostrophe being misinterpreted:</p>
+<pre class="r"><code>cat(&quot;It&#39;s easily fixed though!&quot;)</code></pre>
+<pre><code>## It&#39;s easily fixed though!</code></pre>
+<p>One function that gives you slightly more control over the formatting of your data is the <code>sprintf()</code> function. This function allows you to specify things like the width in which to print each variable, which is useful for arranging output in a table format (note that you need to use <code>cat()</code> to actual print to the screen):</p>
+<pre class="r"><code>cat(sprintf(&quot;%10s\t%5s\n&quot;, &quot;Hello&quot;, &quot;World&quot;), 
+    sprintf(&quot;%10s\t%5s\n&quot;, &quot;Helloooooo&quot;, &quot;World&quot;))</code></pre>
+<pre><code>##      Hello   World
+##  Helloooooo  World</code></pre>
+<p>The <code>sprintf()</code> function takes as input a string telling R how you want your inputs to be formatted, followed by a list of the inputs. Within the formatting string, placeholders of the form <code>%10s</code> are replaced by the given inputs, with the first being replaced by the first argument in the list, and so on (so the number of additional arguments to <code>sprintf</code> must match the number of placeholders). The number in the placeholder defines the width to allocate for printing that argument (positive is right aligned, negative is left aligned), decimal numbers in the placeholder define precision of floating point numbers, and the letter defines the type of argument to print (e.g. <code>s</code> for string, <code>i</code> for integer, <code>f</code> for fixed point decimal, <code>e</code> for exponential decimal). Note that special characters are interpolated by <code>cat()</code> as before. Here are some examples:</p>
+<pre class="r"><code>cat(sprintf(&quot;%20s\n&quot;, &quot;Hello&quot;)) </code></pre>
+<pre><code>##                Hello</code></pre>
+<pre class="r"><code>cat(sprintf(&quot;%-20s\n&quot;, &quot;Hello&quot;)) </code></pre>
+<pre><code>## Hello</code></pre>
+<pre class="r"><code>cat(sprintf(&quot;%10i\n&quot;, 12345)) </code></pre>
+<pre><code>##      12345</code></pre>
+<pre class="r"><code>cat(sprintf(&quot;%10f\n&quot;, 12.345)) </code></pre>
+<pre><code>##  12.345000</code></pre>
+<pre class="r"><code>cat(sprintf(&quot;%10e\n&quot;, 12.345)) </code></pre>
+<pre><code>## 1.234500e+01</code></pre>
+</div>
+</div>
+<div id="installing-packages" class="section level1">
+<h1><span class="header-section-number">4</span> Installing Packages</h1>
+<p>The main R package contains a large number of commonly used functions. There are also additional functions available in other “packages” that you can get hold of from the Comprehensive R Archive Network, or <a href="https://cran.r-project.org">CRAN</a>. To load in a package, first download and install the package from CRAN using the <code>install.packages()</code> function (if it is not already downloaded), and then use the “library” command to make the libraries available to your current R session:</p>
+<pre class="r"><code>?xtable </code></pre>
+<pre><code>## No documentation for &#39;xtable&#39; in specified packages and libraries:
+## you could try &#39;??xtable&#39;</code></pre>
+<pre class="r"><code>install.packages(&quot;xtable&quot;)</code></pre>
+<pre><code>## Installing package into &#39;/Users/bioinfo/Library/R/3.4/library&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## Error in contrib.url(repos, &quot;source&quot;): trying to use CRAN without setting a mirror</code></pre>
+<pre class="r"><code>library(&quot;xtable&quot;) 
+?xtable</code></pre>
+<p>The function <code>xtable()</code> is not available in the R environment until you have loaded the package. Only the most commonly used functions are made available in the R environment by default (for example the package “stats” is loaded by default, which contains all commonly used statistical fuctions). There are also a number of commonly used packages that are part of the R installation, but which are not automatically loaded when you start a new R session. There are also thousands of additional packages available, some written by users, which can perform most of the things that you would ever want to do. Chances are, if you want to do something it’s already available from somewhere. Don’t re-invent the wheel if you can help it.</p>
+<p>Since R is so useful for analysing biological data, the <code>bioconductor</code> project was set up to bring together packages used for the analysis of high-throughput data (it started with microarrays, but now there are packages available for analysis of sequencing data). Bioconductor packages can be downloaded from <a href="http://www.bioconductor.org">bioconductor.org</a>. However, there is also a simple way to install bioconductor packages directly from within R:</p>
+<pre class="r"><code>source(&quot;http://bioconductor.org/biocLite.R&quot;) # Load the biocLite() script 
+biocLite() # Installs the basic packages required to use bioconductor 
+biocLite(&quot;DESeq&quot;) # Installs a specific bioconductor package</code></pre>
+</div>
+<div id="data-frames" class="section level1">
+<h1><span class="header-section-number">5</span> Data Frames</h1>
+<p>Data frames are the most powerful data types in R. They look similar to matrices, but the data structure is actually more similar to a list of vectors (all of the same length). The simplest way to think of them is as being similar to spreadsheets in Excel.</p>
+<p>You can create data frames either in a similar way to how you create a list, or also by converting a matrix object:</p>
+<pre class="r"><code>data.frame(val1 = c(1:3), val2 = c(4:6), val3 = c(7:9), val4 = c(10:12)) </code></pre>
+<pre><code>##   val1 val2 val3 val4
+## 1    1    4    7   10
+## 2    2    5    8   11
+## 3    3    6    9   12</code></pre>
+<pre class="r"><code>as.data.frame(matrix(1:12, nrow = 3, ncol = 4))</code></pre>
+<pre><code>##   V1 V2 V3 V4
+## 1  1  4  7 10
+## 2  2  5  8 11
+## 3  3  6  9 12</code></pre>
+<p>Notice how, in the second data frame, no column names are specified so R sets the defaults as <code>V1</code>, <code>V2</code>, <code>V3</code>, etc. Whilst data frames do have row names, it is the column names that are the most important. As with lists, these can be changed by using the <code>names()</code> command:</p>
+<pre class="r"><code>my_df        &lt;- as.data.frame(matrix(1:12, nrow = 3, ncol = 4)) 
+names(my_df) &lt;- c(&quot;val1&quot;, &quot;val2&quot;, &quot;val3&quot;, &quot;val4&quot;)
+my_df</code></pre>
+<pre><code>##   val1 val2 val3 val4
+## 1    1    4    7   10
+## 2    2    5    8   11
+## 3    3    6    9   12</code></pre>
+<p>You access the elements of a data frame either using single square bracket notation in the same way as for a matrix, or you can access the individual columns using double square bracket notation in the same way as for lists. You can also access the individual columns by using the special <code>$</code> operator which is specifically used for data frames:</p>
+<pre class="r"><code>my_df &lt;- as.data.frame(matrix(1:12, nrow = 3, ncol = 4)) 
+names(my_df) &lt;- c(&quot;val1&quot;, &quot;val2&quot;, &quot;val3&quot;, &quot;val4&quot;)
+my_df</code></pre>
+<pre><code>##   val1 val2 val3 val4
+## 1    1    4    7   10
+## 2    2    5    8   11
+## 3    3    6    9   12</code></pre>
+<pre class="r"><code>sub_df &lt;- my_df[1:2, 3:4]
+sub_df</code></pre>
+<pre><code>##   val3 val4
+## 1    7   10
+## 2    8   11</code></pre>
+<pre class="r"><code>val1 &lt;- my_df[[1]]
+val1</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<pre class="r"><code>val2 &lt;- my_df[[&quot;val2&quot;]] 
+val2</code></pre>
+<pre><code>## [1] 4 5 6</code></pre>
+<pre class="r"><code>val3 &lt;- my_df$val3
+val3</code></pre>
+<pre><code>## [1] 7 8 9</code></pre>
+<p>The beauty of data frames is that the data frame columns can be dealt with as if they were individual variables. For this reason, the column names must be suitable variable names (i.e. alphanumeric and not starting with a number) and must be unique. If you attach a data frame, you can access the columns as if they were variables:</p>
+<pre class="r"><code>my_df &lt;- data.frame(val1 = c(1:3), val2 = c(4:6), val3 = c(7:9), val4 = c(10:12))
+attach(my_df)</code></pre>
+<pre><code>## The following objects are masked _by_ .GlobalEnv:
+## 
+##     val1, val2, val3</code></pre>
+<pre class="r"><code>my_df</code></pre>
+<pre><code>##   val1 val2 val3 val4
+## 1    1    4    7   10
+## 2    2    5    8   11
+## 3    3    6    9   12</code></pre>
+<pre class="r"><code>val1 + 1000 </code></pre>
+<pre><code>## [1] 1001 1002 1003</code></pre>
+<pre class="r"><code>detach(my_df)</code></pre>
+<p>As a slight aside, I dislike using the attach/detach approach to accessing elements of a data frame, as it can make it difficult when reading through your code to tell which variable is being accessed. For instance, if you have a variable named <code>myname</code>, and a data frame with a column <code>myname</code>, then using <code>df$myname</code> in your code makes it much clearer where you are accessing your data from than simply using <code>myname</code>.</p>
+<p>Notice that to make changes to the data frame itself, we need to use the <code>$</code> accessor function (or double square brackets), otherwise a new variable <code>val1</code> will be created. Data frames should be set up in such a way that every row represents an independent observation, and the columns represent the independent variables that you may be interested in. For instance, if you have taken a measurement of say the weight of each sample in triplicate, you would not represent the data like this:</p>
+<table>
+<thead>
+<tr class="header">
+<th>SampleName</th>
+<th>Weight1</th>
+<th>Weight2</th>
+<th>Weight3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sample1</td>
+<td>67.1</td>
+<td>67.3</td>
+<td>66.8</td>
+</tr>
+<tr class="even">
+<td>Sample2</td>
+<td>80.3</td>
+<td>79.8</td>
+<td>79.5</td>
+</tr>
+</tbody>
+</table>
+<p>But instead you would ensure that the two independent variables (weight and replicate number) were in their own columns:</p>
+<table>
+<thead>
+<tr class="header">
+<th>SampleName</th>
+<th>Replicate</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sample1</td>
+<td>1</td>
+<td>67.1</td>
+</tr>
+<tr class="even">
+<td>Sample1</td>
+<td>2</td>
+<td>67.3</td>
+</tr>
+<tr class="odd">
+<td>Sample1</td>
+<td>3</td>
+<td>66.8</td>
+</tr>
+<tr class="even">
+<td>Sample2</td>
+<td>1</td>
+<td>80.3</td>
+</tr>
+<tr class="odd">
+<td>Sample2</td>
+<td>2</td>
+<td>79.8</td>
+</tr>
+<tr class="even">
+<td>Sample2</td>
+<td>3</td>
+<td>79.5</td>
+</tr>
+</tbody>
+</table>
+<p>Now all of the weights are in a single column that can be analysed.</p>
+<p>Subsetting a data frame is also very powerful. The subset command allows you to look for the rows of a data frame that fit certain criteria. For instance, to pull out the genes that show more than 2-fold expression and a p-value less than 0.05, you would do the following:</p>
+<pre class="r"><code>gene_exp &lt;- data.frame(geneName   = paste(&quot;gene&quot;, 1:10, sep = &quot;&quot;), 
+                       foldChange = rnorm(10, mean = 2, sd = 1),
+                       pVal       = rnorm(10, mean = 0.05, sd = 0.05)) 
+signif_genes &lt;- subset(gene_exp, foldChange &gt; 2 &amp; pVal &lt;= 0.05)
+signif_genes</code></pre>
+<pre><code>##   geneName foldChange       pVal
+## 3    gene3   2.363630 0.02712110
+## 7    gene7   4.688288 0.04438911</code></pre>
+<p>Notice here that we use a single <code>&amp;</code> rather than the double <code>&amp;&amp;</code> that we used earlier. This is because we are doing a vector-based logical test (that is performing the test on each element of the vector to get a vector of logical values at the end). It is very easy to forget this and accidentally use the <code>&amp;&amp;</code>, which will not give you what you want:</p>
+<pre class="r"><code>fake_signif_genes &lt;- subset(gene_exp, foldChange &gt; 2 &amp;&amp; pVal &lt;= 0.05) 
+fake_signif_genes</code></pre>
+<pre><code>## [1] geneName   foldChange pVal      
+## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<p>Another form of data that comes in very handy, particularly with data frames, is the “factor”. Factors are a way of dealing with categorical data, and simply encode the possible levels with numberic dummy values 0, 1, 2, etc. (which are used in modelling procedures such as ANOVA):</p>
+<pre class="r"><code>my_vector &lt;- c(&quot;apples&quot;, &quot;pears&quot;, &quot;apples&quot;, &quot;oranges&quot;, &quot;pears&quot;) 
+my_vector</code></pre>
+<pre><code>## [1] &quot;apples&quot;  &quot;pears&quot;   &quot;apples&quot;  &quot;oranges&quot; &quot;pears&quot;</code></pre>
+<pre class="r"><code>my_factor &lt;- as.factor(my_vector)
+my_factor</code></pre>
+<pre><code>## [1] apples  pears   apples  oranges pears  
+## Levels: apples oranges pears</code></pre>
+<pre class="r"><code>levels(my_factor)</code></pre>
+<pre><code>## [1] &quot;apples&quot;  &quot;oranges&quot; &quot;pears&quot;</code></pre>
+<p>Since data frames can hold data of different classes within its columns (a data frame is essentially a glorified list), it is very important to ensure that each column is assigned the correct class so that R functions that you use later do the correct thing with the data. For instance, R will automatically convert character entries to factors with all possible values as the factor levels. You can quickly see the class of all of your columns by using the <code>str()</code> function:</p>
+<pre class="r"><code>str(gene_exp)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    10 obs. of  3 variables:
+##  $ geneName  : Factor w/ 10 levels &quot;gene1&quot;,&quot;gene10&quot;,..: 1 3 4 5 6 7 8 9 10 2
+##  $ foldChange: num  2.535 2.286 2.364 0.659 1.901 ...
+##  $ pVal      : num  0.13467 0.09694 0.02712 0.00657 -0.09457 ...</code></pre>
+<p>Whilst factors are incredibly useful in modelling and plotting, they may not necessarily be exactly what you want. For instance, in this case the column <code>geneName</code> has been converted into a factor, with levels <code>gene1</code>, …, <code>gene10</code>. If we try and add in a new gene, <code>gene11</code>, this will not work as all entries of a factor must be one of the specified levels:</p>
+<pre class="r"><code>gene_exp_plus &lt;- rbind(gene_exp, c(&quot;gene11&quot;, 1.789, 0.0034))</code></pre>
+<pre><code>## Warning in `[&lt;-.factor`(`*tmp*`, ri, value = &quot;gene11&quot;): invalid factor
+## level, NA generated</code></pre>
+<pre class="r"><code>gene_exp_plus</code></pre>
+<pre><code>##    geneName         foldChange                pVal
+## 1     gene1   2.53536522591198    0.13467073075964
+## 2     gene2   2.28584584916299  0.0969404403094254
+## 3     gene3   2.36362956028698  0.0271211016242295
+## 4     gene4  0.659409613716879 0.00657248210081855
+## 5     gene5   1.90110329773266 -0.0945712076460033
+## 6     gene6   2.47232286368533  0.0641570545857412
+## 7     gene7   4.68828816252328   0.044389109295093
+## 8     gene8 -0.744361383000185  0.0424430410893599
+## 9     gene9   1.69141641796611   0.022308245868645
+## 10   gene10 -0.463321170625568   0.117198506690082
+## 11     &lt;NA&gt;              1.789              0.0034</code></pre>
+<p>Instead we would be better off treating <code>geneName</code> as a character vector, since we are unlikely to treat it as a categorical variable in later model fitting analyses.</p>
+</div>
+<div id="reading-and-writing-data" class="section level1">
+<h1><span class="header-section-number">6</span> Reading and Writing Data</h1>
+<p>Reading and writing data in R is quite simple, and is most easily done by using pure text files. Functions exist for reading other formats as well (e.g. Excel tables), but for now we will concentrate on raw text. There are some very basic example files available from <a href="../RTutorial_files/">here</a>.</p>
+<p>Unless you give the complete path for a file, R will look in it’s current working directory for any files that you want to load in. By default, R will use your system’s home directory, but you can set this by using the setwd() function. You can check that the correct working directory is set by using the getwd() function:</p>
+<pre class="r"><code>setwd(&quot;RTutorial_files/&quot;) 
+getwd ()</code></pre>
+<p>If you have a list of data in a file (e.g. a list of gene names separated by new lines), then the simplest method to use is <code>scan()</code>. You must tell <code>scan()</code> where to find the data file (either the full path, or a relative path from the current working directory), as well as the format that the data should be read in as (generally either “character” or “numeric”):</p>
+<pre class="r"><code>my_file &lt;- &quot;RTutorial_files/gene_list.txt&quot;
+gene_list &lt;- scan(my_file, what = &quot;character&quot;, sep = &quot;\n&quot;) 
+gene_list</code></pre>
+<pre><code>##  [1] &quot;gene1&quot;  &quot;gene2&quot;  &quot;gene3&quot;  &quot;gene4&quot;  &quot;gene5&quot;  &quot;gene6&quot;  &quot;gene7&quot; 
+##  [8] &quot;gene8&quot;  &quot;gene9&quot;  &quot;gene10&quot; &quot;gene11&quot; &quot;gene12&quot; &quot;gene13&quot; &quot;gene14&quot;
+## [15] &quot;gene15&quot; &quot;gene16&quot; &quot;gene17&quot; &quot;gene18&quot; &quot;gene19&quot; &quot;gene20&quot; &quot;gene21&quot;
+## [22] &quot;gene22&quot; &quot;gene23&quot; &quot;gene24&quot; &quot;gene25&quot; &quot;gene26&quot; &quot;gene27&quot; &quot;gene28&quot;
+## [29] &quot;gene29&quot; &quot;gene30&quot; &quot;gene31&quot; &quot;gene32&quot; &quot;gene33&quot; &quot;gene34&quot; &quot;gene35&quot;
+## [36] &quot;gene36&quot; &quot;gene37&quot; &quot;gene38&quot; &quot;gene39&quot; &quot;gene40&quot; &quot;gene41&quot; &quot;gene42&quot;
+## [43] &quot;gene43&quot; &quot;gene44&quot; &quot;gene45&quot; &quot;gene46&quot; &quot;gene47&quot; &quot;gene48&quot; &quot;gene49&quot;
+## [50] &quot;gene50&quot;</code></pre>
+<p>For tables (for instance tab-delimited files saved from Excel), the easiest way is to use the <code>read.table()</code> function. This works by using <code>scan()</code> to read in each line from the table, then splitting the line by the specified delimiter. It is easier (or at least you are less prone to mistakes) to read such files when there are no empty cells, so try to fill empty data with a missing data character, such as <code>NA</code> (the default):</p>
+<pre class="r"><code>str(read.table(&quot;RTutorial_files/sample_annotation.txt&quot;, header = TRUE, sep = &quot;\t&quot;))</code></pre>
+<pre><code>## &#39;data.frame&#39;:    6 obs. of  4 variables:
+##  $ SampleName: Factor w/ 6 levels &quot;sample1&quot;,&quot;sample2&quot;,..: 1 2 3 4 5 6
+##  $ Treatment : Factor w/ 2 levels &quot;Control&quot;,&quot;Drug&quot;: 1 1 1 2 2 2
+##  $ Replicate : int  1 2 3 1 2 3
+##  $ CellType  : Factor w/ 1 level &quot;HeLa&quot;: 1 1 1 1 1 1</code></pre>
+<p>There are lots of additional arguments to the <code>read.table()</code> function; <code>header</code> is a boolean value that says whether or not the first row should be used to name the columns of the data frame, <code>sep</code> gives the delimiter between column entries (e.g. <code>\t</code> for tab-delimited files, or <code>,</code> for comma-separated files), <code>skip</code> tells R to skip the first <code>n</code> rows of the input, and <code>nrow</code> tells R to only load the first <code>n</code> rows that it sees:</p>
+<pre class="r"><code>str(read.table(&quot;RTutorial_files/sample_annotation.txt&quot;, header = TRUE, sep = &quot;\t&quot;, nrow = 2))</code></pre>
+<pre><code>## &#39;data.frame&#39;:    2 obs. of  4 variables:
+##  $ SampleName: Factor w/ 2 levels &quot;sample1&quot;,&quot;sample2&quot;: 1 2
+##  $ Treatment : Factor w/ 1 level &quot;Control&quot;: 1 1
+##  $ Replicate : int  1 2
+##  $ CellType  : Factor w/ 1 level &quot;HeLa&quot;: 1 1</code></pre>
+<pre class="r"><code>str(read.table(&quot;RTutorial_files/sample_annotation.txt&quot;, header = FALSE, sep = &quot;\t&quot;))</code></pre>
+<pre><code>## &#39;data.frame&#39;:    7 obs. of  4 variables:
+##  $ V1: Factor w/ 7 levels &quot;sample1&quot;,&quot;sample2&quot;,..: 7 1 2 3 4 5 6
+##  $ V2: Factor w/ 3 levels &quot;Control&quot;,&quot;Drug&quot;,..: 3 1 1 1 2 2 2
+##  $ V3: Factor w/ 4 levels &quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;Replicate&quot;: 4 1 2 3 1 2 3
+##  $ V4: Factor w/ 2 levels &quot;CellType&quot;,&quot;HeLa&quot;: 1 2 2 2 2 2 2</code></pre>
+<p>Notice that when the header is not used, the numeric column <code>Replicate</code> is now interpreted in the same way as the character columns, because now the first entry is non-numeric. By default, <code>read.table()</code> converts character columns into factors, which can be avoided by setting the <code>stringsAsFactors</code> argument to <code>FALSE</code>:</p>
+<pre class="r"><code>str(read.table(&quot;RTutorial_files/sample_annotation.txt&quot;, header = TRUE, sep = &quot;\t&quot;, stringsAsFactors = FALSE))</code></pre>
+<pre><code>## &#39;data.frame&#39;:    6 obs. of  4 variables:
+##  $ SampleName: chr  &quot;sample1&quot; &quot;sample2&quot; &quot;sample3&quot; &quot;sample4&quot; ...
+##  $ Treatment : chr  &quot;Control&quot; &quot;Control&quot; &quot;Control&quot; &quot;Drug&quot; ...
+##  $ Replicate : int  1 2 3 1 2 3
+##  $ CellType  : chr  &quot;HeLa&quot; &quot;HeLa&quot; &quot;HeLa&quot; &quot;HeLa&quot; ...</code></pre>
+</div>
+<div id="control-sequences" class="section level1">
+<h1><span class="header-section-number">7</span> Control Sequences</h1>
+<p>One of the most useful things to be able to do with computers is to repeat the same command multiple times without having to do it by hand each time. For this, control sequences can be used to give you close control over the progress of your program.</p>
+<div id="if-else" class="section level2">
+<h2><span class="header-section-number">7.1</span> IF ELSE</h2>
+<p>The first control sequence to look at is the “if else” command, which acts as a switch to run one of a selection of possible commands given a switch that you specify. For instance, you may want to do something different depending on whether a value is odd or even:</p>
+<pre class="r"><code>my_val &lt;- 3
+if (my_val%%2 == 0) { # If it is even (exactly divisible by 2)
+  cat (&quot;Value is even\n&quot;)
+} else {              # Otherwise it must be odd
+  cat (&quot;Value is odd\n&quot;) 
+}</code></pre>
+<pre><code>## Value is odd</code></pre>
+<p>Here, the expression in the parentheses following “if” is evaluated, and if it evaluates to TRUE then the block of code contained within the following curly braces is evaluated. Otherwise, the block of code following the “else” statement is evaluated. You can add additional tests by using the “else if” statement:</p>
+<pre class="r"><code>my_val &lt;- 27
+if (my_val%%2 == 0) {
+  cat(&quot;Value is divisible by 2\n&quot;)
+} else if (my_val%%3 == 0) { 
+  cat(&quot;Value is divisible by 3\n&quot;)
+} else if (my_val%%4 == 0) {
+  ...
+} else if (my_val%%n == 0) {
+  cat(&quot;Value is divisible by n\n&quot;)
+} else {
+  cat(&quot;Value is not divisible by 1:n\n&quot;) 
+}</code></pre>
+<p>Each switch is followed by a block of code surrounded by curly braces, and the conditional statements are evaluated until one evaluates to TRUE, at which point R avaluates this code bloack then exits. If none of them evaluate to TRUE, then the default code block following “else” is evaluated instead. If no “else” block is present, then the default is to just do nothing. These blocks can be as complicated as you like, and you can have “if else” statements within the blocks to create a hierarchical structure. Note that this ifelse block will ony return the smallest factor of <code>myval</code>.</p>
+</div>
+<div id="for" class="section level2">
+<h2><span class="header-section-number">7.2</span> FOR</h2>
+<p>Another control structure is the “for loop”, which will conduct the code in the block multiple times for a variety of values that you specify at the start. For instance, here is a simple countdown script:</p>
+<pre class="r"><code>for (i in 10:1) {
+  cat(i, &quot;...\n&quot;, sep = &quot;&quot;) 
+  if (i == 1) {
+    cat(&quot;Blastoff!\n&quot;) 
+  }
+}</code></pre>
+<pre><code>## 10...
+## 9...
+## 8...
+## 7...
+## 6...
+## 5...
+## 4...
+## 3...
+## 2...
+## 1...
+## Blastoff!</code></pre>
+<p>So the index <code>i</code> is taken from the set of numbers (10, 9, …, 1), starting at the first value 10, and each time prints out the number followed by a newline. Then an <code>if</code> statement checks to see if we have reached the final number, at which point it is time for blast off! At this point, it returns to the start of the block, updates the number to the second value 9, and repeats. It does this until there are no more values to use.</p>
+<p>As a small aside, this is slightly inefficient. Evaluation of the <code>if</code> statement is conducted every single time the loop is traversed (10 times in this example). It will only ever be true at the end of the loop, so we could always take this out of the loop and evaluate the final printout after the loop is finished and save ourselves 10 calculations. Whilst the difference here is negligible, thinking of things like this may save you time in the future:</p>
+<pre class="r"><code>for (i in 10:1) {
+  cat(i, &quot;...\n&quot;, sep = &quot;&quot;)
+} 
+cat(&quot;Blastoff!\n&quot;)</code></pre>
+<pre><code>## 10...
+## 9...
+## 8...
+## 7...
+## 6...
+## 5...
+## 4...
+## 3...
+## 2...
+## 1...
+## Blastoff!</code></pre>
+</div>
+<div id="while" class="section level2">
+<h2><span class="header-section-number">7.3</span> WHILE</h2>
+<p>The final main control structure is the “while loop”. This is similar to the “for loop”, and will continue to evaluate the code chunk as long as the specified expression evaluates to TRUE:</p>
+<pre class="r"><code>i &lt;- 10
+while (i &gt; 0) {
+  cat(i, &quot;...\n&quot;, sep = &quot;&quot;) 
+  i &lt;- i - 1
+} 
+cat(&quot;Blastoff!\n&quot;)</code></pre>
+<pre><code>## 10...
+## 9...
+## 8...
+## 7...
+## 6...
+## 5...
+## 4...
+## 3...
+## 2...
+## 1...
+## Blastoff!</code></pre>
+<p>This does exactly the same as the “for loop” above. In general, either can be used for a given purpose, but there are times when one would be more “elegant” than the other. For instance, here the for loop is better as you do not need to manually subtract 1 from the index each time.</p>
+<p>However, if you did not know how many iterations were required before finding what you are looking for (for instance searching through a number of files), a “while loop” may be more suitable.</p>
+<p><strong>HOWEVER</strong>: Be aware that it is possible to get caught up in an “infinite loop”. This happens if the conditional statement never evaluates to FALSE. If this happens, press either ESCAPE or press the <code>CONROL</code> key and the letter <code>c</code> (<code>CTRL+c</code>) to quit out of the current function (<code>CMD+c</code>) for Mac). For instance, if we forget to decrement the index, <code>i</code> will always be 10 and will therefore never be less than 0. This loop will therefore run forever:</p>
+<pre class="r"><code>i &lt;- 10
+while (i &gt; 0) {
+  cat(i, &quot;...\n&quot;, sep = &quot;&quot;) 
+}
+cat(&quot;Blastoff!\n&quot;)</code></pre>
+</div>
+<div id="loop-control" class="section level2">
+<h2><span class="header-section-number">7.4</span> Loop Control</h2>
+<p>You can leave control loops early by using flow control constructs. <code>next</code> skips out of the current loop and moves onto the next in the sequence:</p>
+<pre class="r"><code>for (i in 1:10) { 
+  if (i == 5) {
+    next 
+  }
+  cat (i, &quot;\n&quot;, sep = &quot;&quot;) 
+}
+cat(&quot;Finished loop\n&quot;)</code></pre>
+<pre><code>## 1
+## 2
+## 3
+## 4
+## 6
+## 7
+## 8
+## 9
+## 10
+## Finished loop</code></pre>
+<p><code>break</code> will leave the loop entirely, and will return to the function after the last curly brace in the code chunk:</p>
+<pre class="r"><code>for (i in 1:10) { 
+  if (i == 5) {
+    break 
+  }
+  cat (i, &quot;\n&quot;, sep = &quot;&quot;) 
+}
+cat(&quot;Finished loop\n&quot;)</code></pre>
+<pre><code>## 1
+## 2
+## 3
+## 4
+## Finished loop</code></pre>
+</div>
+</div>
+<div id="writing-functions-in-r" class="section level1">
+<h1><span class="header-section-number">8</span> Writing Functions in R</h1>
+<p>There are many functions available in R, and chances are if you want to do something somebody has already written the function to do it. It is best to not re-invent the wheel if possible (or at least it is more efficient – sometimes it is good to reinvent the wheel to understand how it works), but very often you will want to create your own functions to save replicating code.</p>
+<p>A function takes in one or more variables, does something with them, and returns something (e.g. a value or a plot). For instance, calculating the mean of a number of values is simply a case of adding them together and dividing by the number of values. Let’s write a function to do this and check that it matches the <code>mean()</code> function in R:</p>
+<pre class="r"><code>my_mean &lt;- function (x) { # Here, x is a numeric vector 
+  nvals &lt;- length(x)
+  valsum &lt;- sum(x)
+  return (valsum/nvals)
+}
+my_vals &lt;- c(3,5,6,3,4,3,4,7) 
+my_mean(my_vals) </code></pre>
+<pre><code>## [1] 4.375</code></pre>
+<pre class="r"><code>mean(my_vals)</code></pre>
+<pre><code>## [1] 4.375</code></pre>
+<p>So, as with the loops earlier, the function is contained within a block of curly braces. A numeric vector is given to the function, the mean is calculated, and this value is returned to the user using the <code>return()</code> function. This value can be captured into a variable of your choosing in the same way as with any function.</p>
+<p>You can also add further arguments to the function call. If you want an argument to have a default value, you can specify this in the function declaration. This is the value that will be used if no argument value is specified. Any arguments that do not have a default value must be specified when calling the function, or an error will be thrown:</p>
+<pre class="r"><code>foo &lt;- function(x, arg) { 
+  return(paste(x, arg, sep = &quot; &quot;))
+}
+foo (&quot;Hello&quot;) </code></pre>
+<pre><code>## Error in paste(x, arg, sep = &quot; &quot;): argument &quot;arg&quot; is missing, with no default</code></pre>
+<p>Now let’s try and add a default value for <code>arg</code>:</p>
+<pre class="r"><code>foo &lt;- function(x, arg = &quot;World!&quot;) { 
+  return(paste(x, arg, sep = &quot; &quot;))
+}
+foo (&quot;Hello&quot;) </code></pre>
+<pre><code>## [1] &quot;Hello World!&quot;</code></pre>
+<p>This is a good point to mention an idea known as “scope”. After running the following function, have a look at the value <code>valsum</code> calculated within the function:</p>
+<pre class="r"><code>my_mean &lt;- function (x) { # Here, x is a numeric vector 
+  nvals &lt;- length(x)
+  valsum &lt;- sum(x)
+  return (valsum/nvals)
+}
+my_vals &lt;- c(3,5,6,3,4,3,4,7)
+my_mean(my_vals)</code></pre>
+<pre><code>## [1] 4.375</code></pre>
+<pre class="r"><code>print(valsum) </code></pre>
+<pre><code>## Error in print(valsum): object &#39;valsum&#39; not found</code></pre>
+<p>So what went wrong? The error message says that R cannot find the object <code>valsum</code>. So where is it? The “scope” of an object is the environment where it can be found. Up until now, we have been using what are known as “global variables”. That is we have created all of our objects within the “global environment”, which is the top level where R searches for objects. These objects are available at all times.</p>
+<p>However, when we call a function, a new environment, or “scope”, is created, and all variables created within the function become “local variables” that can only be accessed from within the function itself. As soon as we leave the function, these local variables are deleted. If you think about it, this makes sense – otherwise, every time we called a function, memory would fill up with a whole load of temporary objects. Also, how many functions do you think create an object called <code>x</code>? Pretty much all of them (it’s generally the name of the first argument, as in my example). If we created an object <code>x</code>, then ran a couple of functions, and then went to use <code>x</code> again, chances are it would no longer be what we thought it was.</p>
+<p>So, the function itself is completely self-contained. A copy of the input variable is stored in a new local variable called <code>x</code>, something is done to this object (possibly creating additional objects along the way), something is returned, and then all of these objects in the scope of the function are removed, and we move back into the global environment.</p>
+<p>Functions are incredibly useful when we want to repeat the same set of actions on multiple sets of data. The “apply”&quot; set of functions are very useful for running a single function multiple times on input data.</p>
+<p><code>apply()</code> works on a matrix or data frame, and applies the function named by the argument <code>FUN</code> across either the rows or the columns of the table, as specified with the <code>MAR</code> (margin) argument (<code>MAR=1</code> for rows, <code>MAR=2</code> for columns). For instance, suppose that you had a matrix of expression values from a microarray, where each row was a different gene, and each column is the signal from a different probe on the array. We may want to calculate the mean value across these probes for each gene:</p>
+<pre class="r"><code>probe_file  &lt;- &quot;RTutorial_files/probe_values.txt&quot;
+probe_dat   &lt;- read.table(probe_file, header = TRUE, sep = &quot;\t&quot;) 
+probe_means &lt;- apply(probe_dat[, -1], MAR = 1, FUN = mean) 
+probe_means</code></pre>
+<pre><code>##  [1] 21.2 29.8 85.8 63.6 25.6 44.8 70.8 88.4 47.6 35.8 90.2 57.8 24.2 23.2
+## [15] 25.0 57.6 83.0 62.8 33.8 28.4 13.2 58.4 24.6 28.2 47.2  6.4 94.6 14.2
+## [29] 39.6 53.4 80.2 47.8  9.8 58.8 59.8  0.4 63.8 33.0 22.4 53.8 37.8 68.8
+## [43] 99.6 97.6  5.0 59.8 95.4 -0.2  1.4 52.2</code></pre>
+<p>Additionally, apply can be used to apply a function to all values by using <code>MAR=c(1,2)</code> to run across rows and columns:</p>
+<pre class="r"><code>probe_file    &lt;- &quot;RTutorial_files/probe_values.txt&quot;
+probe_dat     &lt;- read.table(probe_file, header = TRUE, sep = &quot;\t&quot;) 
+probe_dat_log &lt;- apply(probe_dat[, -1], MAR = c(1,2), FUN = exp) 
+probe_dat_log</code></pre>
+<pre><code>##             Probe1       Probe2       Probe3       Probe4       Probe5
+##  [1,] 4.424134e+05 7.896296e+13 2.648912e+10 2.980958e+03 3.931334e+12
+##  [2,] 3.931334e+12 1.907347e+21 8.886111e+06 5.987414e+04 1.285160e+19
+##  [3,] 2.235247e+37 5.052394e+31 1.811239e+41 1.220403e+39 8.223013e+36
+##  [4,] 3.404276e+29 4.607187e+28 5.685720e+24 1.373383e+32 1.041376e+23
+##  [5,] 3.584913e+09 1.068647e+13 1.484132e+02 7.896296e+13 8.659340e+16
+##  [6,] 3.493427e+19 2.581313e+20 1.142007e+26 3.185593e+16 5.834617e+14
+##  [7,] 2.758513e+33 1.545539e+25 6.837671e+30 1.373383e+32 1.373383e+32
+##  [8,] 2.451246e+40 1.373383e+32 4.375039e+48 3.025077e+36 2.038281e+34
+##  [9,] 3.185593e+16 1.907347e+21 1.041376e+23 1.545539e+25 2.353853e+17
+## [10,] 2.146436e+14 6.565997e+07 1.285160e+19 2.581313e+20 1.171914e+16
+## [11,] 2.235247e+37 6.076030e+37 5.399228e+44 6.837671e+30 1.467662e+45
+## [12,] 1.142007e+26 8.438357e+26 4.201210e+25 7.016736e+20 1.142007e+26
+## [13,] 1.784823e+08 1.784823e+08 4.311232e+15 5.987414e+04 4.311232e+15
+## [14,] 9.744803e+09 1.627548e+05 9.744803e+09 2.353853e+17 6.565997e+07
+## [15,] 1.957296e+11 7.200490e+10 4.851652e+08 2.146436e+14 1.318816e+09
+## [16,] 2.091659e+24 3.493427e+19 1.858672e+31 1.014800e+33 8.659340e+16
+## [17,] 2.038281e+34 2.451246e+40 4.923458e+41 5.540622e+34 1.252363e+29
+## [18,] 9.253782e+29 3.831008e+22 4.093997e+35 1.545539e+25 1.041376e+23
+## [19,] 4.311232e+15 1.907347e+21 1.957296e+11 2.146436e+14 7.200490e+10
+## [20,] 1.446257e+12 1.318816e+09 5.834617e+14 5.320482e+11 7.896296e+13
+## [21,] 8.103084e+03 2.648912e+10 3.584913e+09 5.459815e+01 1.096633e+03
+## [22,] 6.235149e+27 5.685720e+24 7.694785e+23 2.515439e+30 9.496119e+19
+## [23,] 3.584913e+09 6.398435e+17 2.415495e+07 1.318816e+09 3.584913e+09
+## [24,] 3.584913e+09 5.987414e+04 4.311232e+15 8.659340e+16 2.146436e+14
+## [25,] 1.409349e+22 8.659340e+16 1.285160e+19 4.201210e+25 4.727839e+18
+## [26,] 1.096633e+03 7.389056e+00 1.957296e+11 1.096633e+03 4.539993e-05
+## [27,] 1.811239e+41 1.112864e+36 4.093997e+35 7.307060e+43 4.375039e+48
+## [28,] 1.627548e+05 3.931334e+12 1.353353e-01 1.627548e+05 4.851652e+08
+## [29,] 1.739275e+18 1.285160e+19 1.907347e+21 8.659340e+16 2.648912e+10
+## [30,] 7.016736e+20 4.201210e+25 2.091659e+24 1.739275e+18 8.438357e+26
+## [31,] 4.093997e+35 1.858672e+31 6.663176e+40 4.093997e+35 6.837671e+30
+## [32,] 1.409349e+22 2.830753e+23 3.831008e+22 8.659340e+16 4.727839e+18
+## [33,] 2.415495e+07 1.484132e+02 2.648912e+10 1.000000e+00 2.008554e+01
+## [34,] 6.837671e+30 1.409349e+22 1.041376e+23 1.694889e+28 2.830753e+23
+## [35,] 1.252363e+29 1.041376e+23 6.837671e+30 3.104298e+26 2.581313e+20
+## [36,] 5.459815e+01 3.059023e-07 4.424134e+05 8.315287e-07 1.202604e+06
+## [37,] 9.253782e+29 1.142007e+26 4.093997e+35 1.041376e+23 7.694785e+23
+## [38,] 1.068647e+13 3.185593e+16 5.320482e+11 1.586013e+15 1.586013e+15
+## [39,] 2.415495e+07 9.744803e+09 1.586013e+15 3.931334e+12 2.980958e+03
+## [40,] 7.694785e+23 6.398435e+17 5.685720e+24 1.041376e+23 2.293783e+27
+## [41,] 5.834617e+14 1.068647e+13 4.727839e+18 1.446257e+12 2.830753e+23
+## [42,] 9.253782e+29 1.858672e+31 5.540622e+34 7.694785e+23 3.404276e+29
+## [43,] 1.338335e+42 6.493134e+50 1.084464e+46 1.220403e+39 1.651636e+38
+## [44,] 1.811239e+41 4.093997e+35 3.989520e+45 1.986265e+44 1.467662e+45
+## [45,] 5.459815e+01 5.459815e+01 6.565997e+07 6.144212e-06 5.987414e+04
+## [46,] 4.607187e+28 4.201210e+25 7.694785e+23 3.831008e+22 1.252363e+29
+## [47,] 4.489613e+38 2.178204e+47 2.758513e+33 3.989520e+45 1.338335e+42
+## [48,] 7.389056e+00 3.678794e-01 1.831564e-02 1.125352e-07 6.565997e+07
+## [49,] 5.459815e+01 1.234098e-04 6.565997e+07 9.118820e-04 2.718282e+00
+## [50,] 9.496119e+19 7.694785e+23 1.142007e+26 6.398435e+17 4.201210e+25</code></pre>
+<p>The same results can be generated by using a <code>for</code> loop to loop over all entries, but this is much slower.</p>
+<p><code>lapply()</code> (“list apply”) is similar but runs over a list of values, and returns the output as a list of values. In this example, the mean is calculated for a number of vectors, but these vectors can be different sizes (unlike for a matrix or data frame):</p>
+<pre class="r"><code>my_list &lt;- list(val1 = c(2,4,2,3,4,3,4), 
+                val2 = c(1,2), 
+                val3 = c(10,2,5,9)) 
+lapply(my_list, FUN = mean)</code></pre>
+<pre><code>## $val1
+## [1] 3.142857
+## 
+## $val2
+## [1] 1.5
+## 
+## $val3
+## [1] 6.5</code></pre>
+<p>However, since the output is a list, the output could also be a list of vectors:</p>
+<pre class="r"><code>my_list &lt;- list(val1 = c(2,4,2,3,4,3,4), 
+                val2 = c(1,2), 
+                val3 = c(10,2,5,9)) 
+lapply(my_list, FUN = sort)</code></pre>
+<pre><code>## $val1
+## [1] 2 2 3 3 4 4 4
+## 
+## $val2
+## [1] 1 2
+## 
+## $val3
+## [1]  2  5  9 10</code></pre>
+<p><code>sapply()</code> (“simple apply”) is similar to <code>lapply()</code>, but returns the results as a vector rather than a list. This is a better method to use when returning a single value for each list entry:</p>
+<pre class="r"><code>my_list &lt;- list(val1 = c(2,4,2,3,4,3,4), 
+                val2 = c(1,2), 
+                val3 = c(10,2,5,9)) 
+sapply(my_list, FUN = mean)</code></pre>
+<pre><code>##     val1     val2     val3 
+## 3.142857 1.500000 6.500000</code></pre>
+<p><code>mapply()</code> (“multivariate apply”) is very useful for vectorization, and works by applying the function <code>FUN</code> to the first elements of each object, then to the second element, and so on. The following example will replicate the number <code>n</code> n-times for numbers 1 to 5. This could also be done using loops, but loops do not scale as well as vectorised functions such as this:</p>
+<pre class="r"><code>mapply(rep, 1:5, 1:5)</code></pre>
+<pre><code>## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 2 2
+## 
+## [[3]]
+## [1] 3 3 3
+## 
+## [[4]]
+## [1] 4 4 4 4
+## 
+## [[5]]
+## [1] 5 5 5 5 5</code></pre>
+<p><code>tapply()</code> is a little more complicated, but essentially applies a function after breaking data up based on some index variable. It is useful for calculating summary statistics of different groups of data, and uses a factor parameter <code>INDEX</code> to define the groups over which to apply the function <code>FUN</code>. So in the following code, <code>tapply</code> will apply the function <code>mean()</code> on the values of <code>Expression</code> for the two different treatment classes defined in the <code>INDEX</code> variable:</p>
+<pre class="r"><code>my_dat &lt;- data.frame(Treatment = c(&quot;Control&quot;, &quot;Control&quot;, &quot;Control&quot;, 
+                                   &quot;Treated&quot;, &quot;Treated&quot;, &quot;Treated&quot;),
+                     Expression = c(13, 17, 9,
+                                    28, 37, 34))
+tapply(my_dat$Expression, INDEX = my_dat$Treatment, FUN = mean)</code></pre>
+<pre><code>## Control Treated 
+##      13      33</code></pre>
+</div>
+<div id="some-simple-statistics" class="section level1">
+<h1><span class="header-section-number">9</span> Some Simple Statistics</h1>
+<p>R is mainly designed for easy computation of statistics and there are many in-built functions and additional libraries that allow you to carry out most tasks. Most simple statistics can be easily calculated using in-built functions. The following example creates two vectors of 100 random values sampled from a normal distribution with mean 0 and standard deviation 1, then calculates various basic summary statistics:</p>
+<pre class="r"><code>x &lt;- sort(rnorm(100, mean = 0, sd = 1))
+min(x)   </code></pre>
+<pre><code>## [1] -1.880334</code></pre>
+<pre class="r"><code>max(x)   </code></pre>
+<pre><code>## [1] 2.172939</code></pre>
+<pre class="r"><code>mean(x)  </code></pre>
+<pre><code>## [1] 0.1222042</code></pre>
+<pre class="r"><code>median(x)</code></pre>
+<pre><code>## [1] 0.02802304</code></pre>
+<p>The minimum and maximum values are the smallest and largest values respectively. The mean is what most people would think of when you asked for the average, and is calculated by summing the values and dividing by the total number of values. The median is another way of looking at the average, and is essentially the middle value (<code>50^th^</code> percentile). Other percentiles can be calculated, which can give you an idea of where the majority of your data lie:</p>
+<pre class="r"><code>quantile(x, probs = 0.25) </code></pre>
+<pre><code>##        25% 
+## -0.5534791</code></pre>
+<pre class="r"><code>quantile(x, probs = 0.75) </code></pre>
+<pre><code>##       75% 
+## 0.8144155</code></pre>
+<pre class="r"><code>quantile(x, probs = seq(0, 1, 0.1))</code></pre>
+<pre><code>##          0%         10%         20%         30%         40%         50% 
+## -1.88033359 -0.95703687 -0.70502315 -0.37978196 -0.26487469  0.02802304 
+##         60%         70%         80%         90%        100% 
+##  0.27087119  0.56526234  0.96673898  1.42080404  2.17293880</code></pre>
+<p>The <code>summary()</code> function will calculate many of these basic statistics for you:</p>
+<pre class="r"><code>summary(x)</code></pre>
+<pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+## -1.88033 -0.55348  0.02802  0.12220  0.81442  2.17294</code></pre>
+<p>The variance is the average of the squared distances from the mean, and is a measure of how spread out the data are from the average. The standard deviation is simply the square root of this value <span class="math inline">\(var(x) = sd(x)^2\)</span>:</p>
+<pre class="r"><code>sd(x)</code></pre>
+<pre><code>## [1] 0.9125097</code></pre>
+<pre class="r"><code>var(x)</code></pre>
+<pre><code>## [1] 0.8326739</code></pre>
+<pre class="r"><code>all.equal(sd(x)^2, var(x))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>sum((x-mean(x))^2)/(length(x)-1)</code></pre>
+<pre><code>## [1] 0.8326739</code></pre>
+<p>The covariance is a measure of how much two sets of data vary together:</p>
+<pre class="r"><code>y &lt;- sort(rnorm(100, mean = 0, sd = 1))
+var(y)</code></pre>
+<pre><code>## [1] 1.050252</code></pre>
+<pre class="r"><code>cov(x, y)</code></pre>
+<pre><code>## [1] 0.9175608</code></pre>
+<p>The covariance is related to the correlation between two data sets, which is a number between -1 and 1 indicating the level of dependance between the two variables. A value of 1 indicates perfect correlation, so that as one value increases so does the other. A value of -1 indicates perfect anti-correlation, so that as one value increases the other decreases. A value of 0 indicates that the two values change independently of one another:</p>
+<pre class="r"><code>cor(x, y)</code></pre>
+<pre><code>## [1] 0.9811844</code></pre>
+<pre class="r"><code>cov(x, y)/(sd(x) * sd(y)) </code></pre>
+<pre><code>## [1] 0.9811844</code></pre>
+<p>This value is known as the Pearson correlation. An alternative method for calculating the correlation between two sets of values is to use the Spearman correlation, which is essentially the same as the Pearson correlation but is calculated on the ranks of the data rather than the values themselves. In this way, each value increases by only one unit at a time, meaning that the correlation score is more robust to the presence of outliers:</p>
+<pre class="r"><code>cor(x, y, method = &quot;spearman&quot;)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p>So these values are pretty highly dependent on one another – not surprising considering that they are both drawn randomly from the same distribution. We can calculate the line of best fit between the two vectors by using linear regression, which searches for the best straight line model <span class="math inline">\(y = a + bx\)</span> that minimises the squared distances between the line (estimated values) and the observed data points:</p>
+<pre class="r"><code>my_lin_mod &lt;- lm(y ~ x)
+summary(my_lin_mod)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = y ~ x)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.67389 -0.06981  0.03897  0.13141  0.34467 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -0.19943    0.02007  -9.939   &lt;2e-16 ***
+## x            1.10194    0.02190  50.309   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.1989 on 98 degrees of freedom
+## Multiple R-squared:  0.9627, Adjusted R-squared:  0.9623 
+## F-statistic:  2531 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Explaining this output is beyond the scope of this short tutorial, but the coefficient estimates give us the values for <code>a</code> (<code>-0.1994325</code>) and <code>b</code> (<code>1.1019449</code>) in the linear model. The p-value tells us how significant these estimates are. In statistical terms, we are testing the null hypothesis that the coefficient is actually equal to zero (i.e. there is not an association between <code>x</code> and <code>y</code>). The p-value gives the probability of detecting a coefficient at least as large as the one that we calculated in our model given that the null hypothesis is actually true. If this probability is low enough, we can safely reject the null hypothesis and say that this variable is statistically significant. Often a value of 0.05 (5%) is used as the cutoff for rejection of the null hypothesis.</p>
+<p>Hypothesis testing is a large part of statistics. The t-test is a commonly used test for comparing the means of two sets of data. In simple terms we are looking to see if they are significantly different (e.g. does the expression of a particular gene change significantly following treatment with a drug). In statistical terms, we are testing to see if the change that we see in the means is greater than we would expect by chance alone.</p>
+<pre class="r"><code>t.test(x, y) </code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  x and y
+## t = 1.3626, df = 195.39, p-value = 0.1746
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.08364752  0.45759638
+## sample estimates:
+##   mean of x   mean of y 
+##  0.12220421 -0.06477022</code></pre>
+<p>Since both <code>x</code> and <code>y</code> are drawn from the same distribution, the test shows there is no evidence that there is a difference between the mean. Let’s try again with a different data set, drawn from a different distribution:</p>
+<pre class="r"><code>z &lt;- rnorm(100, mean = 10, sd = 1) 
+t.test(x, z)</code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  x and z
+## t = -73.467, df = 196.31, p-value &lt; 2.2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -10.221693  -9.687262
+## sample estimates:
+##  mean of x  mean of y 
+##  0.1222042 10.0766814</code></pre>
+<p>This time, the p-value is much less than 0.05, so we can make the claim that the mean of <code>z</code> is significantly different from that of <code>x</code>. By default, the <code>t.test()</code> function is 2-sided, meaning that it does not distinguish between whether or not the difference in the means is an increase or a decrease in <code>z</code>. We can specify the <code>alternative</code> parameter to define the alternative hypothesis that we want to test:</p>
+<pre class="r"><code>t.test(x, z, alternative = &quot;less&quot;)    ## Tests if mean(x) &lt; mean(z) </code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  x and z
+## t = -73.467, df = 196.31, p-value &lt; 2.2e-16
+## alternative hypothesis: true difference in means is less than 0
+## 95 percent confidence interval:
+##       -Inf -9.730549
+## sample estimates:
+##  mean of x  mean of y 
+##  0.1222042 10.0766814</code></pre>
+<pre class="r"><code>t.test(x, z, alternative = &quot;greater&quot;) ## Tests if mean(x) &gt; mean(z)</code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  x and z
+## t = -73.467, df = 196.31, p-value = 1
+## alternative hypothesis: true difference in means is greater than 0
+## 95 percent confidence interval:
+##  -10.17841       Inf
+## sample estimates:
+##  mean of x  mean of y 
+##  0.1222042 10.0766814</code></pre>
+<p>This tells us that the difference in the means between <code>x</code> and <code>z</code> is less than 0, or that the mean of <code>z</code> is greater than that of <code>x</code> (as we expect).</p>
+</div>
+<div id="plotting-with-r" class="section level1">
+<h1><span class="header-section-number">10</span> Plotting With R</h1>
+<p>One of the most useful functions of R is the ability to plot publication-quality figures simply and easily. The vast number of tools available to users for plotting figures is beyond the scope of this tutorial, but I will mention a few of the most commonly used plotting functions to allow you to have a quick look at your data. These functions are all part of the <code>base</code> plotting package, but I also recommend looking into the <a href="http://ggplot2.org">ggplot2()</a> package for an incredibly intuative appraoch to plotting data.</p>
+<div id="scatterplots" class="section level2">
+<h2><span class="header-section-number">10.1</span> Scatterplots</h2>
+<p>Scatterplots are probably the simplest plot that we can look at. Here we take two sets of values and plot one against the other to see how they correlate. This means that the two data sets are paired, such that the first element of each data set represents one event, the second represents another, and so on. For instance, for every student in a class, we may have scores from tests taken at the start and at the end of the year, and we want to compare them against one another to see how they compare. Here is how to plot a simple scatterplot:</p>
+<pre class="r"><code>plot(x, y, 
+     pch = 19,                  ## Plot each point as a filled circle
+     col = &quot;red&quot;,               ## Colour each point red
+     xlab = &quot;This is x&quot;,        ## Add a label to the x-axis
+     ylab = &quot;This is y&quot;,        ## Add a label to the y-axis
+     main = &quot;This is y vs. x&quot;,  ## Add a main title to the plot
+     cex.main = 1.4,            ## Change the size of the title
+     cex.lab  = 1.2,            ## Change the size of the axis labels
+     cex.axis = 1.1             ## Change the size of the axis values
+     )</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/scatterplot1-1.png" width="672" /></p>
+<p>There are lots of additional plotting arguments that can be set in the <code>plot()</code> command. These are just a few. These arguments will typically work for any plotting function that you may want to use.</p>
+<p><code>plot()</code> is the standard plotting function, and works differently depending on the type of data on which it is called. Most of the following plots use this function in some way, even though it may not be obvious.</p>
+<p>Here we have coloured all of our points a single colour by using the <code>col = &quot;red&quot;</code> argument. However, we can assign colours to each point separately by supplying a vector of colours that is the same length as <code>x</code> and <code>y</code>. This means that we can set colours based on the data themselves:</p>
+<pre class="r"><code>my_cols &lt;- rep(&quot;black&quot;, length(x)) 
+my_cols[x &gt; 1 &amp; y &gt;  1] &lt;- &quot;red&quot;
+my_cols[x &gt; 1 &amp; y &lt; -1] &lt;- &quot;green&quot; 
+my_cols[x &lt; 0 &amp; y &gt;  0] &lt;- &quot;blue&quot;
+plot(x, y, col = my_cols, pch = 19)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/scatterplot2-1.png" width="672" /></p>
+<p>Since this plot is useful for observing the level of correlation between two data sets, it may be useful to add a couple of lines in to the plot to help us determine if there is a trend indicating that x is well correlated with y. First of all we will add lines in through the origin, and then we will add in a dotted line along the x = y line (since, if the two datasets were exactly correlated, the points would lie on this line). To do this, we use the <code>abline()</code> function. This plots a straight line in one of three ways. We can either specify a horizontal line by specifying the <code>h</code> argument, or we can specify a vertical line by using the <code>v</code> argument, or we can specify a straight line in the format <span class="math inline">\(y = a + bx\)</span> (where <code>a</code> is the intercept term and <code>b</code> is the gradient term):</p>
+<pre class="r"><code>plot(x, y, ylim = c(-3,3), xlim = c(-3,3))
+abline(h = 0)
+abline(v = 0)
+abline(a = 0, b = 1, lty = 2) ## lty gives the line type - in this case dotted</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/scatterplot3-1.png" width="672" /></p>
+<p>Notice that <code>abline()</code> does not create a new plot, but instead adds to the plot that we already have. This is because it does not call the <code>plot.new()</code> function, which would otherwise create a new plotting region.</p>
+<p>We may be particularly interested in how the line of best fit looks as compared to the <span class="math inline">\(x = y\)</span> line, as this will show us if there is a general trend in the data or not. To do this we can use a linear model to predict <code>a</code> and <code>b</code> from the data:</p>
+<pre class="r"><code>plot(x, y, ylim = c(-3,3), xlim = c(-3,3))
+my_lin_model &lt;- lm(y ~ x) 
+abline(my_lin_model, lty = 2, col = &quot;red&quot;)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/scatterplot4-1.png" width="672" /></p>
+<p>If you want to explicitly pull out <code>a</code> and <code>b</code>, use the <code>coef()</code> function to get the coefficients:</p>
+<pre class="r"><code>coef(my_lin_model)[1] ## Get the intercept from the coefficients of the model </code></pre>
+<pre><code>## (Intercept) 
+##  -0.1994325</code></pre>
+<pre class="r"><code>coef(my_lin_model)[2] ## Get the gradient from the coefficients of the model</code></pre>
+<pre><code>##        x 
+## 1.101945</code></pre>
+</div>
+<div id="histograms" class="section level2">
+<h2><span class="header-section-number">10.2</span> Histograms</h2>
+<p>Now let’s look at the distribution of the data. A histogram is useful for this. Here we count up the number of values that fall into discrete bins. The size of the bins (or the number of bins) can be specified by using the <code>breaks</code> argument:</p>
+<pre class="r"><code>x &lt;- rnorm (1000)
+par(mfrow=c(1,2))
+hist(x) ## Shows a nice bell shape curve about mean 0 
+hist(x, breaks = 200) ## More fine-grained</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/histogram-1.png" width="672" /></p>
+</div>
+<div id="quantile-quantile-plots" class="section level2">
+<h2><span class="header-section-number">10.3</span> Quantile-Quantile Plots</h2>
+<p>Quantile-quantile plots are a particular type of scatterplot that are used to see if two data sets are drawn from the same distribution. To do this, it plots the quantiles of each data set against each other. That is it plots the 0<sup>th</sup> percentile of data set A (the minimum value) against the 0th percentile of data set B, the 50<sup>th</sup> percentiles (the medians) against each other, the 100<sup>th</sup> percentiles (the maximum values) against each other, etc. Simply, it sorts both data sets, and makes them both the same length by estimating any missing values, then plots a scatterplot of the sorted data. If the two data sets are drawn from the same distribution, this plot should follow the <span class="math inline">\(x = y\)</span> identity line at all but the most extreme point.</p>
+<p>Here is a QQ plot for two data sets drawn from the same normal distribution:</p>
+<pre class="r"><code>x1 &lt;- rnorm(100, mean = 0, sd = 1) 
+x2 &lt;- rnorm(1000, mean = 0, sd = 1) 
+qqplot(x1, x2)
+abline(a = 0, b = 1, lty = 2)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/QQplot1-1.png" width="672" /></p>
+<p>And here is a QQ plot for two data sets drawn from different normal distributions:</p>
+<pre class="r"><code>x1 &lt;- rnorm(100, mean = 0, sd = 1) 
+x2 &lt;- rnorm(1000, mean = 1, sd = 3) 
+qqplot(x1, x2)
+abline(a = 0, b = 1, lty = 2)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/QQplot2-1.png" width="672" /></p>
+</div>
+<div id="line-plots" class="section level2">
+<h2><span class="header-section-number">10.4</span> Line Plots</h2>
+<p>Scatterplots are useful for generating correlation plots for pairs of data. Another form of data is a set of values along a continuum, for instance we may have the read count along the length of the genome. For this, a scatterplot may not be the most sensible way of viewing these data. Instead, a line plot may be a more fitting way of viewing the data. To do this we simply specify the <code>type</code> argument to be <code>line</code> (or simply <code>l</code>).</p>
+<p>One thing to be careful of with data such as this is that you must make sure that the data are ordered from left to right (or right to left) on the x axis so that connecting the points makes sense on the continuum. For instance, the following plot is not terribly useful:</p>
+<pre class="r"><code>x = c(2,4,5,3,1,7,9,8,6,10)
+y = c(4,2,5,4,10,6,6,5,6,9)
+plot(x = x, y = y, type = &#39;l&#39;)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/lineplot1-1.png" width="672" /> But if we order the data from left to right then it will be a lot more useful:</p>
+<pre class="r"><code>plot(x = x[order(x)], y = y[order(x)], type = &#39;l&#39;) </code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/lineplot2-1.png" width="672" /> You can also plot both points and lines by setting the <code>type</code> argument to <code>both</code> (or <code>b</code>):</p>
+<pre class="r"><code>plot(x = x[order(x)], y = y[order(x)], type = &#39;b&#39;)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/lineplot3-1.png" width="672" /></p>
+</div>
+<div id="density-plots" class="section level2">
+<h2><span class="header-section-number">10.5</span> Density Plots</h2>
+<p>We can use a line plot like this to plot the density of the data, which gives us a similar plot to the histogram. The benefit of this type of plot over a histogram is that you can overlay the distribution of multiple data sets. The <code>density()</code> function is a kernal density estimator function that basically calculates the density of the data within each bin such that the total area under the resulting curve is 1. This makes these plots useful for comparing data sets of different sizes as they are essentially normalised. We can add a legend to this plot to make it clear which line represents which sample. Again, this does not call <code>plot.new()</code> so will appear on top of the current plot:</p>
+<pre class="r"><code>## Create 2 random normal distributions about 5 and 10 respectively
+x1 &lt;- rnorm(100, mean = 5, sd = 1) 
+x2 &lt;- rnorm(1000, mean = 10, sd = 1)
+
+## Calculate the density of each
+x1dens &lt;- density(x1) 
+x2dens &lt;- density(x2)
+
+## Set up a plotting region explicitly
+plot.new()
+plot.window(xlim = c(0,15), 
+            ylim = c(0,0.5))
+range</code></pre>
+<pre><code>## function (..., na.rm = FALSE)  .Primitive(&quot;range&quot;)</code></pre>
+<pre class="r"><code>title(xlab = &quot;Value&quot;, ylab = &quot;Density&quot;, main = &quot;Density Plot&quot;) 
+axis(1)
+axis(2)
+
+## Add the data (notice that these do not call plot.new() so will add onto the current figure
+lines(x1dens , col = &quot;red&quot;) 
+lines(x2dens , col = &quot;blue&quot;)
+
+## Add a legend
+legend(&quot;topleft&quot;, legend = c(&quot;Mean = 5&quot;, &quot;Mean = 10&quot;), col = c(&quot;red&quot;, &quot;blue&quot;), lty = 1)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/density1-1.png" width="672" /></p>
+</div>
+<div id="boxplots" class="section level2">
+<h2><span class="header-section-number">10.6</span> Boxplots</h2>
+<p>Another way to compare the distribution of two (or more) data sets is by using a boxplot. A boxplot shows the overal distribution by plotting a box bounded by the first and third quartiles, with the median highlighted. This shows where the majority of the data lie. Additional values are plotted as whiskers coming out from the main box:</p>
+<pre class="r"><code>boxplot(x1, x2, names = c(&quot;Mean = 5&quot;, &quot;Mean = 10&quot;), ylab = &quot;Value&quot;)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/boxplot1-1.png" width="672" /></p>
+<p><code>boxplot()</code> can also take the data in the form of a data frame, which is useful for instance if you want to compare the distribution of expression values over all genes for a number of different samples. This will automatically label the boxes with the column names from the data frame:</p>
+<pre class="r"><code>my_data &lt;- data.frame(Sample1 = rnorm(100), 
+                      Sample2 = rnorm(100), 
+                      Sample3 = rnorm(100), 
+                      Sample4 = rnorm(100), 
+                      Sample5 = rnorm(100))
+boxplot(my_data)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/boxplot2-1.png" width="672" /></p>
+</div>
+<div id="bar-plots-and-pie-charts" class="section level2">
+<h2><span class="header-section-number">10.7</span> Bar Plots and Pie Charts</h2>
+<p>Now let’s say that we have a data set that shows the number of called peaks from a ChIPseq data set that fall into distinct genomic features (exons, introns, promoters and intergenic regions). One way to look at how the peaks fall would be to look at a pie graph:</p>
+<pre class="r"><code>my_peak_nums &lt;- c(&quot;exon&quot;       = 1400, 
+                  &quot;intron&quot;     = 900, 
+                  &quot;promoter&quot;   = 200, 
+                  &quot;intergenic&quot; = 150) 
+pie(my_peak_nums)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/pie1-1.png" width="672" /></p>
+<p>This figure shows that the majority of the peaks fall into exons. However, pie graphs are typically discouraged by statisticians, because your eyes can often misjudge estimates of the area taken up by each feature. A better way of looking at data such as this would be in the form of a barplot:</p>
+<pre class="r"><code>barplot(my_peak_nums, 
+        ylab = &quot;Number of Peaks in Feature&quot;, 
+        main = &quot;Peaks in Gene Features&quot;)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/barplot1-1.png" width="672" /></p>
+<p>Now let’s suppose that we had data showing the number of peaks in different genomic features for multiple samples. We could plot multiple pie charts:</p>
+<pre class="r"><code>my_peak_nums &lt;- data.frame(GeneFeature = c(&quot;exon&quot;, &quot;intron&quot;, &quot;promoter&quot;, &quot;intergenic&quot;),
+                           Sample1 = c( 1400, 900, 200, 150 ),
+                           Sample2 = c( 2400, 1000, 230,250 ),
+                           Sample3 = c( 40,30, 5,7 )
+                           )
+par(mfrow = c(1,3))
+pie(my_peak_nums[[2]], main = &quot;Sample1&quot;, labels = my_peak_nums[[1]])
+pie(my_peak_nums[[3]], main = &quot;Sample2&quot;, labels = my_peak_nums[[1]])
+pie(my_peak_nums[[4]], main = &quot;Sample3&quot;, labels = my_peak_nums[[1]])</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/pie2-1.png" width="672" /></p>
+<pre class="r"><code>par(mfrow = c(1,1)) ## Reset the plotting region</code></pre>
+<p>However comparing across multiple pie charts is very difficult. Instead, a single barplot will work better. Note that here the number of peaks is different for each sample, so it makes more sense to convert the data into a format whereby the bar height represents the percentage of peaks within a particular feature:</p>
+<pre class="r"><code>## Convert to percentages so that the samples are comparable
+my_peak_percent &lt;- my_peak_nums[, 2:4] 
+for (i in 1:3) {
+  my_peak_percent[[i]] &lt;- 100*my_peak_percent[[i]]/sum(my_peak_percent[[i]]) 
+}
+
+## Convert to a matrix to satisfy requirements for barplot()
+my_peak_percent &lt;- as.matrix(my_peak_percent)
+
+## Plot the bar plot
+barplot(my_peak_percent ,
+        ylab = &quot;Percentage of Peaks in Feature&quot;, 
+        main = &quot;Peaks in Gene Features&quot;, 
+        legend.text = my_peak_nums[[&quot;GeneFeature&quot;]])</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/barplot2-1.png" width="672" /> Notice that the default way that <code>barplot()</code> works is to plot the bars in a single stack for each sample. This is fine for comparing the exons, but trying to compare the other classes is much harder. A better way to plot these data would be to plot the bars side by side for each sample:</p>
+<pre class="r"><code>barplot(my_peak_percent ,
+        ylab = &quot;Percentage of Peaks in Feature&quot;, 
+        main = &quot;Peaks in Gene Features&quot;, 
+        legend.text = my_peak_nums[[&quot;GeneFeature&quot;]], 
+        beside = TRUE)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/barplot3-1.png" width="672" /></p>
+</div>
+<div id="graphical-control" class="section level2">
+<h2><span class="header-section-number">10.8</span> Graphical Control</h2>
+<p>That covers the majority of the basic plotting functions that you may want to use. You can change the standard plotting arguments by using the par() command:</p>
+<pre class="r"><code>par(mar = c(5,10,0,3))  ## Sets the figure margins (in &#39;number of lines&#39;) - b,l,t,r
+par(las = 1)            ## Changes axis labels to always be horizontal
+par(tcl = -0.2)         ## Change the size of the axis ticks
+plot(x = rnorm(100), y = rnorm(100))</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/barplot4-1.png" width="672" /></p>
+</div>
+<div id="subplots" class="section level2">
+<h2><span class="header-section-number">10.9</span> Subplots</h2>
+<p>By default, the graphics device will plot a single figure only. There are several ways to create subfigures within this region. The first is to set the <code>mfrow</code> argument in <code>par()</code>. This will split the graphics region into equally sized subplots:</p>
+<pre class="r"><code>par(mfrow = c(3, 2)) ## Creates a figure region with 3 rows and 2 columns 
+for (i in 1:6) {
+  plot(x = rnorm(100), y = rnorm(100)) 
+}</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/subplot1-1.png" width="672" /> However, if you want more control over your plotting, you can use the <code>layout()</code> function which allows you to specify the size and layout of the subplots. This function takes a matrix specifying where in the grid of subplots each plot should be drawn to. So the first call to <code>plot()</code> will put its figure in the grid regions labelled <code>1</code>, the scond call will put its figure anywhere that there is a <code>2</code>, etc. Anywhere that you do not want a figure should have a <code>0</code>. The heights and widths arguments allow you to specify the size of each grid region. You can check what the resulting figure layout will look like by using <code>layout.show(n)</code>, where <code>n</code> is the number of subplots in your figure. With a bit of work, you can get some very good layouts:</p>
+<pre class="r"><code>my_layout &lt;- matrix(c(1,1,1,1,2,2,3,4,2,2,3,4,0,0,3,4,0,0,5,5), nrow = 5, ncol = 4, byrow = TRUE)
+layout(my_layout, widths = c(10,10,2,2), heights = c(1,5,5,5,2)) 
+my_layout</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    1    1    1
+## [2,]    2    2    3    4
+## [3,]    2    2    3    4
+## [4,]    0    0    3    4
+## [5,]    0    0    5    5</code></pre>
+<pre class="r"><code>layout.show(5) ## Can you see how this matrix leads to this layout? </code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/subplot2-1.png" width="672" /></p>
+</div>
+<div id="saving-figures" class="section level2">
+<h2><span class="header-section-number">10.10</span> Saving Figures</h2>
+<p>By default, figures are generated in a seperate window from R. However, you can save the figure to an external file by using one of the functions <code>png()</code>, <code>pdf()</code>, <code>jpeg()</code>, etc. These functions open a new “device”, which R can use to plot to. After the figure has been plotted, the device must be turned off again using the <code>dev.off()</code> function. There are many arguments that can be used for these functions. In general, these define the dimensions and resolution of the resulting figure. It can be difficult to get these right, so play around to see how they affect things:</p>
+<pre class="r"><code>png(&quot;figures/test_figure.png&quot;, height = 10, width = 10, unit = &quot;in&quot;, res = 300)
+plot(1:10, 1:10, type = &quot;l&quot;, main = &quot;My Test Figure&quot;, xlab = &quot;x axis&quot;, ylab = &quot;y axis&quot;) 
+dev.off()</code></pre>
+</div>
+</div>
+<div id="example-analysis" class="section level1">
+<h1><span class="header-section-number">11</span> Example Analysis</h1>
+<div id="introduction-2" class="section level2">
+<h2><span class="header-section-number">11.1</span> Introduction</h2>
+<p>This is just a simple example analysis to give you an idea of the sort of things that we can do with R. Suppose that we have two experiments, each looking at the effects on gene expression of using a particular drug (“Drug A” and “Drug B”). For each experiment we have two samples; one showing the gene expression when treated with the drug, and the other showing the gene expression when treated with some control agent. Obviously in a real experiment, we would have many replicates, but here we have <span class="math inline">\(n=1\)</span>. We want to do the following:</p>
+<ol style="list-style-type: decimal">
+<li>For each drug, we want to get the fold change for each gene</li>
+<li>For each drug, we want to identify the genes that are significantly changed when using the drug</li>
+<li>We want to compare the results for Drug A with those from Drug B to find genes that are affected similarly by both drugs</li>
+<li>We want to plot the correlation between the fold change values for the two drugs to see how similar they are</li>
+</ol>
+<p>For this, we will need four files. These files are in a tab-delimited text format. They are tables of values where each row is separated by a new line, and each column is separated by a tab character (<code>\t</code>). These files can be created by and read into Excel for ease of use. To avoid errors when reading in files from text, it is good practice to ensure that there are no missing cells in your data. Instead try to get into the habit of using some “missing”&quot; character (e.g. <code>NA</code>).</p>
+<table>
+<thead>
+<tr class="header">
+<th>File Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../RTutorial_files/experiment1_control.txt">experiment1_control.txt</a></td>
+<td>Expression levels for ctrl in expt 1</td>
+</tr>
+<tr class="even">
+<td><a href="../RTutorial_files/experiment1_drug.txt">experiment1_drug.txt</a></td>
+<td>Expression levels for drug A in expt 1</td>
+</tr>
+<tr class="odd">
+<td><a href="../RTutorial_files/experiment2_control.txt">experiment2_control.txt</a></td>
+<td>Expression levels for control in expt 2</td>
+</tr>
+<tr class="even">
+<td><a href="../RTutorial_files/experiment2_drug.txt">experiment2_drug.txt</a></td>
+<td>Expression levels for drug A in expt 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="load-data" class="section level2">
+<h2><span class="header-section-number">11.2</span> Load Data</h2>
+<p>First let’s load in the data:</p>
+<pre class="r"><code>expt1_ctrl &lt;- read.table(&quot;RTutorial_files/experiment1_control.txt&quot;, 
+                         header = TRUE, sep = &quot;\t&quot;, 
+                         stringsAsFactors = FALSE)
+expt1_drug &lt;- read.table(&quot;RTutorial_files/experiment1_drug.txt&quot;, 
+                         header = TRUE, sep = &quot;\t&quot;, 
+                         stringsAsFactors = FALSE)
+expt2_ctrl &lt;- read.table(&quot;RTutorial_files/experiment2_control.txt&quot;, 
+                         header = TRUE, sep = &quot;\t&quot;, 
+                         stringsAsFactors = FALSE)
+expt2_drug &lt;- read.table(&quot;RTutorial_files/experiment2_drug.txt&quot;, 
+                         header = TRUE, sep = &quot;\t&quot;, 
+                         stringsAsFactors = FALSE)</code></pre>
+<p>Use <code>head()</code> to look at the data. Each of these files contains two columns; the gene name and some value that represents the expression level for that gene (assume that these values have been calculated after pre-processing, normalisation, etc.).</p>
+<p>In all of these cases, the list of gene names is identical, and in the same order which means that we could compare row 1 from the control-treated file with row 2 from the drug-treated file to get all of the comparisons. However, in a real data set you will not know for sure that the gene names match so I recommend merging the files together into a single data frame to ensure that all analyses are conducted on a gene by gene basis on the correct values.</p>
+<p>We therefore create a single data frame for both experiments using the merge() command:</p>
+<pre class="r"><code>expt1 &lt;- merge(expt1_ctrl, expt1_drug, 
+               by = &quot;GeneName&quot;) ## The &#39;by&#39; variable tells merge which column to merge
+names(expt1)[2] &lt;- &quot;Control&quot; 
+names(expt1)[3] &lt;- &quot;Drug&quot; 
+expt2 &lt;- merge(expt2_ctrl, expt2_drug, 
+               by = &quot;GeneName&quot;) 
+names(expt2)[2] &lt;- &quot;Control&quot;
+names(expt2)[3] &lt;- &quot;Drug&quot;</code></pre>
+</div>
+<div id="calculate-fold-change" class="section level2">
+<h2><span class="header-section-number">11.3</span> Calculate Fold Change</h2>
+<p>Now we calculate the fold change for each gene by dividing the drug-treated expression by the control expression. To avoid divide by zero errors, we can set a minimum expression value. This will also ensure that we are only looking at expression changes between significant expression values. Since we want to do the same thing to both the experiment 1 and the experiment 2 data sets, it makes sense to write a single function to use for both:</p>
+<pre class="r"><code>get_fold_change &lt;- function (x, min_expression = 10) {
+  ctrl_val &lt;- as.numeric(x[&quot;Control&quot;]) 
+  drug_val &lt;- as.numeric(x[&quot;Drug&quot;])
+  ctrl_val &lt;- ifelse(ctrl_val &lt;= min_expression, min_expression, ctrl_val)
+  drug_val &lt;- ifelse(drug_val &lt;= min_expression, min_expression, drug_val)
+  return(drug_val/ctrl_val) 
+}
+expt1[[&quot;FoldChange&quot;]] &lt;- apply(expt1, MAR = 1, FUN = get_fold_change) 
+expt2[[&quot;FoldChange&quot;]] &lt;- apply(expt2, MAR = 1, FUN = get_fold_change)</code></pre>
+</div>
+<div id="compare-data" class="section level2">
+<h2><span class="header-section-number">11.4</span> Compare Data</h2>
+<p>Now let’s find the genes that are upregulated and downregulated in each experiment. Due to the lack of replicates, we do not have any estimate for the variance of these genes, so we will have to make do with using a threshold on the fold change:</p>
+<pre class="r"><code>fold_change_threshold &lt;- 1.5
+expt1_up   &lt;- subset(expt1, FoldChange &gt;= fold_change_threshold)[[&quot;GeneName&quot;]]
+expt1_down &lt;- subset(expt1, FoldChange &lt;= 1/fold_change_threshold)[[&quot;GeneName&quot;]]
+expt2_up   &lt;- subset(expt2, FoldChange &gt;= fold_change_threshold)[[&quot;GeneName&quot;]]
+expt2_down &lt;- subset(expt2, FoldChange &lt;= 1/fold_change_threshold)[[&quot;GeneName&quot;]]
+cat(&quot;Upregulated in Experiment 1:&quot;,   paste(expt1_up,   collapse = &quot;\n&quot;), sep = &quot;\n&quot;)</code></pre>
+<pre><code>## Upregulated in Experiment 1:
+## gene12
+## gene8</code></pre>
+<pre class="r"><code>cat(&quot;Downregulated in Experiment 1:&quot;, paste(expt1_down, collapse = &quot;\n&quot;), sep = &quot;\n&quot;)</code></pre>
+<pre><code>## Downregulated in Experiment 1:
+## gene32
+## gene46</code></pre>
+<pre class="r"><code>cat(&quot;Upregulated in Experiment 2:&quot;,   paste(expt2_up,   collapse = &quot;\n&quot;), sep = &quot;\n&quot;)</code></pre>
+<pre><code>## Upregulated in Experiment 2:
+## gene18
+## gene50
+## gene8</code></pre>
+<pre class="r"><code>cat(&quot;Downregulated in Experiment 2:&quot;, paste(expt2_down, collapse = &quot;\n&quot;), sep = &quot;\n&quot;)</code></pre>
+<pre><code>## Downregulated in Experiment 2:
+## gene22
+## gene43</code></pre>
+<p>So we now have the genes that change when each of the drugs is used. But now we want to compare the two drugs together. First, let’s see if there are any genes similarly affected by both drugs. We can do this using the <code>intersect()</code> function which gives the intersect of two lists:</p>
+<pre class="r"><code>common_up   &lt;- intersect(expt1_up, expt2_up) 
+common_down &lt;- intersect(expt1_down, expt2_down)
+cat(&quot;Upregulated in Experiment 1 and Experiment 2:&quot;, paste(common_up, collapse = &quot;\n&quot;), sep = &quot;\n&quot;)</code></pre>
+<pre><code>## Upregulated in Experiment 1 and Experiment 2:
+## gene8</code></pre>
+<pre class="r"><code>cat(&quot;Downregulated in Experiment 1 and Experiment 2:&quot;, paste(common_down, collapse = &quot;\n&quot;), sep = &quot;\n&quot;)</code></pre>
+<pre><code>## Downregulated in Experiment 1 and Experiment 2:</code></pre>
+<p>So we can see that only one gene is similarly affected by both drugs (“gene8”). Now let’s plot a figure to see how the fold change differs between the two drugs:</p>
+<pre class="r"><code>fold_change_data &lt;- merge(expt1[, c(&quot;GeneName&quot;, &quot;FoldChange&quot;)], 
+                          expt2[, c(&quot;GeneName&quot;, &quot;FoldChange&quot;)], 
+                          by = &quot;GeneName&quot;)
+names(fold_change_data)[2] &lt;- &quot;Experiment1&quot;
+names(fold_change_data)[3] &lt;- &quot;Experiment2&quot;
+plot(x = log2(fold_change_data[[&quot;Experiment1&quot;]]), 
+     y = log2(fold_change_data[[&quot;Experiment2&quot;]]), 
+     pch = 19,
+     xlab = &quot;log2(Experiment1 Fold Change)&quot;,
+     ylab = &quot;log2(Experiment2 Fold Change)&quot;,
+     main = &quot;Experiment1 Fold Change vs Experiment2 Fold Change&quot;, 
+     cex.lab = 1.3,
+     cex.axis = 1.2,
+     cex.main = 1.4,
+     xlim = c(-2,2),
+     ylim = c(-2,2)
+     )
+abline(h = 0) 
+abline(v = 0)
+abline(a = 0, b = 1, lty = 2)</code></pre>
+<p><img src="/resource/RTutorial_files/figure-html/foldchange-1.png" width="672" /></p>
+<p>This figure shows that the effect on the gene expression is actually quite different for the two drugs. We can also see this by looking at the correlation between the two experiments:</p>
+<pre class="r"><code>cor(x = fold_change_data[[&quot;Experiment1&quot;]], 
+    y = fold_change_data[[&quot;Experiment2&quot;]], 
+    method = &quot;pearson&quot;)</code></pre>
+<pre><code>## [1] 0.08381614</code></pre>
+<pre class="r"><code>cor(x = fold_change_data[[&quot;Experiment1&quot;]], 
+    y = fold_change_data[[&quot;Experiment2&quot;]], 
+    method = &quot;spearman&quot;)</code></pre>
+<pre><code>## [1] -0.02618115</code></pre>
+</div>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+
+    
+    <li class="next"><a href="/resource/bioinformaticstools/">Bioinformatics Tools <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-uopbioinformatics-github-io';
+    var disqus_identifier = '\/resource\/rtutorial\/';
+    var disqus_title = 'How To Use R';
+    var disqus_url = '\/resource\/rtutorial\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Sam Robson &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/perl.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

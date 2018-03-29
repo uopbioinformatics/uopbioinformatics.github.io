@@ -1,4 +1,5 @@
 baseurl = "https://uopbioinformatics.github.io/"
+publishDir = "../uopbioinformatics.github.io"
 title = "UoP Bioinformatics Group"
 copyright = "&copy; 2017 Sam Robson"
 theme = "hugo-academic"

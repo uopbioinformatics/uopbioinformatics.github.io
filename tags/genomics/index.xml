@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genomics on UoP Bioinformatics Group</title>
+    <link>/tags/genomics/</link>
+    <description>Recent content in Genomics on UoP Bioinformatics Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Sam Robson</copyright>
+    <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/genomics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Genotyping of Ancient DNA from Crew Members from the Mary Rose</title>
+      <link>/project/2017-09-29_genotyping_of_crew_members_of_the_mary_rose/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/2017-09-29_genotyping_of_crew_members_of_the_mary_rose/</guid>
+      <description>&lt;p&gt;Built in Portsmouth in 1510, the Mary Rose was the flagship of the fleet of Henry VIII, and had a long and lustrious career until it capsized north of the Isle of Wight in the Battle of the Solent in 1545. Fewer than 35 of the roughly 400 crew members escaped. The wreck was discovered in 1971, and following years of excavation activities the hull was raised from the seabed in 1982 and transported to its home port of Portsmouth. Since then, years of archaeological work has been carried out on the hull itself and on the nearly 20,000 artefacts that have so far been discovered.&lt;/p&gt;
+
+&lt;p&gt;Working together with &lt;a href=&#34;http://www.port.ac.uk/school-of-biological-sciences/staff/dr-garry-scarlett.html&#34; target=&#34;_blank&#34;&gt;Dr Garry Scarlett&lt;/a&gt; at the University of Portsmouth, and the &lt;a href=&#34;http://www.maryrose.org&#34; target=&#34;_blank&#34;&gt;Mary Rose Museum&lt;/a&gt;, we will be looking to understand more about the members of the crew by working on genotyping of the ancient DNA from the skeletons of crew members raised from the wreckage. Using whole genome sequencing techniques, we hope to develop an understanding of phenotypic characteristics, disease traits and geographic information of crew members of one of the most famous ship wrecks in history.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
