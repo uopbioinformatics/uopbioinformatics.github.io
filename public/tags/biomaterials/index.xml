@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biomaterials on UoP Bioinformatics Group</title>
+    <link>/tags/biomaterials/</link>
+    <description>Recent content in Biomaterials on UoP Bioinformatics Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Sam Robson</copyright>
+    <lastBuildDate>Thu, 17 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/biomaterials/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Transcriptome Profiling Of The Radula of Patella vulgata</title>
+      <link>/project/2017-08-17_transcriptome-profiling-of-common-limpet/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/2017-08-17_transcriptome-profiling-of-common-limpet/</guid>
+      <description>&lt;p&gt;The radula is a long chitinous ribbon-like proboscus containing many tiny teeth that is used by almost all molluscs for feeding. The radula is scraped across the surface to which the mollusc is attached to isolate food before it enters the esophagus. The teeth, or denticles, of the radula in the common limpet (&lt;em&gt;Patella vulgata&lt;/em&gt;) have been shown to have the highest tensile strength of any naturally occuring material, outperforming even the high strength of spider silk (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4387522/&#34; target=&#34;_blank&#34;&gt;Barber &lt;em&gt;et al&lt;/em&gt; (2015)&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Working together with researchers at the University of Portsmouth including &lt;a href=&#34;http://www.port.ac.uk/school-of-engineering/staff/professor-asa-barber.html&#34; target=&#34;_blank&#34;&gt;Professor Asa Barber&lt;/a&gt; and &lt;a href=&#34;http://www.port.ac.uk/school-of-pharmacy-and-biomedical-sciences/staff/prof-darek-gorecki.html&#34; target=&#34;_blank&#34;&gt;Professor Darek Gorecki&lt;/a&gt;, we are performing transcriptional profiling throughout the development of the radula to understand the gene pathways involved in the natural generation of this incredibly strong biomaterial.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

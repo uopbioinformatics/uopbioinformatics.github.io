@@ -1,0 +1,315 @@
+---
+title: "Bioinformatics Tools"
+author: "Sam Robson"
+date: "2017-08-23T12:28:14-05:00"
+categories: ["Bioinformatics"]
+tags: ["Bioinformatics", "How To", "Tools", "tools"]
+image_preview: "tools.jpg"
+header:
+  image: "headers/tools-wide.jpg"
+  caption: "http://fisherenglish.co.uk/wp-content/uploads/2017/03/tools-toolbox-bw-ss-1920.jpg"
+summary: "A list of commonly used tools for bioinformatics analyses"
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 3
+    toc_float: false
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Sequence Alignment
+
+## [ClustalW](http://www.ebi.ac.uk/Tools/msa/clustalw2/)
+
+Useful for aligning a small number of sequences, such as homologs from multiple species. Not so useful for multiple alignment of a large amount of sequences from ChIP seq for instance.
+
+## [SeaView](http://doua.prabi.fr/software/seaview)
+
+Graphical visualisation of multiple sequence alignment. Can perform alignment of sequences, or can be used to visualise the results of alignments from other algorithms. Can be manually adjusted which can be useful when incorporating prior knowledge into the alignment.
+
+## [PAGAN](https://code.google.com/p/pagan-msa/wiki/PAGAN)
+
+A phylogeny-aware general purpose aligner which can be more useful for clustering when there are likely to be large gaps in some sequences compared to others (for instance if comparing gene sequences from different species with non-homologous exons).
+
+## [NCBI BLAST](http://blast.st-va.ncbi.nlm.nih.gov/Blast.cgi)
+
+Suite of tools for searching a protein or nucleotide database to find potential matches or homologs, or for aligning multiple sequences. This tool is particularly useful when you have a query sequence and want to find either known homologs amongst different species, or to find additional proteins with similar structural domains.
+
+## [HMMer](http://hmmer.janelia.org)
+
+Similar to BLAST, HMMer uses hidden Markov models to improve the accuracy and ability to detect remote homologs by using a stronger underlying mathematical model. This suite of tools can be used to search for homologs in protein and transcript databases in a similar way to BLAST.
+
+## [FASTA](http://www.ebi.ac.uk/Tools/sss/fasta/)
+
+FASTA is the original sequence similarity search tool, and can be used to search for a query protein amongst known protein or ranscript databases such as UniProt. It uses a heuristic approach, which has been improved over the years, but BLAST is probably a better approach to use in general.
+
+## [MUSCLE](http://www.ebi.ac.uk/Tools/msa/muscle/)
+
+MUSCLE is a multiple sequence comparison tool similar to ClustalW that may be slightly faster with more accurate results. It can be used to perform gapped alignment of a set of sequences in any supported format (e.g. fasta). 
+ 
+ 
+ 
+ 
+# Motif and Domain Analysis
+
+## [MEME Suite](http://meme.nbcr.net/meme/)
+
+The MEME suite is a series of tools for motif analysis and consists of the following tools:
+
+### MEME
+De-Novo discovery of motifs from a series of related protein or transcript sequences. This method is more designed for comparison of sequences from, say, a handful of transcription factor sites and is not so well designed for large number of sequences (e.g. from ChIP seq experiments). This tool is better for the identification of wider motifs. For narrower motifs use DREME.
+
+### DREME
+Like MEME above, but better for the discovery of narrower motifs.
+
+### MAST
+MAST is a motif alignment and search tool for the identification of known (or identified) motifs amongst some database of sequences. This can be either a protein or transcript database, or for instance a known motif can be searched within a set of sequences such as from a ChIP seq experiment. A match score is calculated by comparing the position weight matrix of the motif with each sequence.
+
+### TOMTOM
+TOMTOM is a way to compare de novo motifs to a database of known motifs contained within the MEME database. A list of matching motifs is returned, so this can be used to see if for instance your motif matches the known binding motif of a transcription factor within the database. One of the databases that is queried is the JASPAR database (see resources) which contains a large well-maintained and curated set of known TF binding sites. 
+
+### GOMO
+GOMO takes an input motif and scores all genes based on the binding affinity of the motif at their upstream promoter region. It then performs a gene ontology analysis to see if this motif is associated with the promoter regions of genes involved in any particular function.
+
+### MEME-CHIP
+MEME-CHIP is a combined motif discovery tool for ChIP seq results. It relies on the fact that the mid-100bp region of the supplied sequences represent the likely binding location of the peak, performs motif discovery across a large number of sequences, and compares against known motif databases. 
+
+## HOMER
+
+
+
+# Domain Analysis
+
+## [InterProScan](http://www.ebi.ac.uk/interpro/)
+
+Interpro is a database of protein families and known structural domains from the EBI. InterProScan allows users to scan a query sequence for known structural domains or associated protein families, comparing against proteins in the UniProt Knowledge Database.
+
+## [Pfam](http://pfam.xfam.org)
+
+Pfam is a database from the EBI containing identified protein famillies based on multiple sequence alignments and HMM analysis of known sequences. The Pfam website can be used to view protein families, or view the protein  domain structure of known proteins, or alternative can be used to search a query sequence for known domains.
+
+## [SMART](http://smart.embl-heidelberg.de)
+
+SMART is a well-maintained modular database (based on SwissProt, TReMBL and the like) of annotated and functional protein domains. Domain structure of known proteins as well as identification of known domains within novel protein sequences can be achieved using this tool.
+ 
+## Data Repositories
+
+## [Gene Expression Omnibus (GEO)](http://www.ncbi.nlm.nih.gov/geo/)
+
+GEO is the NCBI repository of high throughput data, including sequencing and microarray data. All data maintained within this database is MIAME-compliant, and is synched with projects in ArrayExpress as well. Most experiments contain both raw data (raw chip data for microarrays, or raw read files for sequencing), as well as processed data files (mapped data, called peaks, normalised microarray results, etc).
+
+## [ArrayExpress](http://www.ebi.ac.uk/arrayexpress/)
+
+ArrayExpress is the EBI-maintained repository for high-throughput data. As with GEO, it contains data for microarray experiments and sequencing experiments of all kinds, all of which are MIAME-compliant. Most experiments contain both raw data (raw chip data for microarrays, or raw read files for sequencing), as well as processed data files (mapped data, called peaks, normalised microarray results, etc).
+
+## [Sequence Read Archive (SRA)](http://www.ncbi.nlm.nih.gov/sra)
+
+The SRA is probably the single most useful source for the storage of sequence level data in the world. GEO and ArrayEpxress are linked to the SRA, and this is where the raw and mapped data for most sequencing experiments are stored. These data are stored in a proprietary XML-style format and the SRA Toolkit applications can be used to dump the files into one of a number of useful formats (e.g. fastq-dump and sam-dump). 
+ 
+ 
+ 
+ 
+# Genome Mapping
+
+## [BWA](http://bio-bwa.sourceforge.net)
+
+The Burrows-Wheeler Aligner is one of the most widely used mapping algorithms available, and is particularly useful for mapping low-divergent sequences against a large reference genome. Each sequence is mapped with a mapping quality score, which takes into account gapped alignments and mismatches, and this can be used to define accurate mapping. The output SAM files also contain the location of mismatches in CIGAR format. The benefits of using this algorithm are its speed and accuracy. One negative is that if a sequence maps to multiple locations, only one mapped loci is returned (obviously with a low mapping score). If you want to see all mapped locations (e.g. if you are interested in regions of low complexity) then Bowtie may be better.
+
+## [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml)
+
+Bowtie is one of the most commonly used mapping algorithms, and uses indexing using Burrows-Wheeler to produce fast and memory efficient alignments. Bowtie can be used to provide multiple mapping coordinates for reads from regions of low complexity and repetitive sequences in the genome. Bowtie is well maintained (with version 2 currently in circulation).
+
+## [MAQ](http://maq.sourceforge.net)
+
+MAQ is an older aligner that does not seem to be maintained any longer. It has been superseded by BWA and Bowtie and should probably not be used any longer.
+
+## [TopHat](http://ccb.jhu.edu/software/tophat/index.shtml)
+
+TopHat is a fast splice-junction aware mapper for the alignment of RNA Seq data to the genome. It is based on the Bowtie aligner above, but analyses mapped data to identify splice junctions between exons. Alternatively a list of known exon splice junctions can be provided which can be used to guide the alignment across splice junctions. This is one of the most commonly used tools for the mapping of RNA seq data.
+
+## [NovoAlign](http://www.novocraft.com/main/page.php?s=novoalign)
+
+Novoalign is a licensed mapping software tool (although a free version is available). For multi-mapping reads, you can choose to return all, none, or just one randomly selected mapping in your output. 
+
+## [SHRiMP](http://compbio.cs.toronto.edu/shrimp/)
+
+SHRiMP is another older free mapping algorithm which no longer has active support from the authors. It is based on seeding together with the Smith-Waterman algorithm, but is surprisingly fast. 
+
+## [SOAP](http://soap.genomics.org.cn)
+
+SOAP is a suite of tools for analysis of short oligonucleotide sequences, including for de novo assembly, alignment against a target genome, splice mapping for RNA seq data, and SNP and indel calling for resequencing experiments. The website has not been updated since 2010, so this may not be maintained any more and may be an older tool that is not of any use any more.
+
+## ELAND
+
+ELAND is the Illumina pipeline software that comes attached to each of the Illumina sequencing machines. It is their proprietary software and is not easy to get hold of, although as indirect customers we could probably obtain a copy if necessary. 
+
+## [ABySS](http://www.bcgsc.ca/platform/bioinfo/software/abyss)
+
+ABySS is a de novo assembler that is paired end aware and well suited for short reads. It is well maintained, with the latest version (1.5.2) out in July. 
+ 
+## Velvet
+
+## SPAdes
+
+## ALLPATHS
+
+ 
+ 
+ 
+# Gene Ontology (GO) and Network Analysis
+
+## [DAVID](http://david.abcc.ncifcrf.gov)
+
+DAVID is an online tool for performing gene ontology analysis of a set of target genes. As well as comparing gene lists against gene ontology classes, it is also able to compare against many other annotated gene lists, including pathways from KEGG and Panther, disease genes, literature searches, etc. It is a fantastic resource for looking for enriched functions within a given gene list.
+
+## [GSEA](http://www.broadinstitute.org/gsea/index.jsp)
+
+GSEA is the Broad Institute's visualisation tool for looking for enrichment of functional annotations in a given gene set. You provide the tool with a molecular profile data set (e.g. from RNA seq or microarray) which allows you to rank all genes in the genome based on some measure of expression (or enrichment above a control). This list is compared against a database of gene sets (including curated sets such as gene ontology and disease data sets, as well as any sets that may be of interest specifically for your current experiment , such as results from a different experiment), the genes are ranked based on the profile data, and are scored based on whether or not they are present in the database. The idea is that if there is an enrichment of genes of a certain function in your data set, then you will see this as an enrichment in the graph of the score towards the end of the genes (it will peak at the start, and then tail off for instance). If however there is no enrichment (the genes in the current database are spread across the entire continuum of expression scores) then no such peak will be seen.
+
+## [GO](http://geneontology.org)
+
+The Gene Ontology consortium maintains a well maintained and fully curated database of gene ontologies for the vast majority of identified genes amongst a whole host of organisms. Gene ontology classes are subdivided into 3 groups: biological process, molecular function, and cellular process. The gene ontology classes also follow a hierarchical structure, with increased fidelity as you look at more fine-grained annotations. The GO website allows you to search for enrichment of certain GO terms within genes in a dataset that you input, such as from a microarray experiment.
+
+## [GREAT](http://bejerano.stanford.edu/great/public/html/)
+
+GREAT is a software tool for predicting cis-regulatory regions for a given set of genomic regions. Essentially it takes a set of genomic loci and analyses the annotation of any nearby genes to see if the specified regions are close by to genes of a specific function. For instance, you might have identified a set of ncRNAs that are specifically involved in cis-regualtory activity of target genes of a specific class. 
+
+
+ 
+# Quality Control
+
+## [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+
+FastQC from the Babraham Institute is a very easy to use tool for quality control of fastq files, such as those used in sequencing. This can be a fantastic first pass analysis for sequencing data to check that no obvious problems exist with the sequencing data prior to mapping. A variety of figures are generated, including the base-level base calling scores across each read which can show if there are any systematic regions that require trimming (e.g. the 3' end of the reads where quality can fade), the per-base sequence composition which can help to identify the presence of contaminants (such as adapter sequences), and the levels of sequence duplication which might indicate significant PCR bias. It is usually a very good idea to run FastQC on the sequencing files as a matter of course prior to mapping to see what specific issues you should expect to encounter in the processing.
+
+
+
+
+ 
+# Peak Calling
+
+## [FindPeaks](http://sourceforge.net/projects/vancouvershortr/)
+
+FindPeaks is part of the Vancouver short read analysis package, and is a peak calling algorithm designed to identify regions of enrichment above control and background levels, in a set of sequencing data (e.g. ChIP seq). It works well at identifying tighter peaks but is not well designed for the identification of extended enriched regions (e.g. H3K36me3). 
+
+## [MACS](http://liulab.dfci.harvard.edu/MACS/index.html)
+
+MACS is a model-based peak-calling algorithm that uses the difference in the ChIP fragments from the positive and negative strands to pinpoint the peak center. A poisson model is used to model the background, and enriched regions above the background or above a control sample are estimated. MACS is useful for tight and medium width peaks, but is not so good at identifying wider peaks such as for gene-wide histone marks.
+
+## [HPeak](http://www.sph.umich.edu/csg/qin/HPeak/)
+
+HPeak uses hidden Markov models to identify regions of the genome with significantly more mapped reads than expected by chance. It was released in 2010 and version 2 is now out, although I do not think that it is maintained and updated any more. 
+
+## [PeakSeq](http://info.gersteinlab.org/PeakSeq)
+
+PeakSeq is another recent peak calling algorithm that identifies local thresholds for peak calling based on a Poisson approximation. The ChIPseq data are first normalised to a control sample, and then enriched regions are identified based on this threshold. 
+
+## [QuEST](http://mendel.stanford.edu/sidowlab/downloads/quest/)
+
+Quantitative enrichment of sequence tags (QuEST) is an older peak calling algorithm that works in a similar way to MACS. It is most suited for identifying clear tight peaks in ChIP seq data.
+
+## [HOMER](http://homer.salk.edu/homer/chipseq/peaks.html)
+
+The HOMER suite of tools is very useful for performing various aspects of ChIPseq analyses, such as annotation of called peaks and motif finding. Their peak calling tool is designed specifically for ChIP style sequencing data, and relies on defining a constant peak length for all peaks. This is designed to keep things sinple for the motif analysis tool, but means that this algorithm is not well designed for identifying longer 
+
+## [PeakRanger](http://ranger.sourceforge.net)
+
+PeakRanger is a versatile peak calling algorithm that is useful for both narrow and broader peaks in ChIP seq data. 
+ 
+ 
+ 
+# Sequence Manipulation
+
+## [BEDTools](http://bedtools.readthedocs.org/en/latest/#)
+
+Bedtools is a suite of Unix tools for dealing with files of bed, bedgraph, wig, etc. They can be used to do everything from intersecting, merging, counting, complementing and shuffling genomic interval files, as well as converting between different file formats such as BAM, BED, GFF/GTF and VCF. 
+
+## [SAMtools](http://www.htslib.org)
+
+SamtTools is a suite of Unix tools for dealing with SAM and BAM formatted files following mapping of genome wide sequencing data. This includes reading, writing, editing, indexing and viewing of these files, as well as filtering based on different fields in the file (mapping quality etc.). 
+
+ 
+ 
+ 
+# Adapter Trimming
+
+## [Cutadapt](https://code.google.com/p/cutadapt/)
+
+Cutadapt is a tool allowing the trimming of adapter sequences from the 3' and 5' of called reads from sequencing studies. This can be used to trim off known sequences as well as trimming reads to a specified length. This method is not useful for paired end reads as it does not maintain synchronisation between the mate pair files.
+
+## [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
+
+Trimmomatic is another tool for trimming sequences such as adapter sequences from called reads, that also allows you to crop reads to remove poor quality bases and maintains synchronisation between mate pair files. 
+
+## [Trim Galore](http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)
+
+Trim galore is a wrapper script for cutadapt that allows users to maintain synchronisation between mate pair files. 
+
+## Reaper
+
+ 
+ 
+# Pathway Analysis
+
+## [Ingenuity](http://www.ingenuity.com)
+
+Ingenuity pathway analysis is a platform for the analysis of pathways within sequencing or microarray results based on comparisons with the Ingenuity knowledge base. In particular, the pathway analysis tool provides an interactive approach to the analysis of complex 'omics data, by using known interactions between genes contained within the knowledgebase to generate connections between genes from your analyses. 
+
+## [KEGG](http://www.genome.jp/kegg/)
+
+Like the gene ontology database, the Kyoto encylopedia of genes and genomes is a database resource of various aspects of biological systems such as pathways, functional hierarchies, protein modules, reactome associations, etc. 
+
+## [Cytoscape](http://www.cytoscape.org)
+
+Cytoscape is an open source software platform for the visualisation of complex networks, such as those resulting from interaction datasets, gene ontology classes, etc. It can be used to look for potential interaction networks by combining data from multiple genome-wide experiments. 
+
+## STRING
+
+
+ 
+# Databases
+
+## Kyoto Encyclopedia of Genes and Genomes (KEGG)
+## Gene Ontology (GO)
+## PANTHER
+## JASPAR
+## UniProtKB
+## TrEMBL
+## SwissProt
+## Peptide Atlas
+
+
+
+
+# Genome Browsers
+
+## University of California, Santa Cruz Genome Browser (UCSC)
+## Integrative Genomics Viewer (IGV)
+## Ensembl Genome Browser
+
+
+
+
+# R Packages
+
+## Bioconductor
+## FunChIP
+## GOplot
+
+
+
+
+
+
+
+# Other (rearrange...)
+## Sailfish
+## Kallisto
+## HTseq
+
+
+

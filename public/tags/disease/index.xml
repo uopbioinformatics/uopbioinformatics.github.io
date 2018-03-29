@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Disease on UoP Bioinformatics Group</title>
+    <link>/tags/disease/</link>
+    <description>Recent content in Disease on UoP Bioinformatics Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Sam Robson</copyright>
+    <lastBuildDate>Thu, 17 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/disease/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Gene Expression Profiling of Duchenne Muscular Dystrophy</title>
+      <link>/project/2017-08-17_expression-profiling-of-dmd/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/2017-08-17_expression-profiling-of-dmd/</guid>
+      <description>&lt;p&gt;Duchenne muscular dystrophy (DMD) is an X-linked recessive form of muscular dystrophy typically presenting in boys at around the age of four. DMD is caused by mutations in the DMD gene, which is the largest gene in the genome with 79 exons encoding a range of dystrophin proteins. These proteins are expressed in skeletal and cardiac muscles and also in brain and other non-muscle tissues, where they have specific roles. Their absence due to DMD mutations causes specific abnormalities such as progressive muscle weakness and wasting and cognitive deficits. Muscle weakness begins in the upper legs and pelvis but quickly spreads until boys are unable to walk and eventually cannot breathe unaided.  As yet, no cure exists for DMD, despite it being the most common form of muscular dystrophy.&lt;/p&gt;
+
+&lt;p&gt;Together with &lt;a href=&#34;http://www.port.ac.uk/school-of-pharmacy-and-biomedical-sciences/staff/prof-darek-gorecki.html&#34; target=&#34;_blank&#34;&gt;Professor Darek Gorecki&lt;/a&gt;, we are using RNA seq analysis to identify the changes in expression associated with a point mutation in the Dmd gene in a dystrophic mouse model. By identifying the pathways most impacted by the dystrophic phenotype, we hope to identify novel areas for future therapeutic intervention.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

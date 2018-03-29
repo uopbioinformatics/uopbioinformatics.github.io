@@ -1,0 +1,1 @@
+SampleName	Treatment	Replicate	CellTypesample1	Control	1	HeLasample2	Control	2	HeLasample3	Control	3	HeLasample4	Drug	1	HeLasample5	Drug	2	HeLasample6	Drug	3	HeLa

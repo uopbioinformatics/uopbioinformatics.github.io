@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome on UoP Bioinformatics Group</title>
+    <link>/tags/welcome/</link>
+    <description>Recent content in Welcome on UoP Bioinformatics Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Sam Robson</copyright>
+    <lastBuildDate>Sun, 01 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/welcome/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Welcome to the University of Portsmouth Bioinformatics Group Website</title>
+      <link>/post/welcome-to-the-university-of-portsmouth-bioinformatics-group-website/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/welcome-to-the-university-of-portsmouth-bioinformatics-group-website/</guid>
+      <description>&lt;p&gt;Welcome to the University of Portsmouth Bioinformatics Group website. I set up this group having recently moved from the University of Cambridge, and hope to develop the group further over the coming years. I am going to aim to post regularly on this blog with posts relating to data analysis, experimental design, advances in sequencing technology, and other related matters that may be of interest to visitors.&lt;/p&gt;
+
+&lt;p&gt;I have kicked things off with a &lt;a href=&#34;../../resource/rtutorial/index.html&#34;&gt;tutorial&lt;/a&gt; for those of you that are interested in learning how to use the statistical programming language &lt;a href=&#34;https://cran.r-project.org&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt;. This language is incredibly useful for anybody looking to perform any kind of statistical analysis, and the &lt;a href=&#34;https://bioconductor.org&#34; target=&#34;_blank&#34;&gt;Bioconductor&lt;/a&gt; packages offer countless extensions to the base functionality to allow you to work with data of any type that you might care to mention. If you are interested in data analysis, I thoroughly recommend checking it out, and if you find it useful or if you splot any issues please comment.&lt;/p&gt;
+
+&lt;p&gt;In addition, I have begun to build a list of commonly used &lt;a href=&#34;../../resource/bioinformaticstools/index.html&#34;&gt;bioinformatics tools&lt;/a&gt;, which may help other people to see which tools are currently available for a variety of different bioinformatics tasks. It is a work in progress, so please bear with me while I continue to populate it. I hope to keep this up to date as I discover new tools.&lt;/p&gt;
+
+&lt;p&gt;In the short time that I have been at the University of Portsmouth, I have had similar conversations with a number of researchers and so will focus on discussing some of these commonly occurring questions in my first few posts (e.g. sample size for experimental design, number of reads required for a sequencing experiment, where to sequence your data, differences between sequecning technologies, etc.). Some of these may then develop further into additional resources.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

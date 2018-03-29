@@ -1,0 +1,95 @@
+---
+title: "Sequencing Facilities"
+author: "Sam Robson"
+date: "2017-10-17T13:45:00-05:00"
+categories: ["Bioinformatics"]
+tags: ["Bioinformatics", "Sequencing", "facility", "company"]
+image_preview: "tools.jpg"
+header:
+  image: "headers/tools-wide.jpg"
+  caption: "http://fisherenglish.co.uk/wp-content/uploads/2017/03/tools-toolbox-bw-ss-1920.jpg"
+summary: "A list of commercial and academic sequencing facilities used by members of the faculty"
+---
+
+On this page you will find a list of commercial and academic sequencing facilities that you may wish to consider when looking for sequencing solutions for your project. In cases where the facility have been used by a member of the faculty here at the University of Portsmouth, you will find links to the researchers with experience. I will attempt to collate some feedback from these researchers on this page over time, but if you have any further questions, please contact the researchers indicated directly.
+
+
+# Commercial Sequencing Facilities
+
+## [Theragen Etex](http://www.theragenetex.com/bio/)
+A company in South Korea who offer a number of different sequencing services, including whole genome, exome, transcriptome, and epigenome sequencing technologies. They offer sequencing using Illumina HiSeq 4000/2500, Ion Torrent PGM and Ion Torrent Proton sequencers. Their services include whole genome sequencing, exome sequencing, RNA seq, epigenomics and **de novo** assembly. They also offer library preparation and bioinformatics support if required. They offer a guarentee on sequence on coverage, although this results from pooling of samples across multiple lanes which may cause batch difficulties in downstream analyses. They are very quick to respond to emails and in our experience seem very keen to provide us with good quality data. Typically they seem to offer very competitive rates for sequencing needs.
+
+**[Prof. Darek Gorecki](http://www.port.ac.uk/school-of-pharmacy-and-biomedical-sciences/staff/prof-darek-gorecki.html) - RNA seq**
+
+
+
+## [Source Bioscience](https://www.sourcebioscience.com/?gclid=CJKgxLDd99YCFe6w7QodMpsMeg)
+A company based in Nottingham who seem to offer a very comprehensive catalogue of sequencing services, including RNA seq, ChIP seq, whole genome sequencing, exome sequencing, targeted sequening and metagenomics. They offer DNA/RNA extraction, library preparation, and bioinformatics support if required. They offer Illumina MiSeq, Illumina HiSeq and Illumina NextSeq services. They are one of the leading providers of commercial sequencing in Europe. Data that we have recieved from them in the past has been of high quality, however we have had one case of lost data which is yet to be resolved in a satisfactory manner. Communication when requesting services and data generation are very fast, but communication when problems have arisen has been very poor.
+
+**[Prof. Darek Gorecki](http://www.port.ac.uk/school-of-pharmacy-and-biomedical-sciences/staff/prof-darek-gorecki.html) - RNA seq**
+
+**[Dr. Maria Salta](http://www.port.ac.uk/school-of-biological-sciences/staff/maria-salta.html) - 16S rDNA Sequencing**
+
+**[Prof. Matt Guille](http://www.port.ac.uk/school-of-biological-sciences/staff/prof-matt-guille.html) - RNA Seq**
+
+
+## [LGC Sequencing Service](https://www.lgcgroup.com/services/dna-sequencing/#.WeYcaUw7lBw)
+LGC (Laboratory of the Government Chemist) are a UK-based sequencing company with a long history in bioanalytics. They offer a range of services as well as next generation sequencing, including consultancy, product testing and forensic science. They are able to provide services including RNA seq, ChIP seq, metagenomics, microbial sequencing, and genotyping. They offer assistance with DNA/RNA extraction, library preparation, project design, and bioinformatics support.
+
+**[Joanne Preston](http://www.port.ac.uk/school-of-biological-sciences/staff/dr-joanne-preston.html) - 16S rDNA Sequencing**
+
+**[Joy Watts](http://www.port.ac.uk/school-of-biological-sciences/staff/dr-joy-watts.html) - Transcriptome Assembly**
+
+
+
+## [Mr. DNA Lab](http://www.mrdnalab.com)
+They offer sequencing using Illumina MiSeq, Illumina HiSeq, Pacific Biosciences Sequel (for longer read lengths), Ion Torrent S5 XL and Ion Torrent PGM machines. They offer support for many sequencing services, including whole genome sequencing, exome sequencing, *de novo* assembly, metagenomics, RNA seq and ChIP seq. They offer a guarentee on sequence on coverage, although this results from pooling of samples across multiple lanes which may cause batch difficulties in downstream analyses. 
+
+
+
+## [GATC Biotech](https://www.gatc-biotech.com/en/index.html)
+GATC Biotech are a German-based commercial sequencing facility providing a comprehensive list of next generation sequencing services including whole genome sequencing, **de novo** sequencing, targeted sequencing, amplicon sequencing, metagenomics, RNA seq, ChIP seq and BS seq. They have expertise in Illumina MiSeq, Illumina HiSeq and PacBio RS II. Their **INVIEW** and **NGSELECT** packages provide a complete service, from DNA/RNA extraction, through library preparation and sequencing, to bioinformatics analysis. 
+
+
+## [Genome Scan](https://www.genomescan.nl)
+Through their ServiceXS department, Genome Scan provide a comprehensive series of research services, including whole genome sequencing, exome sequencing, RNA seq, small RNA seq and bisulfite seq. They offer sequencing using Illumina HiSeq 2500/4000, Illumina NextSeq 500 and Pacific Bioscience RS II (for longer read lengths). They provide a full sequencing service, including library proeration and downstream bioinformatics support.
+
+
+
+# Comparison Table
+Below is a table that I have compiled based on the instruments available and the analyses that each facility is able to provide. Please note that I may have missed something - if I have made a mistake please let me know at <samuel.robson@port.ac.uk>. It is highly likely that any of these facilities would have the capacity to run whatever sequencing experiment you are hoping to conduct, but this table is based on the expertise highlighted on their websites:
+
+## Platforms
+
+| *Facility* | *Theragen* | *Source* | *LGC* | *Mr DNA* | *GATC* | *Genome Scan* | 
+|---|---|---|---|---|---|---|
+| HiSeq       | T | T | F | T | T | T | 
+| MiSeq       | F | T | T | T | T | F | 
+| NextSeq     | F | T | T | F | F | T | 
+| PacBio      | F | F | F | T | T | T | 
+| Ion Torrent | T | F | F | T | F | F | 
+
+## Technologies
+
+| *Facility* | *Theragen* | *Source* | *LGC* | *Mr DNA* | *GATC* | *Genome Scan* | 
+|---|---|---|---|---|---|---|
+| **De Novo**     | T | T | F | T | T | T | 
+| Transcriptomics | T | T | T | T | T | T | 
+| Epigenetics     | ? | T | T | T | T | T | 
+| WGS             | T | T | T | T | T | T | 
+| WES             | T | T | T | T | T | T | 
+| Metagenomics    | F | T | T | T | T | T | 
+| Epigenomics     | T | T | F | ? | T | T | 
+
+## Services
+
+| *Facility* | *Theragen* | *Source* | *LGC* | *Mr DNA* | *GATC* | *Genome Scan* | 
+|---|---|---|---|---|---|---|
+| DNA/RNA Extraction | ? | T | T | ? | T | ? |
+| Library Prep       | T | T | T | T | T | T |
+| Bioinformatics     | T | T | T | T | T | T |
+
+
+
+
+

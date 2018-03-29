@@ -1,0 +1,405 @@
+---
+title: "Bioinformatics Tools"
+author: "Sam Robson"
+date: "2017-08-23T12:28:14-05:00"
+categories: ["Bioinformatics"]
+tags: ["Bioinformatics", "How To", "Tools", "tools"]
+image_preview: "tools.jpg"
+header:
+  image: "headers/tools-wide.jpg"
+  caption: "http://fisherenglish.co.uk/wp-content/uploads/2017/03/tools-toolbox-bw-ss-1920.jpg"
+summary: "A list of commonly used tools for bioinformatics analyses"
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 3
+    toc_float: false
+    number_sections: true
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#sequence-alignment"><span class="toc-section-number">1</span> Sequence Alignment</a><ul>
+<li><a href="#clustalw"><span class="toc-section-number">1.1</span> <a href="http://www.ebi.ac.uk/Tools/msa/clustalw2/">ClustalW</a></a></li>
+<li><a href="#seaview"><span class="toc-section-number">1.2</span> <a href="http://doua.prabi.fr/software/seaview">SeaView</a></a></li>
+<li><a href="#pagan"><span class="toc-section-number">1.3</span> <a href="https://code.google.com/p/pagan-msa/wiki/PAGAN">PAGAN</a></a></li>
+<li><a href="#ncbi-blast"><span class="toc-section-number">1.4</span> <a href="http://blast.st-va.ncbi.nlm.nih.gov/Blast.cgi">NCBI BLAST</a></a></li>
+<li><a href="#hmmer"><span class="toc-section-number">1.5</span> <a href="http://hmmer.janelia.org">HMMer</a></a></li>
+<li><a href="#fasta"><span class="toc-section-number">1.6</span> <a href="http://www.ebi.ac.uk/Tools/sss/fasta/">FASTA</a></a></li>
+<li><a href="#muscle"><span class="toc-section-number">1.7</span> <a href="http://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE</a></a></li>
+</ul></li>
+<li><a href="#motif-and-domain-analysis"><span class="toc-section-number">2</span> Motif and Domain Analysis</a><ul>
+<li><a href="#meme-suite"><span class="toc-section-number">2.1</span> <a href="http://meme.nbcr.net/meme/">MEME Suite</a></a><ul>
+<li><a href="#meme"><span class="toc-section-number">2.1.1</span> MEME</a></li>
+<li><a href="#dreme"><span class="toc-section-number">2.1.2</span> DREME</a></li>
+<li><a href="#mast"><span class="toc-section-number">2.1.3</span> MAST</a></li>
+<li><a href="#tomtom"><span class="toc-section-number">2.1.4</span> TOMTOM</a></li>
+<li><a href="#gomo"><span class="toc-section-number">2.1.5</span> GOMO</a></li>
+<li><a href="#meme-chip"><span class="toc-section-number">2.1.6</span> MEME-CHIP</a></li>
+</ul></li>
+<li><a href="#homer-suite"><span class="toc-section-number">2.2</span> <a href="http://homer.ucsd.edu/homer/">HOMER Suite</a></a></li>
+</ul></li>
+<li><a href="#domain-analysis"><span class="toc-section-number">3</span> Domain Analysis</a><ul>
+<li><a href="#interproscan"><span class="toc-section-number">3.1</span> <a href="http://www.ebi.ac.uk/interpro/">InterProScan</a></a></li>
+<li><a href="#pfam"><span class="toc-section-number">3.2</span> <a href="http://pfam.xfam.org">Pfam</a></a></li>
+<li><a href="#smart"><span class="toc-section-number">3.3</span> <a href="http://smart.embl-heidelberg.de">SMART</a></a></li>
+<li><a href="#data-repositories"><span class="toc-section-number">3.4</span> Data Repositories</a></li>
+<li><a href="#gene-expression-omnibus-geo"><span class="toc-section-number">3.5</span> <a href="http://www.ncbi.nlm.nih.gov/geo/">Gene Expression Omnibus (GEO)</a></a></li>
+<li><a href="#arrayexpress"><span class="toc-section-number">3.6</span> <a href="http://www.ebi.ac.uk/arrayexpress/">ArrayExpress</a></a></li>
+<li><a href="#sequence-read-archive-sra"><span class="toc-section-number">3.7</span> <a href="http://www.ncbi.nlm.nih.gov/sra">Sequence Read Archive (SRA)</a></a></li>
+</ul></li>
+<li><a href="#genome-mapping"><span class="toc-section-number">4</span> Genome Mapping</a><ul>
+<li><a href="#bwa"><span class="toc-section-number">4.1</span> <a href="http://bio-bwa.sourceforge.net">BWA</a></a></li>
+<li><a href="#bowtie"><span class="toc-section-number">4.2</span> <a href="http://bowtie-bio.sourceforge.net/index.shtml">Bowtie</a></a></li>
+<li><a href="#maq"><span class="toc-section-number">4.3</span> <a href="http://maq.sourceforge.net">MAQ</a></a></li>
+<li><a href="#tophat"><span class="toc-section-number">4.4</span> <a href="http://ccb.jhu.edu/software/tophat/index.shtml">TopHat</a></a></li>
+<li><a href="#star"><span class="toc-section-number">4.5</span> <a href="https://github.com/alexdobin/STAR">STAR</a></a></li>
+<li><a href="#novoalign"><span class="toc-section-number">4.6</span> <a href="http://www.novocraft.com/main/page.php?s=novoalign">NovoAlign</a></a></li>
+<li><a href="#shrimp"><span class="toc-section-number">4.7</span> <a href="http://compbio.cs.toronto.edu/shrimp/">SHRiMP</a></a></li>
+<li><a href="#eland"><span class="toc-section-number">4.8</span> ELAND</a></li>
+</ul></li>
+<li><a href="#de-novo-assembly"><span class="toc-section-number">5</span> De Novo Assembly</a><ul>
+<li><a href="#soap"><span class="toc-section-number">5.1</span> <a href="http://soap.genomics.org.cn">SOAP</a></a></li>
+<li><a href="#abyss"><span class="toc-section-number">5.2</span> <a href="http://www.bcgsc.ca/platform/bioinfo/software/abyss">ABySS</a></a></li>
+<li><a href="#trinity"><span class="toc-section-number">5.3</span> <a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki">Trinity</a></a></li>
+</ul></li>
+<li><a href="#read-quantification"><span class="toc-section-number">6</span> Read Quantification</a><ul>
+<li><a href="#htseq"><span class="toc-section-number">6.1</span> <a href="https://htseq.readthedocs.io/en/release_0.9.1/">HTseq</a></a></li>
+<li><a href="#kallisto"><span class="toc-section-number">6.2</span> <a href="https://pachterlab.github.io/kallisto/about">Kallisto</a></a></li>
+</ul></li>
+<li><a href="#gene-ontology-go-and-network-analysis"><span class="toc-section-number">7</span> Gene Ontology (GO) and Network Analysis</a><ul>
+<li><a href="#david"><span class="toc-section-number">7.1</span> <a href="http://david.abcc.ncifcrf.gov">DAVID</a></a></li>
+<li><a href="#gsea"><span class="toc-section-number">7.2</span> <a href="http://www.broadinstitute.org/gsea/index.jsp">GSEA</a></a></li>
+<li><a href="#go"><span class="toc-section-number">7.3</span> <a href="http://geneontology.org">GO</a></a></li>
+<li><a href="#great"><span class="toc-section-number">7.4</span> <a href="http://bejerano.stanford.edu/great/public/html/">GREAT</a></a></li>
+<li><a href="#panther"><span class="toc-section-number">7.5</span> <a href="http://www.pantherdb.org">PANTHER</a></a></li>
+<li><a href="#blast2go"><span class="toc-section-number">7.6</span> <a href="https://www.blast2go.com">blast2GO</a></a></li>
+</ul></li>
+<li><a href="#quality-control"><span class="toc-section-number">8</span> Quality Control</a><ul>
+<li><a href="#fastqc"><span class="toc-section-number">8.1</span> <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></a></li>
+<li><a href="#multiqc"><span class="toc-section-number">8.2</span> <a href="http://multiqc.info">MultiQC</a></a></li>
+</ul></li>
+<li><a href="#peak-calling"><span class="toc-section-number">9</span> Peak Calling</a><ul>
+<li><a href="#findpeaks"><span class="toc-section-number">9.1</span> <a href="http://sourceforge.net/projects/vancouvershortr/">FindPeaks</a></a></li>
+<li><a href="#macs"><span class="toc-section-number">9.2</span> <a href="http://liulab.dfci.harvard.edu/MACS/index.html">MACS</a></a></li>
+<li><a href="#hpeak"><span class="toc-section-number">9.3</span> <a href="http://www.sph.umich.edu/csg/qin/HPeak/">HPeak</a></a></li>
+<li><a href="#peakseq"><span class="toc-section-number">9.4</span> <a href="http://info.gersteinlab.org/PeakSeq">PeakSeq</a></a></li>
+<li><a href="#quest"><span class="toc-section-number">9.5</span> <a href="http://mendel.stanford.edu/sidowlab/downloads/quest/">QuEST</a></a></li>
+<li><a href="#homer"><span class="toc-section-number">9.6</span> <a href="http://homer.salk.edu/homer/chipseq/peaks.html">HOMER</a></a></li>
+<li><a href="#peakranger"><span class="toc-section-number">9.7</span> <a href="http://ranger.sourceforge.net">PeakRanger</a></a></li>
+</ul></li>
+<li><a href="#sequence-manipulation"><span class="toc-section-number">10</span> Sequence Manipulation</a><ul>
+<li><a href="#bedtools"><span class="toc-section-number">10.1</span> <a href="http://bedtools.readthedocs.org/en/latest/#">BEDTools</a></a></li>
+<li><a href="#samtools"><span class="toc-section-number">10.2</span> <a href="http://www.htslib.org">SAMtools</a></a></li>
+</ul></li>
+<li><a href="#adapter-trimming"><span class="toc-section-number">11</span> Adapter Trimming</a><ul>
+<li><a href="#cutadapt"><span class="toc-section-number">11.1</span> <a href="https://code.google.com/p/cutadapt/">Cutadapt</a></a></li>
+<li><a href="#trimmomatic"><span class="toc-section-number">11.2</span> <a href="http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a></a></li>
+<li><a href="#trim-galore"><span class="toc-section-number">11.3</span> <a href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/">Trim Galore</a></a></li>
+<li><a href="#reaper"><span class="toc-section-number">11.4</span> <a href="https://www.ebi.ac.uk/research/enright/software/kraken">Reaper</a></a></li>
+</ul></li>
+<li><a href="#pathway-analysis"><span class="toc-section-number">12</span> Pathway Analysis</a><ul>
+<li><a href="#ingenuity"><span class="toc-section-number">12.1</span> <a href="http://www.ingenuity.com">Ingenuity</a></a></li>
+<li><a href="#kegg"><span class="toc-section-number">12.2</span> <a href="http://www.genome.jp/kegg/">KEGG</a></a></li>
+<li><a href="#cytoscape"><span class="toc-section-number">12.3</span> <a href="http://www.cytoscape.org">Cytoscape</a></a></li>
+<li><a href="#string"><span class="toc-section-number">12.4</span> <a href="https://string-db.org">STRING</a></a></li>
+</ul></li>
+<li><a href="#genome-browsers"><span class="toc-section-number">13</span> Genome Browsers</a><ul>
+<li><a href="#university-of-california-santa-cruz-genome-browser-ucsc"><span class="toc-section-number">13.1</span> <a href="https://htseq.readthedocs.io/en/release_0.9.1/">University of California, Santa Cruz Genome Browser (UCSC)</a></a></li>
+<li><a href="#ensembl-genome-browser"><span class="toc-section-number">13.2</span> <a href="http://www.ensembl.org/index.html">Ensembl Genome Browser</a></a></li>
+<li><a href="#integrative-genomics-viewer-igv"><span class="toc-section-number">13.3</span> <a href="http://software.broadinstitute.org/software/igv/">Integrative Genomics Viewer (IGV)</a></a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="sequence-alignment" class="section level1">
+<h1><span class="header-section-number">1</span> Sequence Alignment</h1>
+<div id="clustalw" class="section level2">
+<h2><span class="header-section-number">1.1</span> <a href="http://www.ebi.ac.uk/Tools/msa/clustalw2/">ClustalW</a></h2>
+<p>Useful for aligning a small number of sequences, such as homologs from multiple species. Not so useful for multiple alignment of a large amount of sequences from ChIP seq for instance.</p>
+</div>
+<div id="seaview" class="section level2">
+<h2><span class="header-section-number">1.2</span> <a href="http://doua.prabi.fr/software/seaview">SeaView</a></h2>
+<p>Graphical visualisation of multiple sequence alignment. Can perform alignment of sequences, or can be used to visualise the results of alignments from other algorithms. Can be manually adjusted which can be useful when incorporating prior knowledge into the alignment.</p>
+</div>
+<div id="pagan" class="section level2">
+<h2><span class="header-section-number">1.3</span> <a href="https://code.google.com/p/pagan-msa/wiki/PAGAN">PAGAN</a></h2>
+<p>A phylogeny-aware general purpose aligner which can be more useful for clustering when there are likely to be large gaps in some sequences compared to others (for instance if comparing gene sequences from different species with non-homologous exons).</p>
+</div>
+<div id="ncbi-blast" class="section level2">
+<h2><span class="header-section-number">1.4</span> <a href="http://blast.st-va.ncbi.nlm.nih.gov/Blast.cgi">NCBI BLAST</a></h2>
+<p>Suite of tools for searching a protein or nucleotide database to find potential matches or homologs, or for aligning multiple sequences. This tool is particularly useful when you have a query sequence and want to find either known homologs amongst different species, or to find additional proteins with similar structural domains.</p>
+</div>
+<div id="hmmer" class="section level2">
+<h2><span class="header-section-number">1.5</span> <a href="http://hmmer.janelia.org">HMMer</a></h2>
+<p>Similar to BLAST, HMMer uses hidden Markov models to improve the accuracy and ability to detect remote homologs by using a stronger underlying mathematical model. This suite of tools can be used to search for homologs in protein and transcript databases in a similar way to BLAST.</p>
+</div>
+<div id="fasta" class="section level2">
+<h2><span class="header-section-number">1.6</span> <a href="http://www.ebi.ac.uk/Tools/sss/fasta/">FASTA</a></h2>
+<p>FASTA is the original sequence similarity search tool, and can be used to search for a query protein amongst known protein or ranscript databases such as UniProt. It uses a heuristic approach, which has been improved over the years, but BLAST is probably a better approach to use in general.</p>
+</div>
+<div id="muscle" class="section level2">
+<h2><span class="header-section-number">1.7</span> <a href="http://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE</a></h2>
+<p>MUSCLE is a multiple sequence comparison tool similar to ClustalW that may be slightly faster with more accurate results. It can be used to perform gapped alignment of a set of sequences in any supported format (e.g. fasta).</p>
+</div>
+</div>
+<div id="motif-and-domain-analysis" class="section level1">
+<h1><span class="header-section-number">2</span> Motif and Domain Analysis</h1>
+<div id="meme-suite" class="section level2">
+<h2><span class="header-section-number">2.1</span> <a href="http://meme.nbcr.net/meme/">MEME Suite</a></h2>
+<p>The MEME suite is a series of tools for motif analysis and consists of the following tools:</p>
+<div id="meme" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> MEME</h3>
+<p>De-Novo discovery of motifs from a series of related protein or transcript sequences. This method is more designed for comparison of sequences from, say, a handful of transcription factor sites and is not so well designed for large number of sequences (e.g. from ChIP seq experiments). This tool is better for the identification of wider motifs. For narrower motifs use DREME.</p>
+</div>
+<div id="dreme" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> DREME</h3>
+<p>Like MEME above, but better for the discovery of narrower motifs.</p>
+</div>
+<div id="mast" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> MAST</h3>
+<p>MAST is a motif alignment and search tool for the identification of known (or identified) motifs amongst some database of sequences. This can be either a protein or transcript database, or for instance a known motif can be searched within a set of sequences such as from a ChIP seq experiment. A match score is calculated by comparing the position weight matrix of the motif with each sequence.</p>
+</div>
+<div id="tomtom" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> TOMTOM</h3>
+<p>TOMTOM is a way to compare de novo motifs to a database of known motifs contained within the MEME database. A list of matching motifs is returned, so this can be used to see if for instance your motif matches the known binding motif of a transcription factor within the database. One of the databases that is queried is the JASPAR database (see resources) which contains a large well-maintained and curated set of known TF binding sites.</p>
+</div>
+<div id="gomo" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> GOMO</h3>
+<p>GOMO takes an input motif and scores all genes based on the binding affinity of the motif at their upstream promoter region. It then performs a gene ontology analysis to see if this motif is associated with the promoter regions of genes involved in any particular function.</p>
+</div>
+<div id="meme-chip" class="section level3">
+<h3><span class="header-section-number">2.1.6</span> MEME-CHIP</h3>
+<p>MEME-CHIP is a combined motif discovery tool for ChIP seq results. It relies on the fact that the mid-100bp region of the supplied sequences represent the likely binding location of the peak, performs motif discovery across a large number of sequences, and compares against known motif databases.</p>
+</div>
+</div>
+<div id="homer-suite" class="section level2">
+<h2><span class="header-section-number">2.2</span> <a href="http://homer.ucsd.edu/homer/">HOMER Suite</a></h2>
+<p>The HOMER (Hypergeometric Optimization of Motif EnRichment) suite of tools is ostensibly a package (like MEME) for <em>de novo</em> identification of enriched motifs from genomic data, but has expanded considerably to provide resources for many aspects of NGS analysis. It has tools for analysis of ChIP-Seq, RNA-Seq, GRO-Seq, Hi-C and BS-Seq data. For instance, for ChIP-seq it has some very useful functions for annotation of peaks (annotatePeaks.pl), motif analysis on called peaks (findMotifsGenome.pl), and differential peak analysis (getDifferentialPeaksReplicates.pl).</p>
+</div>
+</div>
+<div id="domain-analysis" class="section level1">
+<h1><span class="header-section-number">3</span> Domain Analysis</h1>
+<div id="interproscan" class="section level2">
+<h2><span class="header-section-number">3.1</span> <a href="http://www.ebi.ac.uk/interpro/">InterProScan</a></h2>
+<p>Interpro is a database of protein families and known structural domains from the EBI. InterProScan allows users to scan a query sequence for known structural domains or associated protein families, comparing against proteins in the UniProt Knowledge Database.</p>
+</div>
+<div id="pfam" class="section level2">
+<h2><span class="header-section-number">3.2</span> <a href="http://pfam.xfam.org">Pfam</a></h2>
+<p>Pfam is a database from the EBI containing identified protein famillies based on multiple sequence alignments and HMM analysis of known sequences. The Pfam website can be used to view protein families, or view the protein domain structure of known proteins, or alternative can be used to search a query sequence for known domains.</p>
+</div>
+<div id="smart" class="section level2">
+<h2><span class="header-section-number">3.3</span> <a href="http://smart.embl-heidelberg.de">SMART</a></h2>
+<p>SMART is a well-maintained modular database (based on SwissProt, TReMBL and the like) of annotated and functional protein domains. Domain structure of known proteins as well as identification of known domains within novel protein sequences can be achieved using this tool.</p>
+</div>
+<div id="data-repositories" class="section level2">
+<h2><span class="header-section-number">3.4</span> Data Repositories</h2>
+</div>
+<div id="gene-expression-omnibus-geo" class="section level2">
+<h2><span class="header-section-number">3.5</span> <a href="http://www.ncbi.nlm.nih.gov/geo/">Gene Expression Omnibus (GEO)</a></h2>
+<p>GEO is the NCBI repository of high throughput data, including sequencing and microarray data. All data maintained within this database is MIAME-compliant, and is synched with projects in ArrayExpress as well. Most experiments contain both raw data (raw chip data for microarrays, or raw read files for sequencing), as well as processed data files (mapped data, called peaks, normalised microarray results, etc).</p>
+</div>
+<div id="arrayexpress" class="section level2">
+<h2><span class="header-section-number">3.6</span> <a href="http://www.ebi.ac.uk/arrayexpress/">ArrayExpress</a></h2>
+<p>ArrayExpress is the EBI-maintained repository for high-throughput data. As with GEO, it contains data for microarray experiments and sequencing experiments of all kinds, all of which are MIAME-compliant. Most experiments contain both raw data (raw chip data for microarrays, or raw read files for sequencing), as well as processed data files (mapped data, called peaks, normalised microarray results, etc).</p>
+</div>
+<div id="sequence-read-archive-sra" class="section level2">
+<h2><span class="header-section-number">3.7</span> <a href="http://www.ncbi.nlm.nih.gov/sra">Sequence Read Archive (SRA)</a></h2>
+<p>The SRA is probably the single most useful source for the storage of sequence level data in the world. GEO and ArrayEpxress are linked to the SRA, and this is where the raw and mapped data for most sequencing experiments are stored. These data are stored in a proprietary XML-style format and the SRA Toolkit applications can be used to dump the files into one of a number of useful formats (e.g. fastq-dump and sam-dump).</p>
+</div>
+</div>
+<div id="genome-mapping" class="section level1">
+<h1><span class="header-section-number">4</span> Genome Mapping</h1>
+<div id="bwa" class="section level2">
+<h2><span class="header-section-number">4.1</span> <a href="http://bio-bwa.sourceforge.net">BWA</a></h2>
+<p>The Burrows-Wheeler Aligner is one of the most widely used mapping algorithms available, and is particularly useful for mapping low-divergent sequences against a large reference genome. Each sequence is mapped with a mapping quality score, which takes into account gapped alignments and mismatches, and this can be used to define accurate mapping. The output SAM files also contain the location of mismatches in CIGAR format. The benefits of using this algorithm are its speed and accuracy. One negative is that if a sequence maps to multiple locations, only one mapped loci is returned (obviously with a low mapping score). If you want to see all mapped locations (e.g. if you are interested in regions of low complexity) then Bowtie may be better.</p>
+</div>
+<div id="bowtie" class="section level2">
+<h2><span class="header-section-number">4.2</span> <a href="http://bowtie-bio.sourceforge.net/index.shtml">Bowtie</a></h2>
+<p>Bowtie is one of the most commonly used mapping algorithms, and uses indexing using Burrows-Wheeler to produce fast and memory efficient alignments. Bowtie can be used to provide multiple mapping coordinates for reads from regions of low complexity and repetitive sequences in the genome. Bowtie is well maintained (with version 2 currently in circulation).</p>
+</div>
+<div id="maq" class="section level2">
+<h2><span class="header-section-number">4.3</span> <a href="http://maq.sourceforge.net">MAQ</a></h2>
+<p>MAQ is an older aligner that does not seem to be maintained any longer. It has been superseded by BWA and Bowtie and should probably not be used any longer.</p>
+</div>
+<div id="tophat" class="section level2">
+<h2><span class="header-section-number">4.4</span> <a href="http://ccb.jhu.edu/software/tophat/index.shtml">TopHat</a></h2>
+<p>TopHat is a splice-junction aware mapper for the alignment of RNA Seq data to the genome. It is based on the Bowtie aligner above, but analyses mapped data to identify splice junctions between exons. Alternatively a list of known exon splice junctions can be provided which can be used to guide the alignment across splice junctions. This is one of the most commonly used tools for the mapping of RNA seq data.</p>
+</div>
+<div id="star" class="section level2">
+<h2><span class="header-section-number">4.5</span> <a href="https://github.com/alexdobin/STAR">STAR</a></h2>
+<p>Like TopHat, STAR is a splice aware aligner that is used to map RNA Seq reads to the genome. However, STAR uses a much faster algorithm than TopHat and tends to produce slightly better results.</p>
+</div>
+<div id="novoalign" class="section level2">
+<h2><span class="header-section-number">4.6</span> <a href="http://www.novocraft.com/main/page.php?s=novoalign">NovoAlign</a></h2>
+<p>Novoalign is a licensed mapping software tool (although a free version is available). For multi-mapping reads, you can choose to return all, none, or just one randomly selected mapping in your output.</p>
+</div>
+<div id="shrimp" class="section level2">
+<h2><span class="header-section-number">4.7</span> <a href="http://compbio.cs.toronto.edu/shrimp/">SHRiMP</a></h2>
+<p>SHRiMP is another older free mapping algorithm which no longer has active support from the authors. It is based on seeding together with the Smith-Waterman algorithm, but is surprisingly fast.</p>
+</div>
+<div id="eland" class="section level2">
+<h2><span class="header-section-number">4.8</span> ELAND</h2>
+<p>ELAND is the Illumina pipeline software that comes attached to each of the Illumina sequencing machines. It is their proprietary software and is not easy to get hold of, although as indirect customers we could probably obtain a copy if necessary.</p>
+</div>
+</div>
+<div id="de-novo-assembly" class="section level1">
+<h1><span class="header-section-number">5</span> De Novo Assembly</h1>
+<div id="soap" class="section level2">
+<h2><span class="header-section-number">5.1</span> <a href="http://soap.genomics.org.cn">SOAP</a></h2>
+<p>SOAP is a suite of tools for analysis of short oligonucleotide sequences, including for de novo assembly, alignment against a target genome, splice mapping for RNA seq data, and SNP and indel calling for resequencing experiments. The website has not been updated since 2010, so this may not be maintained any more and may be an older tool that is not of any use any more.</p>
+</div>
+<div id="abyss" class="section level2">
+<h2><span class="header-section-number">5.2</span> <a href="http://www.bcgsc.ca/platform/bioinfo/software/abyss">ABySS</a></h2>
+<p>ABySS is a de novo assembler that is paired end aware and well suited for short reads. It is well maintained, with the latest version (1.5.2) out in July.</p>
+</div>
+<div id="trinity" class="section level2">
+<h2><span class="header-section-number">5.3</span> <a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki">Trinity</a></h2>
+<p>Trinity is a complete package for assembly of transcripts from Illumina RNA Seq data, developed at the Broad Institute ant the Hebrew University of Jerusalem. There are three main stages to the assembly: 1) The <em>Inchworm</em> program performs the read assembly, generating either full length transcripts, or unique portions for alternatively spliced transcripts; 2) The <em>Chrysalis</em> program then clusters these unique contigs into “gene” clusters and constructs de Bruijn graphs for each cluster based on member assignment; 3) The <em>Butterfly</em> program then deconvolutes these graphs and generates the full length transcripts for the alternatively spliced transcripts and identiying paralogous genes. It can be used in conjunction with the <a href="https://trinotate.github.io">Trinotate</a> package, which uses a number of standard programs for annoattion of the resulting transcripts.</p>
+</div>
+</div>
+<div id="read-quantification" class="section level1">
+<h1><span class="header-section-number">6</span> Read Quantification</h1>
+<div id="htseq" class="section level2">
+<h2><span class="header-section-number">6.1</span> <a href="https://htseq.readthedocs.io/en/release_0.9.1/">HTseq</a></h2>
+<p>HTseq is a python based tool for assessing the quantification of reads amongst specific genomic elements (typically used to count reads that map to individual genes in RNA Seq data analysis). It relies on mapped data using one of the (likely splice-aware) mapping elgorithms mentioned above. In particular, it allows you to specify how best to deal with reads that overlap multiple exons (e.g. due to multiple splicing isoforms, or due to reads mapping to genes that overlap on opposite strands).</p>
+</div>
+<div id="kallisto" class="section level2">
+<h2><span class="header-section-number">6.2</span> <a href="https://pachterlab.github.io/kallisto/about">Kallisto</a></h2>
+<p>Kallisto is an alignment-free read quantification algorithm, used to quantify the abundance of transcripts from (say) RNA-Seq data. It uses an index of the target transcriptome and uses a pseudoalignment method which can quantify 30 million human reads in less than 3 minutes. This has been shown to be comparable to other assembly-based quantification methods (e.g. Tophat2, STAR), and actually is robust to read-level errors and so often out-performs these, whilst also being orders of magnitude faster.</p>
+</div>
+</div>
+<div id="gene-ontology-go-and-network-analysis" class="section level1">
+<h1><span class="header-section-number">7</span> Gene Ontology (GO) and Network Analysis</h1>
+<div id="david" class="section level2">
+<h2><span class="header-section-number">7.1</span> <a href="http://david.abcc.ncifcrf.gov">DAVID</a></h2>
+<p>DAVID is an online tool for performing gene ontology analysis of a set of target genes. As well as comparing gene lists against gene ontology classes, it is also able to compare against many other annotated gene lists, including pathways from KEGG and Panther, disease genes, literature searches, etc. It is a fantastic resource for looking for enriched functions within a given gene list.</p>
+</div>
+<div id="gsea" class="section level2">
+<h2><span class="header-section-number">7.2</span> <a href="http://www.broadinstitute.org/gsea/index.jsp">GSEA</a></h2>
+<p>GSEA is the Broad Institute’s visualisation tool for looking for enrichment of functional annotations in a given gene set. You provide the tool with a molecular profile data set (e.g. from RNA seq or microarray) which allows you to rank all genes in the genome based on some measure of expression (or enrichment above a control). This list is compared against a database of gene sets (including curated sets such as gene ontology and disease data sets, as well as any sets that may be of interest specifically for your current experiment , such as results from a different experiment), the genes are ranked based on the profile data, and are scored based on whether or not they are present in the database. The idea is that if there is an enrichment of genes of a certain function in your data set, then you will see this as an enrichment in the graph of the score towards the end of the genes (it will peak at the start, and then tail off for instance). If however there is no enrichment (the genes in the current database are spread across the entire continuum of expression scores) then no such peak will be seen.</p>
+</div>
+<div id="go" class="section level2">
+<h2><span class="header-section-number">7.3</span> <a href="http://geneontology.org">GO</a></h2>
+<p>The Gene Ontology consortium maintains a well maintained and fully curated database of gene ontologies for the vast majority of identified genes amongst a whole host of organisms. Gene ontology classes are subdivided into 3 groups: biological process, molecular function, and cellular process. The gene ontology classes also follow a hierarchical structure, with increased fidelity as you look at more fine-grained annotations. The GO website allows you to search for enrichment of certain GO terms within genes in a dataset that you input, such as from a microarray experiment.</p>
+</div>
+<div id="great" class="section level2">
+<h2><span class="header-section-number">7.4</span> <a href="http://bejerano.stanford.edu/great/public/html/">GREAT</a></h2>
+<p>GREAT is a software tool for predicting cis-regulatory regions for a given set of genomic regions. Essentially it takes a set of genomic loci and analyses the annotation of any nearby genes to see if the specified regions are close by to genes of a specific function. For instance, you might have identified a set of ncRNAs that are specifically involved in cis-regualtory activity of target genes of a specific class.</p>
+</div>
+<div id="panther" class="section level2">
+<h2><span class="header-section-number">7.5</span> <a href="http://www.pantherdb.org">PANTHER</a></h2>
+<p>The PANTHER (Protein ANalysis THrough Evolutionary Relationships) database is another database of gene/protein family and subfamily functional classes, that actually uses the GO terms from the gene ontology database. It uses evolutionarily conserved elements of novel genes/proteins to identify functions based on similar families present in the database. It is ultimately used in a similar way to the GO database.</p>
+</div>
+<div id="blast2go" class="section level2">
+<h2><span class="header-section-number">7.6</span> <a href="https://www.blast2go.com">blast2GO</a></h2>
+<p>blast2GO is a bioinformatics package for the identification of GO classes and other functional information from novel nucleotide level data (e.g. from <em>de novo</em> sequencing). It utilises the BLAST algorithm to identify genes with similar sequence structure and known functional annotation that can be inferred across to the novel sequence.</p>
+</div>
+</div>
+<div id="quality-control" class="section level1">
+<h1><span class="header-section-number">8</span> Quality Control</h1>
+<div id="fastqc" class="section level2">
+<h2><span class="header-section-number">8.1</span> <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></h2>
+<p>FastQC from the Babraham Institute is a very easy to use tool for quality control of fastq files, such as those used in sequencing. This can be a fantastic first pass analysis for sequencing data to check that no obvious problems exist with the sequencing data prior to mapping. A variety of figures are generated, including the base-level base calling scores across each read which can show if there are any systematic regions that require trimming (e.g. the 3’ end of the reads where quality can fade), the per-base sequence composition which can help to identify the presence of contaminants (such as adapter sequences), and the levels of sequence duplication which might indicate significant PCR bias. It is usually a very good idea to run FastQC on the sequencing files as a matter of course prior to mapping to see what specific issues you should expect to encounter in the processing.</p>
+</div>
+<div id="multiqc" class="section level2">
+<h2><span class="header-section-number">8.2</span> <a href="http://multiqc.info">MultiQC</a></h2>
+<p>MultiQC is a tool that I have recently started to use which is able to create interactive reports aggregating the results from various QC programs into one simple to navigate web page. This provides a single report for each sample that can easily be perused to identify issues with the data. It is set up to deal with output from many common analysis tools, including cutadapt, fastQC, Trimmomatic, BWA, Tophat, Bowtie, STAR, etc.</p>
+</div>
+</div>
+<div id="peak-calling" class="section level1">
+<h1><span class="header-section-number">9</span> Peak Calling</h1>
+<div id="findpeaks" class="section level2">
+<h2><span class="header-section-number">9.1</span> <a href="http://sourceforge.net/projects/vancouvershortr/">FindPeaks</a></h2>
+<p>FindPeaks is part of the Vancouver short read analysis package, and is a peak calling algorithm designed to identify regions of enrichment above control and background levels, in a set of sequencing data (e.g. ChIP seq). It works well at identifying tighter peaks but is not well designed for the identification of extended enriched regions (e.g. H3K36me3).</p>
+</div>
+<div id="macs" class="section level2">
+<h2><span class="header-section-number">9.2</span> <a href="http://liulab.dfci.harvard.edu/MACS/index.html">MACS</a></h2>
+<p>MACS is a model-based peak-calling algorithm that uses the difference in the ChIP fragments from the positive and negative strands to pinpoint the peak center. A poisson model is used to model the background, and enriched regions above the background or above a control sample are estimated. MACS is useful for tight and medium width peaks, but is not so good at identifying wider peaks such as for gene-wide histone marks.</p>
+</div>
+<div id="hpeak" class="section level2">
+<h2><span class="header-section-number">9.3</span> <a href="http://www.sph.umich.edu/csg/qin/HPeak/">HPeak</a></h2>
+<p>HPeak uses hidden Markov models to identify regions of the genome with significantly more mapped reads than expected by chance. It was released in 2010 and version 2 is now out, although I do not think that it is maintained and updated any more.</p>
+</div>
+<div id="peakseq" class="section level2">
+<h2><span class="header-section-number">9.4</span> <a href="http://info.gersteinlab.org/PeakSeq">PeakSeq</a></h2>
+<p>PeakSeq is another recent peak calling algorithm that identifies local thresholds for peak calling based on a Poisson approximation. The ChIPseq data are first normalised to a control sample, and then enriched regions are identified based on this threshold.</p>
+</div>
+<div id="quest" class="section level2">
+<h2><span class="header-section-number">9.5</span> <a href="http://mendel.stanford.edu/sidowlab/downloads/quest/">QuEST</a></h2>
+<p>Quantitative enrichment of sequence tags (QuEST) is an older peak calling algorithm that works in a similar way to MACS. It is most suited for identifying clear tight peaks in ChIP seq data.</p>
+</div>
+<div id="homer" class="section level2">
+<h2><span class="header-section-number">9.6</span> <a href="http://homer.salk.edu/homer/chipseq/peaks.html">HOMER</a></h2>
+<p>The HOMER suite of tools is very useful for performing various aspects of ChIPseq analyses, such as annotation of called peaks and motif finding. Their peak calling tool is designed specifically for ChIP style sequencing data, and relies on defining a constant peak length for all peaks. This is designed to keep things sinple for the motif analysis tool, but means that this algorithm is not well designed for identifying longer</p>
+</div>
+<div id="peakranger" class="section level2">
+<h2><span class="header-section-number">9.7</span> <a href="http://ranger.sourceforge.net">PeakRanger</a></h2>
+<p>PeakRanger is a versatile peak calling algorithm that is useful for both narrow and broader peaks in ChIP seq data.</p>
+</div>
+</div>
+<div id="sequence-manipulation" class="section level1">
+<h1><span class="header-section-number">10</span> Sequence Manipulation</h1>
+<div id="bedtools" class="section level2">
+<h2><span class="header-section-number">10.1</span> <a href="http://bedtools.readthedocs.org/en/latest/#">BEDTools</a></h2>
+<p>Bedtools is a suite of Unix tools for dealing with files of bed, bedgraph, wig, etc. They can be used to do everything from intersecting, merging, counting, complementing and shuffling genomic interval files, as well as converting between different file formats such as BAM, BED, GFF/GTF and VCF.</p>
+</div>
+<div id="samtools" class="section level2">
+<h2><span class="header-section-number">10.2</span> <a href="http://www.htslib.org">SAMtools</a></h2>
+<p>SamtTools is a suite of Unix tools for dealing with SAM and BAM formatted files following mapping of genome wide sequencing data. This includes reading, writing, editing, indexing and viewing of these files, as well as filtering based on different fields in the file (mapping quality etc.).</p>
+</div>
+</div>
+<div id="adapter-trimming" class="section level1">
+<h1><span class="header-section-number">11</span> Adapter Trimming</h1>
+<div id="cutadapt" class="section level2">
+<h2><span class="header-section-number">11.1</span> <a href="https://code.google.com/p/cutadapt/">Cutadapt</a></h2>
+<p>Cutadapt is a tool allowing the trimming of adapter sequences from the 3’ and 5’ of called reads from sequencing studies. This can be used to trim off known sequences as well as trimming reads to a specified length. This method is not useful for paired end reads as it does not maintain synchronisation between the mate pair files.</p>
+</div>
+<div id="trimmomatic" class="section level2">
+<h2><span class="header-section-number">11.2</span> <a href="http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a></h2>
+<p>Trimmomatic is another tool for trimming sequences such as adapter sequences from called reads, that also allows you to crop reads to remove poor quality bases and maintains synchronisation between mate pair files.</p>
+</div>
+<div id="trim-galore" class="section level2">
+<h2><span class="header-section-number">11.3</span> <a href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/">Trim Galore</a></h2>
+<p>Trim galore is a wrapper script for cutadapt that allows users to maintain synchronisation between mate pair files.</p>
+</div>
+<div id="reaper" class="section level2">
+<h2><span class="header-section-number">11.4</span> <a href="https://www.ebi.ac.uk/research/enright/software/kraken">Reaper</a></h2>
+<p>Reaper is part of the Kraken package from EMBL/EBI, and is a fast and memory efficient method for demultiplexing, trimming and filtering short read sequencing data. It can be used for a variety of purposes, including barcode filtering, quality checking, and the llike.</p>
+</div>
+</div>
+<div id="pathway-analysis" class="section level1">
+<h1><span class="header-section-number">12</span> Pathway Analysis</h1>
+<div id="ingenuity" class="section level2">
+<h2><span class="header-section-number">12.1</span> <a href="http://www.ingenuity.com">Ingenuity</a></h2>
+<p>Ingenuity pathway analysis is a platform for the analysis of pathways within sequencing or microarray results based on comparisons with the Ingenuity knowledge base. In particular, the pathway analysis tool provides an interactive approach to the analysis of complex ’omics data, by using known interactions between genes contained within the knowledgebase to generate connections between genes from your analyses.</p>
+</div>
+<div id="kegg" class="section level2">
+<h2><span class="header-section-number">12.2</span> <a href="http://www.genome.jp/kegg/">KEGG</a></h2>
+<p>Like the gene ontology database, the Kyoto encylopedia of genes and genomes is a database resource of various aspects of biological systems such as pathways, functional hierarchies, protein modules, reactome associations, etc. KEGG pathway maps provide interaction information between genes in the given pathway, and expression data can be overlaid to understand the interaction effects in your data.</p>
+</div>
+<div id="cytoscape" class="section level2">
+<h2><span class="header-section-number">12.3</span> <a href="http://www.cytoscape.org">Cytoscape</a></h2>
+<p>Cytoscape is an open source software platform for the visualisation of complex networks, such as those resulting from interaction datasets, gene ontology classes, etc. It can be used to look for potential interaction networks by combining data from multiple genome-wide experiments.</p>
+</div>
+<div id="string" class="section level2">
+<h2><span class="header-section-number">12.4</span> <a href="https://string-db.org">STRING</a></h2>
+<p>The STRING database provides protein-protein interaction networks identified using a variety of different methods (computer predictions, text mining from published reports and other databases, high throughput experiments, conserved co-expression, etc). This includes both direct interactions and functional interactions. This database can be very useful to understand protein interaction networks and to identify hub genes in gene expression results.</p>
+</div>
+</div>
+<div id="genome-browsers" class="section level1">
+<h1><span class="header-section-number">13</span> Genome Browsers</h1>
+<div id="university-of-california-santa-cruz-genome-browser-ucsc" class="section level2">
+<h2><span class="header-section-number">13.1</span> <a href="https://htseq.readthedocs.io/en/release_0.9.1/">University of California, Santa Cruz Genome Browser (UCSC)</a></h2>
+<p>One of the most well-known genome browsers available. Describing everything that this browser can do is beyond the scope of this brief outline, but the UCSC browser allows you to represent genomic data from various sources in parallel tracks on the internet browser allowing you to identify correlations between different factors throughout the genome. You can upload your own data in a variety of formats (e.g. mapped RNA seq data in wiggle format, raw read data in BAM format, called peaks from ChIP Seq data in BED format, etc.), and can also access a huge amount of data available from UCSC’s own servers (e.g. instances of the vast ENCODE data). This is a great way of visualising and exploring your data and should be explored in more detail to see what you can do.</p>
+</div>
+<div id="ensembl-genome-browser" class="section level2">
+<h2><span class="header-section-number">13.2</span> <a href="http://www.ensembl.org/index.html">Ensembl Genome Browser</a></h2>
+<p>The Ensembl Genome Browser is an alternative web based genome browser to the UCSC browser offered by Ensembl. It is important to be aware that, whislt both UCSC and Ensembl use the same assemblies, there are many key differences that make them fairly incompatible. One important difference is that chromosomes are labelled differently (e.g. chr1, chr2, chr3 for UCSC but 1, 2, 3, for Ensembl). Similarly the genome builds are named differently. It generally works out simpler to pick one of these specifications and stick to it. Additional data (your own files or puclished data such as that from ENCODE) can be added using the track hubs feature, which allows you to specify where to find these data and how to represent them in your browser session.</p>
+</div>
+<div id="integrative-genomics-viewer-igv" class="section level2">
+<h2><span class="header-section-number">13.3</span> <a href="http://software.broadinstitute.org/software/igv/">Integrative Genomics Viewer (IGV)</a></h2>
+<p>The IGV browser from the Broad Institute is an alternative to the UCSC browser. Unlike the UCSC browser, which accesses a centrally located database through a web broswer, the IGV runs locally and so does not suffer from the lag and slow-down often seen with the UCSC browser (particularly during high traffic times of the day). The IGV browser has some very nice personalisation and formatting options not present in UCSC (e.g. being able to easily resize all of your tracks). On first looks, it is a little more bare bones than UCSC due to the lack of data avaialble at your fingertips (as with UCSC), but these annotated published data sets can be added using well annotated track hubs.</p>
+</div>
+</div>
