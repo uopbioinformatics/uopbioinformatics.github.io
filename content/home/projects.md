@@ -26,6 +26,10 @@ view = 1
   tag = "*"
   
 [[filter]]
+  name = "Research Centres"
+  tag = ".research-centres"
+  
+[[filter]]
   name = "Bioinformatics"
   tag = ".bioinformatics"  
   
@@ -52,5 +56,6 @@ view = 1
 [[filter]]
   name = "Genomics"
   tag = ".genomics"
+  
 +++
 

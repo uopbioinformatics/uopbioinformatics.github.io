@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research Centres on UoP Bioinformatics Group</title>
+    <link>/tags/research-centres/</link>
+    <description>Recent content in Research Centres on UoP Bioinformatics Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Sam Robson</copyright>
+    <lastBuildDate>Tue, 18 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/research-centres/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Center for Enzyme Innovation</title>
+      <link>/project/2019-06-18_center_for_enzyme_innovation/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/2019-06-18_center_for_enzyme_innovation/</guid>
+      <description>&lt;p&gt;The Centre for Enzyme Innovation is a new initiative set up at the University of Portsmouth, with a goal to find solutions to some of the most pressing global environmental problems. In particular, we aim to examine environmental samples to find how the natural world has solved the problem of plastic pollution, by identifying microorganisms who have evolved to be able to break down plastics in the environment. By identifying these microorgansisms, and further understanding the enzymatic methods that they use towards this goal, we aim to harness the amazing work that nature has done, and find ways to enhance this and scale it up on an industrial scale to allow their use in circular recycling of plastics.&lt;/p&gt;
+
+&lt;p&gt;The Centre was &lt;a href=&#34;https://www.port.ac.uk/enquire/news/portsmouth-scientists-awarded-major-plastics-funding&#34; target=&#34;_blank&#34;&gt;recently awarded £5.8 million&lt;/a&gt; in funding from the Research England Expanding Excellence Fund. Together with significant investment from the University of Portsmouth, we aim to use this funding to speed up our progress towards finding a solution to one of the world’s greatest environmental challenges – plastic waste.&lt;/p&gt;
+
+&lt;p&gt;We will be working in the Discovery phase of the pipeline, aiming to use next generation &lt;a href=&#34;https://nanoporetech.com&#34; target=&#34;_blank&#34;&gt;Nanopore&lt;/a&gt; sequencing to explore microorganisms present on samples taken from environmental sites of interest (e.g. plastic receycling centres) to try and profile what is present and how they have developed to survive on plastic substrates. We aim to use this bioprospecting approach to explore metagenomics and metatranscriptomics of samples to identify mechanisms of action for plastic degaradation, and in particular to compare with previously explored species to identify what makes these species unique. This information, and information on the make-up of enzymes involved in the processes, will feed through the pipeline to be further engineered to create enzymes that can be scaled up on an industrial scale.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Portsmouth Heritage Hub</title>
+      <link>/project/2019-06-18_portsmouth_heritage_hub/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/2019-06-18_portsmouth_heritage_hub/</guid>
+      <description>&lt;p&gt;The Portsmouth Heritage Hub was set up by Dr Sam Robson, Dr Robert Inkpen and Dr Garry Scarlett, and aims to provide a centralised hub for researchers within the University of Portsmouth currently working on projects involving preservation, conservation, interpretation and education about our local cultural heritage.&lt;/p&gt;
+
+&lt;p&gt;The Solent, and the surrounding Wessex area has a rich array of history. Portsmouth’s Historic Dockyard, home to world famous ships such as the Mary Rose and HMS Victory, attracts thousands of visitors from around the world, and provides a window into the life of sailors throughout the ages and how this has shaped the City today. The Isle of Wight has proved to be one of the richest sources of dinosaur fossils in all of Europe,  and has earned it the title of the UK’s Dinosaur Capital. Fishbourne Roman. Palace in Chichester is the largest Roman residential building to have been discovered in Britain, and offers a unique glimpse into the life of  Britons following the Roman conquest. And of course, Portsmouth will today play host to Royalty and international leaders to celebrate its part in the D-Day landings in Normandy, one of the most important operations in World War II.&lt;/p&gt;
+
+&lt;p&gt;The skills and expertise of researchers throughout the University are multifaceted and span a wide range of themes and fields. These include (but are not limited to) expertise with ancient DNA analysis to understand our past, identifying novel ways to preserve monuments and buildings, interpretation of ancient texts and oral histories, and using modern technology such as virtual reality to provide interactive ways to engage the public with their past.&lt;/p&gt;
+
+&lt;p&gt;There are many more projects besides, and our aim is to provide a framework for these researchers to work together with local stakeholders in historical monuments, buildings and other sites to identify ways to improve the heritage of our local area, to interpret our history to better inform our understanding of our past, and to provide new and interesting ways to engage the local area with our history.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

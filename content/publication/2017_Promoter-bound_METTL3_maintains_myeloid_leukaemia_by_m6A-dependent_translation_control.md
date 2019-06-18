@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2018_Promoter-bound_METTL3_maintains_myeloid_leukaemia_by_m6A-dependent_translation_control.png"
+image = "publications/2017_Promoter-bound_METTL3_maintains_myeloid_leukaemia_by_m6A-dependent_translation_control.png"
 caption = ""
 
 +++

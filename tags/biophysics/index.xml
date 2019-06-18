@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biophysics on UoP Bioinformatics Group</title>
+    <link>/tags/biophysics/</link>
+    <description>Recent content in Biophysics on UoP Bioinformatics Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Sam Robson</copyright>
+    <lastBuildDate>Tue, 18 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/biophysics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Center for Enzyme Innovation</title>
+      <link>/project/2019-06-18_center_for_enzyme_innovation/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/2019-06-18_center_for_enzyme_innovation/</guid>
+      <description>&lt;p&gt;The Centre for Enzyme Innovation is a new initiative set up at the University of Portsmouth, with a goal to find solutions to some of the most pressing global environmental problems. In particular, we aim to use bioprospecting to search environmental samples to find out how the natural world has solved the problem of plastic pollution, particularly through the identification of microorganisms who have evolved to be able to break down plastics. By identifying these microorgansisms, and further understanding the enzymatic methods that they use towards this goal, we aim to harness the amazing work that nature has done, and find ways to enhance them and scale them up on an industrial scale to allow their use in circular recycling of plastics.&lt;/p&gt;
+
+&lt;p&gt;The Centre was &lt;a href=&#34;https://www.port.ac.uk/enquire/news/portsmouth-scientists-awarded-major-plastics-funding&#34; target=&#34;_blank&#34;&gt;recently awarded £5.8 million&lt;/a&gt; in funding from the Research England Expanding Excellence Fund. Together with significant investment from the University of Portsmouth, we aim to use this funding to speed up our progress towards finding a solution to one of the world’s greatest environmental challenges – plastic waste.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

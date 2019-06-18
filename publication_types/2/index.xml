@@ -7,15 +7,69 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017 Sam Robson</copyright>
-    <lastBuildDate>Thu, 07 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 May 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Interaction of Sox2 with RNA binding proteins in mouse embryonic stem cells</title>
+      <link>/publication/2019_interaction_of_sox2_with_rna_binding_proteins_in_mouse_embryonic_stem_cells/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2019_interaction_of_sox2_with_rna_binding_proteins_in_mouse_embryonic_stem_cells/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>METTL1 Promotes let-7 MicroRNA Processing via m7G Methylation</title>
+      <link>/publication/2019_mettl1_promotes_let-7_microrna_processing_via_m7g_methylation/</link>
+      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2019_mettl1_promotes_let-7_microrna_processing_via_m7g_methylation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dystrophic mdx mouse myoblasts exhibit elevated ATP/UTP-evoked metabotropic purinergic responses and alterations in calcium signalling</title>
+      <link>/publication/2019_dystrophic_mdx_mouse_myoblasts_exhibit_elevated_atp_utp-evoked_metabotropic_purinergic_responses_and_alterations_in_calcium_signalling/</link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2019_dystrophic_mdx_mouse_myoblasts_exhibit_elevated_atp_utp-evoked_metabotropic_purinergic_responses_and_alterations_in_calcium_signalling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SRPK1 maintains acute myeloid leukemia through effects on isoform usage of epigenetic regulators including BRD4</title>
+      <link>/publication/2018_srpk1_maintains_acute_myeloid_leukemia_through_effects_on_isoform_usage_of_epigenetic_regulators_including_brd4/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2018_srpk1_maintains_acute_myeloid_leukemia_through_effects_on_isoform_usage_of_epigenetic_regulators_including_brd4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phosphorylation of histone H4T80 triggers DNA damage checkpoint recovery</title>
+      <link>/publication/2018_phosphorylation_of_histone_h4t80_triggers_dna_damage_checkpoint_recovery/</link>
+      <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2018_phosphorylation_of_histone_h4t80_triggers_dna_damage_checkpoint_recovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inhibition of the acetyltransferase NAT10 normalizes progeric and aging cells by rebalancing the Transportin-1 nuclear import pathway</title>
+      <link>/publication/2018_inhibition_of_the_acetyltransferase_nat10_normalizes_progeric_and_aging_cells_by_rebalancing_the_transportin-1_nuclear_import_pathway/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2018_inhibition_of_the_acetyltransferase_nat10_normalizes_progeric_and_aging_cells_by_rebalancing_the_transportin-1_nuclear_import_pathway/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Promoter-bound METTL3 maintains myeloid leukaemia by m6A-dependent translation control</title>
-      <link>/publication/2018_promoter-bound_mettl3_maintains_myeloid_leukaemia_by_m6a-dependent_translation_control/</link>
+      <link>/publication/2017_promoter-bound_mettl3_maintains_myeloid_leukaemia_by_m6a-dependent_translation_control/</link>
       <pubDate>Thu, 07 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2018_promoter-bound_mettl3_maintains_myeloid_leukaemia_by_m6a-dependent_translation_control/</guid>
+      <guid>/publication/2017_promoter-bound_mettl3_maintains_myeloid_leukaemia_by_m6a-dependent_translation_control/</guid>
       <description></description>
     </item>
     
@@ -88,60 +142,6 @@
       <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>/publication/2014_glutamine_methylation_in_histone_h2a_is_an_rna-polymerase-i-dedicated_modification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>BET protein inhibition shows efficacy against JAK2V617F-driven neoplasms</title>
-      <link>/publication/2014_bet_protein_inhibition_shows_efficacy_against_jak2v617f-driven_neoplasms/</link>
-      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2014_bet_protein_inhibition_shows_efficacy_against_jak2v617f-driven_neoplasms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>The non-coding snRNA 7SK controls transcriptional termination, poising, and bidirectionality in embryonic stem cells</title>
-      <link>/publication/2013_the_non-coding_snrna_7sk_controls_transcriptional_termination_poising_and_bidirectionality_in_embryonic_stem_cells/</link>
-      <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2013_the_non-coding_snrna_7sk_controls_transcriptional_termination_poising_and_bidirectionality_in_embryonic_stem_cells/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Human RNA methyltransferase BCDIN3D regulates microRNA processing</title>
-      <link>/publication/2012_human_rna_methyltransferase_bcdin3d_regulates_microrna_processing/</link>
-      <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2012_human_rna_methyltransferase_bcdin3d_regulates_microrna_processing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Three distinct patterns of histone H3Y41 phosphorylation mark active genes</title>
-      <link>/publication/2012_three_distinct_patterns_of_histone_h3y41ph_phosphorylation_mark_active_genes/</link>
-      <pubDate>Thu, 27 Sep 2012 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2012_three_distinct_patterns_of_histone_h3y41ph_phosphorylation_mark_active_genes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Deciphering c-MYC-regulated genes in two distinct tissues</title>
-      <link>/publication/2011_deciphering_c-myc-regulated_genes_in_two_distinct_tissues/</link>
-      <pubDate>Thu, 01 Dec 2011 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2011_deciphering_c-myc-regulated_genes_in_two_distinct_tissues/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Inhibition of BET recruitment to chromatin as an effective treatment for MLL-fusion leukaemia</title>
-      <link>/publication/2011_inhibition_of_bet_recruitment_to_chromatin_as_an_effective_treatment_for_mll-fusion_leaukemia/</link>
-      <pubDate>Sun, 02 Oct 2011 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2011_inhibition_of_bet_recruitment_to_chromatin_as_an_effective_treatment_for_mll-fusion_leaukemia/</guid>
       <description></description>
     </item>
     

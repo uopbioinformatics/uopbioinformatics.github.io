@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Enzymology on UoP Bioinformatics Group</title>
+    <link>/tags/enzymology/</link>
+    <description>Recent content in Enzymology on UoP Bioinformatics Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Sam Robson</copyright>
+    <lastBuildDate>Tue, 18 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/enzymology/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Center for Enzyme Innovation</title>
+      <link>/project/2019-06-18_center_for_enzyme_innovation/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/2019-06-18_center_for_enzyme_innovation/</guid>
+      <description>&lt;p&gt;Cliona celeta is a yellow boring sponge found around the waters of the UK. The diversity of sponges in the Skomer Marine Nature Reserve has been surveyed since the 1990s. In 2013 divers observed apparent disease in C. celeta individuals across Skomer Island and the Marloes Peninsula. The previously healthy yellow sponge became colonised by fouling organisms followed by tissue decay and patches of black necrotic sponge. This issue appears to be seasonal, largely seen between the months of March and October, and is the first recorded incidence of sponge disease in temperate coastal waters. In addition, several sponges were seen to be fouled by algal and invertebrate species, without progression to the black state, which is indicative of reduced anti-fouling mechanisms in the sponge.&lt;/p&gt;
+
+&lt;p&gt;Working together with &lt;a href=&#34;http://www.port.ac.uk/school-of-biological-sciences/staff/dr-joanne-preston.html&#34; target=&#34;_blank&#34;&gt;Dr Joanne Preston&lt;/a&gt;, we are working to identify the change in microbial communities following the shift between healthy and fouled or necrotic tissue in sponges based on microbiological culturing and 16S rDNA sequencing of the sponge host and the microbial communities.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

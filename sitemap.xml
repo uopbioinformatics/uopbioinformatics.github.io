@@ -5,6 +5,87 @@
     
     <url>
     
+      <loc>/project/2019-06-18_center_for_enzyme_innovation/</loc>
+      <lastmod>2019-06-18T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/project/2019-06-18_portsmouth_heritage_hub/</loc>
+      <lastmod>2019-06-18T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/portsmouth-heritage-hub-inaugural-workshop/</loc>
+      <lastmod>2019-06-16T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/2019_interaction_of_sox2_with_rna_binding_proteins_in_mouse_embryonic_stem_cells/</loc>
+      <lastmod>2019-05-09T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/2019_mettl1_promotes_let-7_microrna_processing_via_m7g_methylation/</loc>
+      <lastmod>2019-04-25T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/2019_dystrophic_mdx_mouse_myoblasts_exhibit_elevated_atp_utp-evoked_metabotropic_purinergic_responses_and_alterations_in_calcium_signalling/</loc>
+      <lastmod>2019-01-24T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/2018_srpk1_maintains_acute_myeloid_leukemia_through_effects_on_isoform_usage_of_epigenetic_regulators_including_brd4/</loc>
+      <lastmod>2018-12-19T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/2018_phosphorylation_of_histone_h4t80_triggers_dna_damage_checkpoint_recovery/</loc>
+      <lastmod>2018-11-15T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/2018_inhibition_of_the_acetyltransferase_nat10_normalizes_progeric_and_aging_cells_by_rebalancing_the_transportin-1_nuclear_import_pathway/</loc>
+      <lastmod>2018-07-03T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/software/mysoftware/</loc>
       <lastmod>2018-04-01T00:00:00+00:00</lastmod>
     </url>
@@ -23,7 +104,7 @@
     
     <url>
     
-      <loc>/publication/2018_promoter-bound_mettl3_maintains_myeloid_leukaemia_by_m6a-dependent_translation_control/</loc>
+      <loc>/publication/2017_promoter-bound_mettl3_maintains_myeloid_leukaemia_by_m6a-dependent_translation_control/</loc>
       <lastmod>2017-12-07T00:00:00+00:00</lastmod>
     </url>
     
@@ -339,7 +420,7 @@
     <url>
     
       <loc>/publication_types/2/</loc>
-      <lastmod>2017-12-07T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-09T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -349,7 +430,7 @@
     <url>
     
       <loc>/tags/bioinformatics/</loc>
-      <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -379,7 +460,7 @@
     <url>
     
       <loc>/categories/blog/</loc>
-      <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -508,8 +589,18 @@
     
     <url>
     
+      <loc>/tags/portsmouth-heritage-hub/</loc>
+      <lastmod>2019-06-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/</loc>
-      <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -519,7 +610,7 @@
     <url>
     
       <loc>/project/</loc>
-      <lastmod>2017-09-29T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -529,7 +620,7 @@
     <url>
     
       <loc>/publication_types/</loc>
-      <lastmod>2017-12-07T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-09T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -540,6 +631,16 @@
     
       <loc>/tags/r/</loc>
       <lastmod>2017-08-23T12:28:14-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/research-centres/</loc>
+      <lastmod>2019-06-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -599,7 +700,7 @@
     <url>
     
       <loc>/tags/university-of-portsmouth/</loc>
-      <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -629,7 +730,7 @@
     <url>
     
       <loc>/tags/welcome/</loc>
-      <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
