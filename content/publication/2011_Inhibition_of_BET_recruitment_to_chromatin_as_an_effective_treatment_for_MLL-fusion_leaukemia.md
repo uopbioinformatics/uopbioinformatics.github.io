@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2011_Inhibition_of_BET_recruitment_to_chromatin_as_an_effective_treatment_for_MLL-fusion_leaukemia.png"
+image = ""
 caption = ""
 
 +++

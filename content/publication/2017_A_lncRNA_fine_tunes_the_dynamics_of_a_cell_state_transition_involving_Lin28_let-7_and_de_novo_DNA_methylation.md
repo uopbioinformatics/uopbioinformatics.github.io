@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2017_A_lncRNA_fine_tunes_the_dynamics_of_a_cell_state_transition_involving_Lin28_let-7_and_de_novo_DNA_methylation.png"
+image = ""
 caption = ""
 
 +++

@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2014_Recurrent_mutations_including_NMP1c_activates_a_BRD4_dependent_core_transcriptional_program_in_acute_myeloid_leukemia.png"
+image = ""
 caption = ""
 
 +++

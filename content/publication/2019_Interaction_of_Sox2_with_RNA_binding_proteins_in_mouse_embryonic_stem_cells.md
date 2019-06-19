@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2019_Interaction_of_Sox2_with_RNA_binding_proteins_in_mouse_embryonic_stem_cells.png"
+image = ""
 caption = ""
 
 +++

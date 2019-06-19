@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2012_Human_RNA_methyltransferase_BCDIN3D_regulates_microRNA_processing.png"
+image = ""
 caption = ""
 
 +++

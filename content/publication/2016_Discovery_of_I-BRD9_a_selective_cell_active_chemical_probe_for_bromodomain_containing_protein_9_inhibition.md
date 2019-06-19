@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2016_Discovery_of_I-BRD9_a_selective_cell_active_chemical_probe_for_bromodomain_containing_protein_9_inhibition.png"
+image = ""
 caption = ""
 
 +++

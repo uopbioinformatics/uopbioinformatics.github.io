@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2017_RNA_binding_by_the_histone_methyltransferases_Set1_and_Set2.jpg"
+image = ""
 caption = ""
 
 +++

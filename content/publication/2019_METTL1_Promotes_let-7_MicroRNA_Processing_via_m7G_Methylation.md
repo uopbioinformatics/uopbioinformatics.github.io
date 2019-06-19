@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2019_METTL1_Promotes_let-7_MicroRNA_Processing_via_m7G_Methylation.png"
+image = ""
 caption = ""
 
 +++

@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2014_The_breast_cancer_oncogene_EMSY_represses_transcription_of_antimetastatic_microRNA_miR-31.png"
+image = ""
 caption = ""
 
 +++

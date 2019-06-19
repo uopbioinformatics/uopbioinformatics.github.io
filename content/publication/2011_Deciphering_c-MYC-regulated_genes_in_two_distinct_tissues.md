@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2011_Deciphering_c-MYC-regulated_genes_in_two_distinct_tissues.png"
+image = ""
 caption = ""
 
 +++

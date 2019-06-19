@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2014_Glutamine_methylation_in_histone_H2A_is_an_RNA-polymerase-I-dedicated_modification.png"
+image = ""
 caption = ""
 
 +++

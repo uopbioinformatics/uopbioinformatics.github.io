@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2018_Inhibition_of_the_acetyltransferase_NAT10_normalizes_progeric_and_aging_cells_by_rebalancing_the_Transportin-1_nuclear_import_pathway.png"
+image = ""
 caption = ""
 
 +++

@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2012_Three_distinct_patterns_of_histone_H3Y41ph_phosphorylation_mark_active_genes.png"
+image = ""
 caption = ""
 
 +++

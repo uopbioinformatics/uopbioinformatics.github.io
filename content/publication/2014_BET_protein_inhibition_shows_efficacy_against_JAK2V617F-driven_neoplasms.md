@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2014_BET_protein_inhibition_shows_efficacy_against_JAK2V617F-driven_neoplasms.png"
+image = ""
 caption = ""
 
 +++

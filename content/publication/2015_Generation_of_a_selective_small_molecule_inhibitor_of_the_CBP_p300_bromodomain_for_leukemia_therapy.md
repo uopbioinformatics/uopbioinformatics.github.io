@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2015_Generation_of_a_selective_small_molecule_inhibitor_of_the_CBP_p300_bromodomain_for_leukemia_therapy.png"
+image = ""
 caption = ""
 
 +++

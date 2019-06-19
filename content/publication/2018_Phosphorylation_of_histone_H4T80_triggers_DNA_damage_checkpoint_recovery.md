@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2018_Phosphorylation_of_histone_H4T80_triggers_DNA_damage_checkpoint_recovery.png"
+image = ""
 caption = ""
 
 +++

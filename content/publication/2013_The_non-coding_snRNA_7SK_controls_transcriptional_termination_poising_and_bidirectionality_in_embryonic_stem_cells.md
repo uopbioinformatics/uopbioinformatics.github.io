@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2013_The_non-coding_snRNA_7SK_controls_transcriptional_termination_poising_and_bidirectionality_in_embryonic_stem_cells.jpg"
+image = ""
 caption = ""
 
 +++

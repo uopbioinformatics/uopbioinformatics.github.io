@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2016_A_chemical_probe_for_ATAD2_bromodomain.png"
+image = ""
 caption = ""
 
 +++

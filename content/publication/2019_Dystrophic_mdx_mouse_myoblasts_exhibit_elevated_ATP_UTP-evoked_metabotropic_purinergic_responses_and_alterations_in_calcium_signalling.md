@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2019_Dystrophic_mdx_mouse_myoblasts_exhibit_elevated_ATP_UTP-evoked_metabotropic_purinergic_responses_and_alterations_in_calcium_signalling.png"
+image = ""
 caption = ""
 
 +++

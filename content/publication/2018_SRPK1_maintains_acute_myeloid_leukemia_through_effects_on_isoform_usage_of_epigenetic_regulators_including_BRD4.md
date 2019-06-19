@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2018_SRPK1_maintains_acute_myeloid_leukemia_through_effects_on_isoform_usage_of_epigenetic_regulators_including_BRD4.png"
+image = ""
 caption = ""
 
 +++

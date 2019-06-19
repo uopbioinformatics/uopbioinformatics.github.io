@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2010_Origins_and_functional_impact_of_copy_number_variation_in_the_human_genome.jpg"
+image = ""
 caption = ""
 
 +++

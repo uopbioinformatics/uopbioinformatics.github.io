@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2010_Genome-wide_association_study_of_CNVs_in_16000_cases_of_eight_common_diseases_and_3000_shared_controls.png"
+image = ""
 caption = ""
 
 +++

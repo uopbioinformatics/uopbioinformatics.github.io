@@ -18,7 +18,7 @@ url_slides = ""
 url_video = ""
 
 [header]
-image = "publications/2010_Nucleosome-interacting_proteins_regulated_by_DNA_and_histone_methylation-wide.jpg"
+image = ""
 caption = ""
 
 +++
